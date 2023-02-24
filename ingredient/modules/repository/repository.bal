@@ -23,7 +23,7 @@ function init() returns error? {
                                          )`);                                
 }
 
-public isolated function addIngredient(model:IngredientDTO ing) returns error|int|model:ValidationError|model:NotFoundError{
+public isolated function addIngredient(model:IngredientDTO ing) returns error|model:ValidationError|model:Ingredient?|error|model:NotFoundError|model:NotFoundError{
     model:Ingredient|error verification = checkIngredient(ing.designation);
     if verification is model:Ingredient{
         return <model:ValidationError>{
@@ -41,7 +41,7 @@ public isolated function addIngredient(model:IngredientDTO ing) returns error|in
     VALUES (${ing.designation})`);
     int|string? lastInsertId = result.lastInsertId;
     if lastInsertId is int {
-        return lastInsertId;
+        return getIngredientById(lastInsertId);
     } else {
         return <model:NotFoundError>{
             body: {
@@ -55,8 +55,25 @@ public isolated function addIngredient(model:IngredientDTO ing) returns error|in
     }
 }
 
-public isolated function getIngredient(int id) returns model:Ingredient?|error|model:NotFoundError{
-    model:Ingredient|error ing = getIngredientFromDB(id);
+public isolated function getIngredientById(int id) returns model:Ingredient?|error|model:NotFoundError{
+    model:Ingredient|error ing = getIngredientByIdFromDB(id);
+    if ing is error{
+           return <model:NotFoundError>{
+               body: {
+                   'error: {
+                       code: "INGREDIENT_NOT_FOUND",
+                       message: "The searched ingredient has not founded"
+                   }
+               }
+           };
+    }
+    else {
+        return ing;
+    }
+}
+
+public isolated function getIngredientByDesignation(string designation) returns model:Ingredient?|error|model:NotFoundError{
+    model:Ingredient|error ing = getIngredientByDesignationFromDB(designation);
     if ing is error{
            return <model:NotFoundError>{
                body: {
@@ -103,9 +120,16 @@ public isolated function checkIngredient(string designation) returns model:Ingre
     return ing;
 }
 
-public isolated function getIngredientFromDB(int id) returns model:Ingredient|error{
+public isolated function getIngredientByIdFromDB(int id) returns model:Ingredient|error{
     model:Ingredient|error ing = check dbClient->queryRow(
         `SELECT * FROM Ingredients WHERE ingredient_id = ${id}`
+    );
+    return ing;
+}
+
+public isolated function getIngredientByDesignationFromDB(string designation) returns model:Ingredient|error{
+    model:Ingredient|error ing = check dbClient->queryRow(
+        `SELECT * FROM Ingredients WHERE designation = ${designation}`
     );
     return ing;
 }
