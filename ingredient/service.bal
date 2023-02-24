@@ -3,15 +3,15 @@ import ingredient.model;
 import ingredient.repository;
 service /ingredients on new http:Listener(8080) {
 
-    resource function post .(@http:Payload model:IngredientDTO ing) returns int|error{
+    isolated resource function post .(@http:Payload model:IngredientDTO ing) returns error?|int|model:ValidationError|model:NotFoundError{
         return repository:addIngredient(ing);
     }
     
-    resource function get [int id]() returns model:Ingredient|error {
+    isolated resource function get [int id]() returns model:Ingredient?|error|model:NotFoundError {
         return repository:getIngredient(id);
     }
     
-    resource function get .() returns model:Ingredient[]|error {
+    isolated resource function get .() returns model:Ingredient[]|error?|model:NotFoundError {
         return repository:getAllIngredients();
     }
 

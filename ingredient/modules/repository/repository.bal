@@ -8,7 +8,7 @@ configurable string PASSWORD = ?;
 configurable string HOST = ?;
 configurable int PORT = ?;
 
-mysql:Client dbClient;
+final mysql:Client dbClient;
 
 function init() returns error? {
     mysql:Client dbClientCreate = check new(host=HOST, user=USER, password=PASSWORD, port=PORT);
@@ -23,10 +23,18 @@ function init() returns error? {
                                          )`);                                
 }
 
-public function addIngredient(model:IngredientDTO ing) returns int|error{
+public isolated function addIngredient(model:IngredientDTO ing) returns error|int|model:ValidationError|model:NotFoundError{
     model:Ingredient|error verification = checkIngredient(ing.designation);
     if verification is model:Ingredient{
-        return error("Duplicated ingredient");
+        return <model:ValidationError>{
+            body: {
+                'error: {
+                    code: "INGREDIENT_ALREADY_EXISTS",
+                    message: "The ingredient has already created"
+                }
+            }
+               
+        };
     }
     sql:ExecutionResult result = check dbClient->execute(`
     INSERT INTO Ingredients (designation)
@@ -35,18 +43,36 @@ public function addIngredient(model:IngredientDTO ing) returns int|error{
     if lastInsertId is int {
         return lastInsertId;
     } else {
-        return error("Unable to obtain last insert ID");
+        return <model:NotFoundError>{
+            body: {
+                'error: {
+                    code: "INGREDIENT_ID_NOT_FOUND",
+                    message: "The searched ingredient has not founded"
+                }
+            }
+               
+        };
     }
 }
 
-public function getIngredient(int id) returns model:Ingredient|error{
-    model:Ingredient|sql:Error ing = check dbClient->queryRow(
-        `SELECT * FROM Ingredients WHERE ingredient_id = ${id}`
-    );
-    return ing;
+public isolated function getIngredient(int id) returns model:Ingredient?|error|model:NotFoundError{
+    model:Ingredient|error ing = getIngredientFromDB(id);
+    if ing is error{
+           return <model:NotFoundError>{
+               body: {
+                   'error: {
+                       code: "INGREDIENT_NOT_FOUND",
+                       message: "The searched ingredient has not founded"
+                   }
+               }
+           };
+    }
+    else {
+        return ing;
+    }
 }
 
-public function getAllIngredients() returns model:Ingredient[]|error {
+public isolated function getAllIngredients() returns model:Ingredient[]|error?|model:NotFoundError {
     model:Ingredient[] ingredients = [];
     stream<model:Ingredient, sql:Error?> resultStream = dbClient->query(
         `SELECT * FROM Ingredients`
@@ -56,12 +82,30 @@ public function getAllIngredients() returns model:Ingredient[]|error {
             ingredients.push(ing);
         };
     check resultStream.close();
+    if ingredients.length() == 0{
+        return <model:NotFoundError>{
+            body: {
+                'error: {
+                    code: "INGREDIENTS_NOT_FOUND",
+                    message: "The searched ingredients has not founded"
+                }
+            }
+        };
+    }
+
     return ingredients;
 }
 
-public function checkIngredient(string designation) returns model:Ingredient|error{
-    model:Ingredient|sql:Error ing = check dbClient->queryRow(
+public isolated function checkIngredient(string designation) returns model:Ingredient|error{
+    model:Ingredient|error ing = check dbClient->queryRow(
         `SELECT * FROM Ingredients WHERE designation = ${designation}`
+    );
+    return ing;
+}
+
+public isolated function getIngredientFromDB(int id) returns model:Ingredient|error{
+    model:Ingredient|error ing = check dbClient->queryRow(
+        `SELECT * FROM Ingredients WHERE ingredient_id = ${id}`
     );
     return ing;
 }
