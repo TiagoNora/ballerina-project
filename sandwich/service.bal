@@ -1,17 +1,18 @@
 import ballerina/http;
+import sandwich.model;
+import sandwich.repository;
+service /sandwiches on new http:Listener(8081) {
 
-# A service representing a network-accessible API
-# bound to port `9090`.
-service / on new http:Listener(9090) {
-
-    # A resource for generating greetings
-    # + name - the input string name
-    # + return - string name with hello message or error
-    resource function get greeting(string name) returns string|error {
-        // Send a response back to the caller.
-        if name is "" {
-            return error("name should not be empty!");
-        }
-        return "Hello, " + name;
+    isolated resource function post .(@http:Payload model:SandwichDTO sand) returns error|model:ValidationError|model:Sandwich?|model:NotFoundError{
+        return repository:addSandwich(sand);
     }
+    
+    isolated resource function get searchById(int id) returns model:Sandwich?|error|model:NotFoundError {
+        return repository:getSandwichById(id);
+    }
+    
+    isolated resource function get .() returns model:Sandwich[]|error?|model:NotFoundError {
+        return repository:getAllSandwiches();
+    }
+
 }
