@@ -1,5 +1,0 @@
-[ingredient.repository]
-USER="myUser"
-PASSWORD="myPassword"
-HOST="localhost"
-PORT=3306
