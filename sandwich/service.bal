@@ -15,4 +15,9 @@ service /sandwiches on new http:Listener(8081) {
         return repository:getAllSandwiches();
     }
 
+
+    //Add ingredients to sandwich
+    //Add descriptions ao sandwich
+    //List all sandwiches that doesn´t have a ingredient
+
 }
