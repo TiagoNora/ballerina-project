@@ -59,7 +59,105 @@ You should change the spaces that contains the keyword **secret** with your cred
 
 
 
-## API Documentation :construction:
+## API Documentation
+
+### Ingredient Management
+
+#### US01: Create ingrendient
+
+```http
+  POST /ingredients
+```
+Payload: **JSON**
+
+```json
+{
+    "designation": "Designation",
+}
+```
+
+| Status  | Description   |
+| :---------- | :--------- |
+| `201`      | `Ingredient created` |
+| `400`      | `Ingredient duplicated` |
+| `404`      | `Ingredient id not found` |
+
+**If 201 returns:**
+```json
+{
+    "ingredient_id": id,
+    "designation": "Designation"
+}
+```
+#### US02: Get ingrendient by id
+
+```http
+  GET /ingredients/searchById?id={id}
+```
+
+| Parameter  | Type       | Description                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `int` | **Required** |
+
+| Status  | Description   |
+| :---------- | :--------- |
+| `200`      | `Ingredient found` |
+| `404`      | `Ingredient not found` |
+
+**If 200 returns:**
+```json
+{
+    "ingredient_id": id,
+    "designation": "Designation"
+}
+```
+
+#### US03: Get ingrendient by designation
+
+```http
+  GET /ingredients/searchByDesignation?designation={designation}
+```
+
+| Parameter  | Type       | Description                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `designation`      | `string` | **Required** |
+
+| Status  | Description   |
+| :---------- | :--------- |
+| `200`      | `Ingredient found` |
+| `404`      | `Ingredient not found` |
+
+**If 200 returns:**
+```json
+{
+    "ingredient_id": id,
+    "designation": "Designation"
+}
+```
+
+#### US04: Get all ingrendients
+
+```http
+  GET /ingredients
+```
+
+| Status  | Description   |
+| :---------- | :--------- |
+| `200`      | `Ingredient or ingredients found` |
+| `404`      | `Ingredient or ingredients not found` |
+
+**If 200 returns:**
+```json
+[{
+    "ingredient_id": id,
+    "designation": "Designation"
+},
+{
+    "ingredient_id": id1,
+    "designation": "Designation1"
+}
+]
+```
 
 
 
