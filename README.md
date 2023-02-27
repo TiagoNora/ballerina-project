@@ -24,6 +24,7 @@ bal version or bal
 - Podman (Container manager)
 - Mysql (Database)
 - Insomnia (API Client)
+- JMeter (Load test tool)
 
 ## Open and run
 1. Open project
