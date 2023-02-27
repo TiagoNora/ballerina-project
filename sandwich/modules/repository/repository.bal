@@ -269,3 +269,94 @@ public isolated function hasDuplicates(int[] array) returns boolean{
     }
 }
 
+public isolated function addIngredients(model:Ns ns, int id) returns model:CreatedMessage|model:ValidationError|model:NotFoundError|error{
+
+    boolean flag = checkSandwichId(id);
+    if flag == false{
+        return <model:NotFoundError>{
+            body: {
+                'error: {
+                    code: "SANDWICH_ID_NOT_FOUND",
+                    message: "The searched sandwich has not founded"
+                }
+            }
+               
+        };
+    }
+    int[]|error found = findSandwichIngredientsByIdFromDB(id);
+    if found is error{
+        return <model:NotFoundError>{
+            body: {
+                'error: {
+                    code: "QUERY_ERROR",
+                    message: "To the given id no ingredients were found"
+                }
+            }
+        };
+    }
+    int[] array = ns.ingredients_id;
+    boolean aux = checkArrayReceivedAndFound(array,found);
+    if aux == false{
+        return <model:ValidationError>{
+            body: {
+                'error: {
+                    code: "INGREDIENTS_DUPLICATED",
+                    message: "The ingredients received were duplicated"
+                }
+            }
+               
+        };
+    }
+    foreach int n in array {
+        boolean|error b = findIngredientByIdFromRest(n);
+        if b == false{
+            return <model:NotFoundError>{
+                body: {
+                    'error: {
+                    code: "INGREDIENT_NOT_FOUND",
+                    message: "One of the ingredients insert into the list doesn´t exists"
+                    }
+                }
+               
+            };
+        }
+    }
+    foreach int n in array {
+        sql:ExecutionResult _ = check dbClient->execute(`INSERT INTO sandwich_ingredients (sandwich_id, ingredient_id) VALUES (${id}, ${n})`);
+        
+    }
+    return <model:CreatedMessage>{
+        code: "INGREDIENTS_ADDED",
+        message: "The ingredients were added to the list of ingredients"
+    };
+
+}
+
+public isolated function checkSandwichId(int id) returns boolean{
+    model:SandwichInfo|error sand= findSandwichByIdFromDB(id);
+    if sand is model:SandwichInfo{
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+public isolated function checkArrayReceivedAndFound (int[] received, int[] found) returns boolean{
+    int aux = 0;
+    foreach int nFound in found{
+        foreach int nReceived in received {
+            if nFound == nReceived{
+                aux += 1;
+            }
+        }
+    }
+    
+    if aux == 0{
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+

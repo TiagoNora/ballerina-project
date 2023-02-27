@@ -15,8 +15,10 @@ service /sandwiches on new http:Listener(8081) {
         return repository:getAllSandwiches();
     }
 
+    isolated resource function post ingredients(@http:Payload model:Ns ns, int id) returns model:CreatedMessage|model:ValidationError|model:NotFoundError|error{
+        return repository:addIngredients(ns,id);
+    }
 
-    //Add ingredients to sandwich
     //Add descriptions ao sandwich
     //List all sandwiches that doesn´t have a ingredient
 

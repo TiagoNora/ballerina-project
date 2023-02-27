@@ -47,3 +47,13 @@ public type NotFoundError record {|
 public type N record {
     int ingredient_id;
 };
+
+public type Ns record {
+    int[] ingredients_id;
+};
+
+public type CreatedMessage record{
+    *http:Created;
+    string code;
+    string message;
+};
