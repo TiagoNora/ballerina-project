@@ -5,8 +5,8 @@ Welcome to my GitHub project! This project is being developed under the curricul
 
 # Prerequisites
 
-1. Docker
-- Install docker windows in your machine
+1. Podman
+- Install podman in your machine, follow this [link](https://github.com/containers/podman/blob/main/docs/tutorials/podman-for-windows.md)
 - Create the container with the mysql image
 - Create a user with all the permissions
 
@@ -19,7 +19,11 @@ You can check if the installation of Ballerina was successful with the following
 ```
 bal version or bal
 ```
-
+# Open-Source tools and technologies used
+- Ballerina (Programming Language)
+- Podman (Container manager)
+- Mysql (Database)
+- Insomnia (API Client)
 
 ## Open and run
 1. Open project
