@@ -179,6 +179,38 @@ Payload: **JSON**
   POST /sandwiches
 ```
 
+Payload: **JSON**
+
+```json
+{
+    "designation": "Designation",
+    "selling_price": 1.99,
+    "ingredients_id": [1,2,3,4],
+    "descriptions": [{
+                        language: "en"
+                        text: "Good sandwich to enjoy in the afthernoon"}]
+}
+```
+
+| Status  | Description   |
+| :---------- | :--------- |
+| `201`      | `Sandwich created` |
+| `400`      | `Ingredient duplicated` or `Description duplicated` |
+| `404`      | `Ingredient id not found` or `Sandwich id not found`|
+
+**If 201 returns:**
+```json
+{
+    "sandwich_id": 1,
+    "designation": "Designation",
+    "selling_price": 1.99,
+    "ingredients_id": [1,2,3,4],
+    "descriptions": [{
+                        language: "en"
+                        text: "Good sandwich to enjoy in the afthernoon"}]
+}
+```
+
 #### US06: Get sandwich by id
 
 ```http
