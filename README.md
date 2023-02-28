@@ -51,10 +51,13 @@ You should change the spaces that contains the keyword **secret** with your cred
     
 ## User Cases
 
+### Ingredient Management
 - [x]  US01: Create ingrendient
 - [x]  US02: Get ingrendient by id
 - [x]  US03: Get ingrendient by designation
 - [x]  US04: Get all ingrendients
+
+### Sandwich Management
 - [x]  US05: Create sandwich
 - [x]  US06: Get sandwich by id
 - [x]  US07: Get all sandwiches
