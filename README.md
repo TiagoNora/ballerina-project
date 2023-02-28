@@ -270,6 +270,10 @@ Payload: **JSON**
   POST /sandwiches/ingredients?id={id}
 ```
 
+| Parameter  | Type       | Description                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `int` | **Required** |
+
 Payload: **JSON**
 
 ```json
@@ -302,6 +306,10 @@ Payload: **JSON**
 ```http
   POST /sandwiches/descriptions?id={id}
 ```
+
+| Parameter  | Type       | Description                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `int` | **Required** |
 
 Payload: **JSON**
 
@@ -341,6 +349,35 @@ Payload: **JSON**
 
 ```http
   GET /sandwiches/searchWithoutId?id={id}
+```
+
+| Parameter  | Type       | Description                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `int` | **Required** |
+
+
+| Status  | Description   |
+| :---------- | :--------- |
+| `200`      | `Description or descriptions added` |
+| `404`      | `Sandwiches or sandwich not found` |
+
+**If 201 returns:**
+```json
+[{
+    "sandwich_id": 1,
+    "designation": "Designation",
+    "selling_price": 1.99,
+    "ingredients_id": [1,2,3,4,5],
+    "descriptions": [{
+                        language: "en"
+                        text: "Good sandwich to enjoy in the afthernoon"
+                      },
+                      {
+                        language: "pt"
+                        text: "Uma boa sanduíche para desfrutar à tarde"
+                      }
+                    ]
+}]
 ```
 
 ## License
