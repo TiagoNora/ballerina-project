@@ -63,6 +63,12 @@ You should change the spaces that contains the keyword **secret** with your cred
 - [ ]  US10: Get all sandwiches that doesn´t have a particular ingrendient
 
 
+## Calendar
+
+| Week | Timeframe    | Description                | Comment|
+| :-------- | :------- | :------------------------- | :----|
+| 1 | 22/02/2023-01/03/2023 | US01-US10 |DONE :white_check_mark: |
+
 
 ## API Documentation
 
