@@ -269,7 +269,7 @@ public isolated function hasDuplicates(int[] array) returns boolean{
     }
 }
 
-public isolated function addIngredients(model:Ns ns, int id) returns model:CreatedMessage|model:ValidationError|model:NotFoundError|error{
+public isolated function addIngredients(model:Ns ns, int id) returns model:Sandwich|error|model:NotFoundError|error|model:ValidationError|model:NotFoundError{
 
     boolean flag = checkSandwichId(id);
     if flag == false{
@@ -325,10 +325,9 @@ public isolated function addIngredients(model:Ns ns, int id) returns model:Creat
         sql:ExecutionResult _ = check dbClient->execute(`INSERT INTO sandwich_ingredients (sandwich_id, ingredient_id) VALUES (${id}, ${n})`);
         
     }
-    return <model:CreatedMessage>{
-        code: "INGREDIENTS_ADDED",
-        message: "The ingredients were added to the list of ingredients"
-    };
+    model:Sandwich|error|model:NotFoundError sand = getSandwichById(id);
+
+    return sand;
 
 }
 
