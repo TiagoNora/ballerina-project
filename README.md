@@ -67,7 +67,7 @@ You should change the spaces that contains the keyword **secret** with your cred
 
 | Week | Timeframe    | Description                | Comment|
 | :-------- | :------- | :------------------------- | :----|
-| 1 | 22/02/2023-01/03/2023 | US01-US10 |DONE :construction: |
+| 1 | 22/02/2023-01/03/2023 | US01-US10 |IN PROGRESS :construction: |
 
 
 ## API Documentation
