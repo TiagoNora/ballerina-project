@@ -244,6 +244,25 @@ Payload: **JSON**
   GET /sandwiches
 ```
 
+| Status  | Description   |
+| :---------- | :--------- |
+| `200`      | `Sandwich or sandwiches found` |
+| `404`      | `Sandwich or Sandwiches not found` |
+
+**If 200 returns:**
+```json
+[{
+    "sandwich_id": 1,
+    "designation": "Designation",
+    "selling_price": 1.99,
+    "ingredients_id": [1,2,3,4],
+    "descriptions": [{
+                        language: "en"
+                        text: "Good sandwich to enjoy in the afthernoon"}]
+}
+]
+```
+
 #### US08: Add ingrendient or ingrendients to sandwich
 
 ```http
