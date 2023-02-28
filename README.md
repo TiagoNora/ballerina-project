@@ -280,7 +280,7 @@ Payload: **JSON**
 
 | Status  | Description   |
 | :---------- | :--------- |
-| `201`      | `Sandwich created` |
+| `201`      | `Ingredients or ingredient added` |
 | `400`      | `Ingredient duplicated` |
 | `404`      | `Sandwich id not found` or `Ingredient id not found`|
 
@@ -301,6 +301,40 @@ Payload: **JSON**
 
 ```http
   POST /sandwiches/descriptions?id={id}
+```
+
+Payload: **JSON**
+
+```json
+{
+  language: "pt"
+  text: "Uma boa sanduíche para desfrutar à tarde"
+}
+```
+
+| Status  | Description   |
+| :---------- | :--------- |
+| `201`      | `Description or descriptions added` |
+| `400`      | `Description duplicated` |
+| `404`      | `Sandwich id not found` |
+
+**If 201 returns:**
+```json
+{
+    "sandwich_id": 1,
+    "designation": "Designation",
+    "selling_price": 1.99,
+    "ingredients_id": [1,2,3,4,5],
+    "descriptions": [{
+                        language: "en"
+                        text: "Good sandwich to enjoy in the afthernoon"
+                      },
+                      {
+                        language: "pt"
+                        text: "Uma boa sanduíche para desfrutar à tarde"
+                      }
+                    ]
+}
 ```
 
 #### US10: Get all sandwiches that doesn´t have a particular ingrendient
