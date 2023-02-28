@@ -269,6 +269,34 @@ Payload: **JSON**
 ```http
   POST /sandwiches/ingredients?id={id}
 ```
+
+Payload: **JSON**
+
+```json
+{
+	"ingredients_id": [5]
+}
+```
+
+| Status  | Description   |
+| :---------- | :--------- |
+| `201`      | `Sandwich created` |
+| `400`      | `Ingredient duplicated` |
+| `404`      | `Sandwich id not found` or `Ingredient id not found`|
+
+**If 201 returns:**
+```json
+{
+    "sandwich_id": 1,
+    "designation": "Designation",
+    "selling_price": 1.99,
+    "ingredients_id": [1,2,3,4,5],
+    "descriptions": [{
+                        language: "en"
+                        text: "Good sandwich to enjoy in the afthernoon"}]
+}
+```
+
 #### US09: Add description or descriptions to sandwich
 
 ```http
