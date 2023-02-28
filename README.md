@@ -170,7 +170,40 @@ Payload: **JSON**
 ]
 ```
 
+#### US05: Create sandwich
 
+```http
+  POST /sandwiches
+```
+
+#### US06: Get sandwich by id
+
+```http
+  GET /sandwiches/searchById?id={id}
+```
+
+#### US07: Get all sandwiches
+
+```http
+  GET /sandwiches
+```
+
+#### US08: Add ingrendient or ingrendients to sandwich
+
+```http
+  POST /sandwiches/ingredients?id={id}
+```
+#### US09: Add description or descriptions to sandwich
+
+```http
+  POST /sandwiches/descriptions?id={id}
+```
+
+#### US10: Get all sandwiches that doesn´t have a particular ingrendient
+
+```http
+  GET /sandwiches/searchWithoutId?id={id}
+```
 
 ## License
 
