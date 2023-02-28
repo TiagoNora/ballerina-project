@@ -216,6 +216,27 @@ Payload: **JSON**
 ```http
   GET /sandwiches/searchById?id={id}
 ```
+| Parameter  | Type       | Description                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `int` | **Required** |
+
+| Status  | Description   |
+| :---------- | :--------- |
+| `200`      | `Sandwich found` |
+| `404`      | `Sandwich not found` |
+
+**If 200 returns:**
+```json
+{
+    "sandwich_id": 1,
+    "designation": "Designation",
+    "selling_price": 1.99,
+    "ingredients_id": [1,2,3,4],
+    "descriptions": [{
+                        language: "en"
+                        text: "Good sandwich to enjoy in the afthernoon"}]
+}
+```
 
 #### US07: Get all sandwiches
 
