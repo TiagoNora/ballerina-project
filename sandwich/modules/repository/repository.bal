@@ -359,3 +359,67 @@ public isolated function checkArrayReceivedAndFound (int[] received, int[] found
     }
 }
 
+public isolated function addDescriptions(model:Descriptions des, int id) returns model:Sandwich|error|model:NotFoundError|model:ValidationError{
+    boolean flag = checkSandwichId(id);
+    if flag == false{
+        return <model:NotFoundError>{
+            body: {
+                'error: {
+                    code: "SANDWICH_ID_NOT_FOUND",
+                    message: "The searched sandwich has not founded"
+                }
+            }
+               
+        };
+    }
+    model:Description[]|error found = findSandwichDescriptionsByIdFromDB(id);
+    if found is error{
+        return <model:NotFoundError>{
+            body: {
+                'error: {
+                    code: "QUERY_ERROR",
+                    message: "To the given id no descriptions were found"
+                }
+            }
+        };
+    }
+    boolean aux = checkDescriptionsDuplicated(found,des);
+    if aux == false{
+        return <model:ValidationError>{
+            body: {
+                'error: {
+                    code: "DESCRIPTIONS_DUPLICATED",
+                    message: "The description received were duplicated"
+                }
+            }
+               
+        };
+    }
+    foreach model:Description de in des.descriptions {
+        sql:ExecutionResult _ = check dbClient->execute(`INSERT INTO sandwich_descriptions (sandwich_id , text, language) VALUES (${id}, ${de.text}, ${de.language})`);
+    }
+
+    model:Sandwich|error|model:NotFoundError sand = getSandwichById(id);
+
+    return sand;
+}
+
+
+public isolated function checkDescriptionsDuplicated (model:Description[] found, model:Descriptions des) returns boolean{
+    int aux = 0;
+    foreach model:Description nFound in found{
+        foreach model:Description nReceived in des.descriptions {
+            if nFound.language == nReceived.language{
+                aux += 1;
+            }
+        }
+    }
+    
+    if aux == 0{
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+

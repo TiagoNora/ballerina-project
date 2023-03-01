@@ -170,8 +170,7 @@ Payload: **JSON**
 {
     "ingredient_id": id1,
     "designation": "Designation1"
-}
-]
+}]
 ```
 
 #### US05: Create sandwich
@@ -188,8 +187,8 @@ Payload: **JSON**
     "selling_price": 1.99,
     "ingredients_id": [1,2,3,4],
     "descriptions": [{
-                        language: "en"
-                        text: "Good sandwich to enjoy in the afthernoon"}]
+                        "language": "en",
+                        "text": "Good sandwich to enjoy in the afthernoon"}]
 }
 ```
 
@@ -207,8 +206,8 @@ Payload: **JSON**
     "selling_price": 1.99,
     "ingredients_id": [1,2,3,4],
     "descriptions": [{
-                        language: "en"
-                        text: "Good sandwich to enjoy in the afthernoon"}]
+                        "language": "en",
+                        "text": "Good sandwich to enjoy in the afthernoon"}]
 }
 ```
 
@@ -234,8 +233,8 @@ Payload: **JSON**
     "selling_price": 1.99,
     "ingredients_id": [1,2,3,4],
     "descriptions": [{
-                        language: "en"
-                        text: "Good sandwich to enjoy in the afthernoon"}]
+                        "language": "en",
+                        "text": "Good sandwich to enjoy in the afthernoon"}]
 }
 ```
 
@@ -258,10 +257,9 @@ Payload: **JSON**
     "selling_price": 1.99,
     "ingredients_id": [1,2,3,4],
     "descriptions": [{
-                        language: "en"
-                        text: "Good sandwich to enjoy in the afthernoon"}]
-}
-]
+                        "language": "en",
+                        "text": "Good sandwich to enjoy in the afthernoon"}]
+}]
 ```
 
 #### US08: Add ingrendient or ingrendients to sandwich
@@ -296,8 +294,8 @@ Payload: **JSON**
     "selling_price": 1.99,
     "ingredients_id": [1,2,3,4,5],
     "descriptions": [{
-                        language: "en"
-                        text: "Good sandwich to enjoy in the afthernoon"}]
+                        "language": "en",
+                        "text": "Good sandwich to enjoy in the afthernoon"}]
 }
 ```
 
@@ -315,8 +313,9 @@ Payload: **JSON**
 
 ```json
 {
-  language: "pt"
-  text: "Uma boa sanduíche para desfrutar à tarde"
+	"descriptions": [{
+		"text": "Uma boa sanduíche para desfrutar à tarde",
+		"language": "pt"}]
 }
 ```
 
@@ -334,14 +333,13 @@ Payload: **JSON**
     "selling_price": 1.99,
     "ingredients_id": [1,2,3,4,5],
     "descriptions": [{
-                        language: "en"
-                        text: "Good sandwich to enjoy in the afthernoon"
+                        "language": "en",
+                        "text": "Good sandwich to enjoy in the afthernoon"
                       },
                       {
-                        language: "pt"
-                        text: "Uma boa sanduíche para desfrutar à tarde"
-                      }
-                    ]
+                        "language": "pt",
+                        "text": "Uma boa sanduíche para desfrutar à tarde"
+                      }]
 }
 ```
 
@@ -369,14 +367,13 @@ Payload: **JSON**
     "selling_price": 1.99,
     "ingredients_id": [1,2,3,4,5],
     "descriptions": [{
-                        language: "en"
-                        text: "Good sandwich to enjoy in the afthernoon"
+                        "language": "en",
+                        "text": "Good sandwich to enjoy in the afthernoon"
                       },
                       {
-                        language: "pt"
-                        text: "Uma boa sanduíche para desfrutar à tarde"
-                      }
-                    ]
+                        "language": "pt",
+                        "text": "Uma boa sanduíche para desfrutar à tarde"
+                      }]
 }]
 ```
 
