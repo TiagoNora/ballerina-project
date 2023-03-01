@@ -70,8 +70,10 @@ You should change the spaces that contains the keyword **secret** with your cred
 
 | Week | Timeframe    | Description                | Comment|
 | :-------- | :------- | :------------------------- | :----|
-| 1 | 22/02/2023-01/03/2023 | INICIAL CONFIGURATION | DONE :white_check_mark: |
-|   |                       | US01-US10            |  IN PROGRESS :construction: |
+| 1 | 22/02/2023-01/03/2023 | INICIAL CONFIGURATION | DONE :white_check_mark:     |
+|   |                       | US01-US10             |  DONE :white_check_mark:    |
+| 2 | 01/03/2023-08/03/2023 | STARTING WRITING BACHELOR PROJECT REPORT|  IN PROGRESS :construction: |
+| 2 |                       | ALTER US05 TO BE ABLE MAKE A REQUEST TO A SERVICE TO VERIFY THE LANGUAGE OF THE TEXT|  IN PROGRESS :construction: |
 
 
 ## API Documentation
