@@ -62,8 +62,8 @@ You should change the spaces that contains the keyword **secret** with your cred
 - [x]  US06: Get sandwich by id
 - [x]  US07: Get all sandwiches
 - [x]  US08: Add ingrendient or ingrendients to sandwich
-- [ ]  US09: Add description or descriptions to sandwich
-- [ ]  US10: Get all sandwiches that doesn´t have a particular ingrendient
+- [x]  US09: Add description or descriptions to sandwich
+- [x]  US10: Get all sandwiches that doesn´t have a particular ingrendient
 
 
 ## Calendar
