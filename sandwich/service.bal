@@ -23,6 +23,10 @@ service /sandwiches on new http:Listener(8081) {
         return repository:addDescriptions(des,id);
     }
 
+    isolated resource function get searchWithoutId(int id) returns model:Sandwich[]|error|model:NotFoundError{
+        return repository:getWithoutId(id);
+    }
+
     //List all sandwiches that doesn´t have a ingredient
 
 }

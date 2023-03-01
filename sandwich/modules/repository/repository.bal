@@ -423,3 +423,58 @@ public isolated function checkDescriptionsDuplicated (model:Description[] found,
     }
 }
 
+public isolated function getWithoutId(int id) returns model:Sandwich|error|model:NotFoundError{
+    model:Sandwich[] sandwiches = [];
+    boolean|error b = findIngredientByIdFromRest(id);
+    if b == false{
+        return <model:NotFoundError>{                
+            body: {
+                'error: {
+                code: "INGREDIENT_NOT_FOUND",
+                message: "The ingredient doesn´t exist"                    
+                }
+            }
+               
+        };
+    }
+
+    int[]|error array = getSandwichesWithoutIngredientId(id);
+    if array is error{
+        return <model:NotFoundError>{                
+            body: {
+                'error: {
+                code: "INGREDIENT_NOT_FOUND",
+                message: "The ingredient doesn´t exist"                    
+                }
+            }
+               
+        };
+    }
+
+    foreach int n in array{
+        model:Sandwich|error|model:NotFoundError sand = getSandwichById(id);
+        sandwiches.push(sand);
+    }
+
+    return sandwiches;
+
+    //query sandwiches that don´t have ingredient
+    //return sandwich
+}
+
+
+public isolated function getSandwichesWithoutIngredientId(int id) returns id[]|error{
+    model:N[] array = [];
+    int[] arrayInt = [];
+    stream<model:N, sql:Error?> resultStream = dbClient->query(`SELECT ingredient_id FROM sandwich_ingredients WHERE sandwich_id  not in (select sandwich_id from sandwich_ingredients where sandwich_id = ${id})`);
+    check from model:N des in resultStream
+        do {
+            array.push(des);
+        };
+    check resultStream.close();
+    foreach model:N n in array {
+        arrayInt.push(n.ingredient_id);
+    }
+    return arrayInt;
+}
+
