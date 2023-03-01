@@ -55,3 +55,8 @@ public type Ns record {
 public type Descriptions record {
     Description[] descriptions;
 };
+
+public type NQuery record {
+    int ingredient_id;
+    int sandwich_id;
+};
