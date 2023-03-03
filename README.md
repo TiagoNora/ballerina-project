@@ -74,7 +74,7 @@ You should change the spaces that contains the keyword **secret** with your cred
 |   |                       | US01-US10             |  DONE :white_check_mark:    |
 | 2 | 01/03/2023-08/03/2023 | UPLOAD TEMPLATE OF THE BACHELOR PROJECT REPORT IN GITHUB|  DONE :white_check_mark:  |
 |   |                       | STUDY OF STATE OF THE ART TO INCLUDE IN THE REPORT | IN PROGRESS :construction:   | 
-| 2 |                       | ALTER US05 TO BE ABLE MAKE A REQUEST TO A SERVICE TO VERIFY THE LANGUAGE OF THE TEXT|  IN PROGRESS :construction: |
+|   |                       | ALTER US05 TO BE ABLE MAKE A REQUEST TO A SERVICE TO VERIFY THE LANGUAGE OF THE TEXT|  IN PROGRESS :construction: |
 
 
 ## API Documentation
