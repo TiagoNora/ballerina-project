@@ -27,6 +27,4 @@ service /sandwiches on new http:Listener(8081) {
         return repository:getWithoutId(id);
     }
 
-    //List all sandwiches that doesn´t have a ingredient
-
 }

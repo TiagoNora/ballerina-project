@@ -1,0 +1,14 @@
+[package]
+org = "tiago"
+name = "user"
+version = "0.1.0"
+distribution = "2201.4.0"
+
+[build-options]
+observabilityIncluded = true
+
+
+[[platform.java11.dependency]]
+groupId = "mysql"
+artifactId = "mysql-connector-java"
+version = "8.0.26"
