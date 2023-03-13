@@ -48,24 +48,9 @@ public isolated function addUser(model:UserDTO user) returns model:User?|error|m
         n=lastIdInserted;
     }
 
-    model:User|error r = getUserByIdFromDB(n);
-    if r is error{
-        return notFound("QUERY_ERROR","To the given id no useres were found");
-    }
-    string[]|error array = findUserPermsByIdFromDB(n);
-    if array is error{
-        return notFound("QUERY_ERROR","To the given id no perms were found");
-    }
-    model:User u = {
-        user_id: n,
-        name:r.name,
-        taxIdentificationNumber: r.taxIdentificationNumber,
-        address: r.address,
-        email: r.email,
-        permissions: array
-    };
+    model:User|model:NotFoundError r = getUserById(n);
 
-    return u;
+    return r;
 
 }
 
@@ -81,6 +66,26 @@ public isolated function addUserToDB(model:UserDTO user) returns int|model:NotFo
         return notFound("USER_ID_NOT_FOUND","The searched user has not founded");
     }
 
+}
+
+public isolated function getUserById(int id) returns model:User|model:NotFoundError{
+        model:User|error r = getUserByIdFromDB(id);
+    if r is error{
+        return notFound("QUERY_ERROR","To the given id no useres were found");
+    }
+    string[]|error array = findUserPermsByIdFromDB(id);
+    if array is error{
+        return notFound("QUERY_ERROR","To the given id no perms were found");
+    }
+    model:User u = {
+        user_id: id,
+        name:r.name,
+        taxIdentificationNumber: r.taxIdentificationNumber,
+        address: r.address,
+        email: r.email,
+        permissions: array
+    };
+    return u;
 }
 
 public isolated function checkUserById(int id) returns boolean{

@@ -7,10 +7,10 @@ service /users on new http:Listener(8082) {
         return repository:addUser(user);
     }
 
-    //isolated resource function get searchById(int id) returns model:User?|error|model:NotFoundError {
-    //    return repository:getUserById(id);
-    //}
-    //
+    isolated resource function get searchById(int id) returns model:User?|error|model:NotFoundError {
+        return repository:getUserById(id);
+    }
+
     //isolated resource function get searchByEmail(string email) returns model:User?|error|model:NotFoundError {
     //    return repository:getUserByEmail(id);
     //}
