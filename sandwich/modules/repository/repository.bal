@@ -40,53 +40,21 @@ function init() returns error? {
 
 public isolated function addSandwich(model:SandwichDTO san) returns error|model:ValidationError|model:Sandwich?|error|model:NotFoundError{
     if san.ingredients_id.length() == 0{
-        return <model:ValidationError>{
-            body: {
-                'error: {
-                    code: "SANDWICH_WITH_NO_INGREDIENTS",
-                    message: "The sandwich that has received contains no ingredients"
-                }
-            }
-               
-        };
+        return validationError("SANDWICH_WITH_NO_INGREDIENTS","The sandwich that has received contains no ingredients");
     }
     else {
         if hasDuplicates(san.ingredients_id) == true{
-            return <model:ValidationError>{
-                body: {
-                    'error: {
-                    code: "INGREDIENTS_DUPLICATED",
-                    message: "One of the ingredients insert into the list is duplicated"
-                    }
-                }
-               
-            };
+            return validationError("INGREDIENTS_DUPLICATED","One of the ingredients insert into the list is duplicated");
         }
         foreach int n in san.ingredients_id {
             boolean|error flag = findIngredientByIdFromRest(n);
             if flag == false{
-                return <model:NotFoundError>{
-                    body: {
-                        'error: {
-                        code: "INGREDIENT_NOT_FOUND",
-                        message: "One of the ingredients insert into the list doesn´t exists"
-                        }
-                    }
-               
-                };
+                return notFound("INGREDIENT_NOT_FOUND","One of the ingredients insert into the list doesn´t exists");
             }
         }
     }
     if san.descriptions.length() == 0{
-        return <model:ValidationError>{
-            body: {
-                'error: {
-                    code: "SANDWICH_WITH_NO_DESCRIPTIONS",
-                    message: "The sandwich that has received contains no descriptions"
-                }
-            }
-               
-        };
+        return validationError("SANDWICH_WITH_NO_DESCRIPTIONS","The sandwich that has received contains no descriptions");
     }
 
     int|model:NotFoundError|error lastIdInserted = addSandwichToDB(san.selling_price,san.designation);
@@ -109,36 +77,15 @@ public isolated function addSandwich(model:SandwichDTO san) returns error|model:
 public isolated function getSandwichById(int id) returns model:Sandwich|error|model:NotFoundError{
     model:SandwichInfo|error info = findSandwichByIdFromDB(id);
     if info is error{
-           return <model:NotFoundError>{
-               body: {
-                   'error: {
-                       code: "SANDWICH_NOT_FOUND",
-                       message: "The searched sandwich has not founded"
-                   }
-               }
-           };
+           return notFound("SANDWICH_NOT_FOUND","The searched sandwich has not founded");
     } 
     int[]|error array = findSandwichIngredientsByIdFromDB(id);
     if array is error{
-        return <model:NotFoundError>{
-            body: {
-                'error: {
-                    code: "QUERY_ERROR",
-                    message: "To the given id no ingredients were found"
-                }
-            }
-        };
+        return notFound("QUERY_ERROR","To the given id no ingredients were found");
     }
     model:Description[]|error descriptions = findSandwichDescriptionsByIdFromDB(id);
     if descriptions is error{
-        return <model:NotFoundError>{
-            body: {
-                'error: {
-                    code: "QUERY_ERROR",
-                    message: "To the given id no descritpions were found"
-                }
-            }
-        };
+        return notFound("QUERY_ERROR","To the given id no descritpions were found");
     }
     
     model:Sandwich sandwich = {
@@ -156,14 +103,7 @@ public isolated function getAllSandwiches() returns model:Sandwich[]|error?|mode
     model:Sandwich[] sandwiches = [];
     int[]|error array = findSandwichByIdsFromDB();
     if array is error{
-        return <model:NotFoundError>{
-            body: {
-                'error: {
-                    code: "SANDWICHES_NOT_FOUND",
-                    message: "No sandwiches were found"
-                }
-            }
-        };
+        return notFound("SANDWICHES_NOT_FOUND","No sandwiches were found");
     }
     foreach int n in array {
         model:Sandwich?|error|model:NotFoundError sand = getSandwichById(n);
@@ -179,15 +119,7 @@ public isolated function addSandwichToDB(float selling_price, string designation
         return lastInsertId;
     }
     else {
-        return <model:NotFoundError>{
-            body: {
-                'error: {
-                    code: "INGREDIENT_ID_NOT_FOUND",
-                    message: "The searched ingredient has not founded"
-                }
-            }
-               
-        };
+        return notFound("INGREDIENT_ID_NOT_FOUND","The searched ingredient has not founded");
     }
 
 }
@@ -273,52 +205,21 @@ public isolated function addIngredients(model:Ns ns, int id) returns model:Sandw
 
     boolean flag = checkSandwichId(id);
     if flag == false{
-        return <model:NotFoundError>{
-            body: {
-                'error: {
-                    code: "SANDWICH_ID_NOT_FOUND",
-                    message: "The searched sandwich has not founded"
-                }
-            }
-               
-        };
+        return notFound("SANDWICH_ID_NOT_FOUND","The searched sandwich has not founded");
     }
     int[]|error found = findSandwichIngredientsByIdFromDB(id);
     if found is error{
-        return <model:NotFoundError>{
-            body: {
-                'error: {
-                    code: "QUERY_ERROR",
-                    message: "To the given id no ingredients were found"
-                }
-            }
-        };
+        return notFound("QUERY_ERROR","To the given id no ingredients were found");
     }
     int[] array = ns.ingredients_id;
     boolean aux = checkArrayReceivedAndFound(array,found);
     if aux == false{
-        return <model:ValidationError>{
-            body: {
-                'error: {
-                    code: "INGREDIENTS_DUPLICATED",
-                    message: "The ingredients received were duplicated"
-                }
-            }
-               
-        };
+        return validationError("INGREDIENTS_DUPLICATED","The ingredients received were duplicated");
     }
     foreach int n in array {
         boolean|error b = findIngredientByIdFromRest(n);
         if b == false{
-            return <model:NotFoundError>{
-                body: {
-                    'error: {
-                    code: "INGREDIENT_NOT_FOUND",
-                    message: "One of the ingredients insert into the list doesn´t exists"
-                    }
-                }
-               
-            };
+            return notFound("INGREDIENT_NOT_FOUND","One of the ingredients insert into the list doesn´t exists");
         }
     }
     foreach int n in array {
@@ -362,38 +263,15 @@ public isolated function checkArrayReceivedAndFound (int[] received, int[] found
 public isolated function addDescriptions(model:Descriptions des, int id) returns model:Sandwich|error|model:NotFoundError|model:ValidationError{
     boolean flag = checkSandwichId(id);
     if flag == false{
-        return <model:NotFoundError>{
-            body: {
-                'error: {
-                    code: "SANDWICH_ID_NOT_FOUND",
-                    message: "The searched sandwich has not founded"
-                }
-            }
-               
-        };
+        return notFound("SANDWICH_ID_NOT_FOUND","The searched sandwich has not founded");
     }
     model:Description[]|error found = findSandwichDescriptionsByIdFromDB(id);
     if found is error{
-        return <model:NotFoundError>{
-            body: {
-                'error: {
-                    code: "QUERY_ERROR",
-                    message: "To the given id no descriptions were found"
-                }
-            }
-        };
+        return notFound("QUERY_ERROR","To the given id no descriptions were found");
     }
     boolean aux = checkDescriptionsDuplicated(found,des);
     if aux == false{
-        return <model:ValidationError>{
-            body: {
-                'error: {
-                    code: "DESCRIPTIONS_DUPLICATED",
-                    message: "The description received were duplicated"
-                }
-            }
-               
-        };
+        return validationError("DESCRIPTIONS_DUPLICATED","The description received were duplicated");
     }
     foreach model:Description de in des.descriptions {
         sql:ExecutionResult _ = check dbClient->execute(`INSERT INTO sandwich_descriptions (sandwich_id , text, language) VALUES (${id}, ${de.text}, ${de.language})`);
@@ -427,28 +305,12 @@ public isolated function getWithoutId(int id) returns model:Sandwich[]|model:Not
     model:Sandwich[] sandwiches = [];
     boolean|error b = findIngredientByIdFromRest(id);
     if b == false{
-        return <model:NotFoundError>{                
-            body: {
-                'error: {
-                code: "INGREDIENT_NOT_FOUND",
-                message: "The ingredient doesn´t exist"                    
-                }
-            }
-               
-        };
+        return notFound("INGREDIENT_NOT_FOUND","The ingredient doesn´t exist");
     }
 
     int[]|error array = getSandwichesWithoutIngredientId(id);
     if array is error{
-        return <model:NotFoundError>{                
-            body: {
-                'error: {
-                code: "INGREDIENT_NOT_FOUND",
-                message: "The ingredient doesn´t exist"                    
-                }
-            }
-               
-        };
+        return notFound("INGREDIENT_NOT_FOUND","The ingredient doesn´t exist");
     }
 
     foreach int n in array{
@@ -477,3 +339,27 @@ public isolated function getSandwichesWithoutIngredientId(int id) returns int[]|
     return arrayInt;
 }
 
+
+public isolated function notFound(string codeMessage,string messageError) returns model:NotFoundError{
+    return <model:NotFoundError>{
+            body: {
+                'error: {
+                    code: codeMessage,
+                    message: messageError
+                }
+            }
+               
+    };
+}
+
+public isolated function validationError(string codeMessage,string messageError) returns model:ValidationError{
+    return <model:ValidationError>{
+            body: {
+                'error: {
+                    code: codeMessage,
+                    message: messageError
+                }
+            }
+               
+    };
+}
