@@ -26,15 +26,7 @@ function init() returns error? {
 public isolated function addIngredient(model:IngredientDTO ing) returns error|model:ValidationError|model:Ingredient?|error|model:NotFoundError|model:NotFoundError{
     model:Ingredient|error verification = checkIngredient(ing.designation);
     if verification is model:Ingredient{
-        return <model:ValidationError>{
-            body: {
-                'error: {
-                    code: "INGREDIENT_ALREADY_EXISTS",
-                    message: "The ingredient has already created"
-                }
-            }
-               
-        };
+        return validationError("INGREDIENT_ALREADY_EXISTS","The ingredient has already created");
     }
     sql:ExecutionResult result = check dbClient->execute(`
     INSERT INTO Ingredients (designation)
@@ -43,29 +35,14 @@ public isolated function addIngredient(model:IngredientDTO ing) returns error|mo
     if lastInsertId is int {
         return getIngredientById(lastInsertId);
     } else {
-        return <model:NotFoundError>{
-            body: {
-                'error: {
-                    code: "INGREDIENT_ID_NOT_FOUND",
-                    message: "The searched ingredient has not founded"
-                }
-            }
-               
-        };
+        return notFound("INGREDIENT_ID_NOT_FOUND","The searched ingredient has not founded");
     }
 }
 
 public isolated function getIngredientById(int id) returns model:Ingredient?|error|model:NotFoundError{
     model:Ingredient|error ing = getIngredientByIdFromDB(id);
     if ing is error{
-           return <model:NotFoundError>{
-               body: {
-                   'error: {
-                       code: "INGREDIENT_NOT_FOUND",
-                       message: "The searched ingredient has not founded"
-                   }
-               }
-           };
+           return notFound("INGREDIENT_NOT_FOUND","The searched ingredient has not founded");
     }
     else {
         return ing;
@@ -75,14 +52,7 @@ public isolated function getIngredientById(int id) returns model:Ingredient?|err
 public isolated function getIngredientByDesignation(string designation) returns model:Ingredient?|error|model:NotFoundError{
     model:Ingredient|error ing = getIngredientByDesignationFromDB(designation);
     if ing is error{
-           return <model:NotFoundError>{
-               body: {
-                   'error: {
-                       code: "INGREDIENT_NOT_FOUND",
-                       message: "The searched ingredient has not founded"
-                   }
-               }
-           };
+           return notFound("INGREDIENT_NOT_FOUND","The searched ingredient has not founded");
     }
     else {
         return ing;
@@ -100,14 +70,7 @@ public isolated function getAllIngredients() returns model:Ingredient[]|error?|m
         };
     check resultStream.close();
     if ingredients.length() == 0{
-        return <model:NotFoundError>{
-            body: {
-                'error: {
-                    code: "INGREDIENTS_NOT_FOUND",
-                    message: "The searched ingredients has not founded"
-                }
-            }
-        };
+        return notFound("INGREDIENTS_NOT_FOUND","The searched ingredients has not founded");
     }
 
     return ingredients;
@@ -132,4 +95,28 @@ public isolated function getIngredientByDesignationFromDB(string designation) re
         `SELECT * FROM Ingredients WHERE designation = ${designation}`
     );
     return ing;
+}
+
+public isolated function notFound(string codeMessage,string messageError) returns model:NotFoundError{
+    return <model:NotFoundError>{
+            body: {
+                'error: {
+                    code: codeMessage,
+                    message: messageError
+                }
+            }
+               
+    };
+}
+
+public isolated function validationError(string codeMessage,string messageError) returns model:ValidationError{
+    return <model:ValidationError>{
+            body: {
+                'error: {
+                    code: codeMessage,
+                    message: messageError
+                }
+            }
+               
+    };
 }
