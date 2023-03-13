@@ -11,13 +11,13 @@ service /users on new http:Listener(8082) {
         return repository:getUserById(id);
     }
 
-    //isolated resource function get searchByEmail(string email) returns model:User?|error|model:NotFoundError {
-    //    return repository:getUserByEmail(id);
-    //}
+    isolated resource function get searchByEmail(string email) returns model:User?|error|model:NotFoundError {
+        return repository:getUserByEmail(email);
+    }
 //
-    //isolated resource function get searchByTaxIdentificationNumber(int id) returns model:User?|error|model:NotFoundError {
-    //    return repository:getUserByTaxIdentificationNumber(id);
-    //}
+    isolated resource function get searchByTaxIdentificationNumber(string tax) returns model:User?|error|model:NotFoundError {
+        return repository:getUserByTaxIdentificationNumber(tax);
+    }
 //
     //isolated resource function get autenticationData(int id) returns model:AuthenticationData?|error|model:NotFoundError {
     //    return repository:getautenticationDataFromUser(id);

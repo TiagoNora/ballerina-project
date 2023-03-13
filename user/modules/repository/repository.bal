@@ -42,6 +42,15 @@ public isolated function addUser(model:UserDTO user) returns model:User?|error|m
     if user.taxIdentificationNumber.length() != 9{
         return validationError("INVALID_TAX_IDENTIFICATION_NUMBER","The introduzed tax identification number is not valid");
     }
+
+    model:User|model:NotFoundError r1 = getUserByEmail(user.email);
+    if r1 is model:User{
+        return validationError("EMAIL_ALREADY_REGISTRED","The introduzed email is not valid");
+    }
+    model:User|model:NotFoundError r2 = getUserByTaxIdentificationNumber(user.taxIdentificationNumber);
+    if r2 is model:User{
+        return validationError("TAX_IDENTIFICATION_NUMBER_ALREADY_REGISTRED","The introduzed tax identification number is not valid");
+    }
     int|model:NotFoundError|error lastIdInserted = addUserToDB(user);
     int n=0;
     if lastIdInserted is int{
@@ -88,6 +97,46 @@ public isolated function getUserById(int id) returns model:User|model:NotFoundEr
     return u;
 }
 
+public isolated function getUserByEmail(string mail) returns model:User|model:NotFoundError{
+    model:User|error r = getUserByEmailFromDB(mail);
+    if r is error{
+        return notFound("QUERY_ERROR","To the given email no users were found");
+    }
+    string[]|error array = findUserPermsByIdFromDB(r.user_id);
+    if array is error{
+        return notFound("QUERY_ERROR","To the given id no perms were found");
+    }
+    model:User u = {
+        user_id: r.user_id,
+        name:r.name,
+        taxIdentificationNumber: r.taxIdentificationNumber,
+        address: r.address,
+        email: r.email,
+        permissions: array
+    };
+    return u;
+}
+
+public isolated function getUserByTaxIdentificationNumber(string tax) returns model:User|model:NotFoundError{
+    model:User|error r = getUserByTaxIdentFromDB(tax);
+    if r is error{
+        return notFound("QUERY_ERROR","To the given tax identification number no users were found");
+    }
+    string[]|error array = findUserPermsByIdFromDB(r.user_id);
+    if array is error{
+        return notFound("QUERY_ERROR","To the given id no perms were found");
+    }
+    model:User u = {
+        user_id: r.user_id,
+        name:r.name,
+        taxIdentificationNumber: r.taxIdentificationNumber,
+        address: r.address,
+        email: r.email,
+        permissions: array
+    };
+    return u;
+}
+
 public isolated function checkUserById(int id) returns boolean{
     model:User|error ing = getUserByIdFromDB(id);
     if ing is error{
@@ -101,6 +150,20 @@ public isolated function checkUserById(int id) returns boolean{
 public isolated function getUserByIdFromDB(int id) returns model:User|error{
     model:User|error ing = check dbClient->queryRow(
         `SELECT * FROM users WHERE user_id = ${id}`
+    );
+    return ing;
+}
+
+public isolated function getUserByEmailFromDB(string mail) returns model:User|error{
+    model:User|error ing = check dbClient->queryRow(
+        `SELECT * FROM users WHERE email = ${mail}`
+    );
+    return ing;
+}
+
+public isolated function getUserByTaxIdentFromDB(string tax) returns model:User|error{
+    model:User|error ing = check dbClient->queryRow(
+        `SELECT * FROM users WHERE taxIdentificationNumber = ${tax}`
     );
     return ing;
 }

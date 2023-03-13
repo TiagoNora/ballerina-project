@@ -88,8 +88,8 @@ You should change the spaces that contains the keyword **secret** with your cred
 
 - [x]  US11: Add customer
 - [x]  US12: Get customer by id
-- []  US13: Get customer by email
-- []  US14: Get customer by tax identification number
+- [x]  US13: Get customer by email
+- [x]  US14: Get customer by tax identification number
 - []  US15: Get customer authentication data
 - []  US16: Add permissions to user
 
