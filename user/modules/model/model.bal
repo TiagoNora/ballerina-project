@@ -20,21 +20,25 @@ public type NotFoundError record {|
 
 public type UserDTO record {
     string name;
-    string taxIdentificationNumer;
+    string password;
+    string taxIdentificationNumber;
     string address;
     string email;
-    AuthenticationData[] permissions;
 };
 
 public type User record {
-    int id;
+    int user_id;
     string name;
-    string taxIdentificationNumer;
+    string taxIdentificationNumber;
     string address;
     string email;
-    AuthenticationData[] permissions;
+    string[] permissions;
+};
+public type N record {
+    string perm;
 };
 
-public type AuthenticationData record {
-    string perm;
+public type Login record {
+   string email;
+   string password;
 };
