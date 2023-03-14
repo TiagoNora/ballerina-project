@@ -51,12 +51,12 @@ You should change the spaces that contains the keyword **secret** with your cred
     
 ## User Cases
 
-[User Cases]()
+[User Cases](https://github.com/TiagoNora/ballerina-project/blob/1464445bb0ee4a552aed878bb9cdfd032406d621/docs/UserCases.md)
 
 
 ## Calendar
 
-[Calendar]()
+[Calendar](https://github.com/TiagoNora/ballerina-project/blob/1464445bb0ee4a552aed878bb9cdfd032406d621/docs/Calendar.md)
 
 
 ## API Documentation
