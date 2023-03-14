@@ -147,6 +147,24 @@ public isolated function checkUserById(int id) returns boolean{
     }
 }
 
+public isolated function checkUserPermById(int id) returns boolean{
+    string|error ing = getPermFromDB(id);
+    if ing is error{
+           return false;
+    }
+    else {
+        return true;
+    }
+}
+
+public isolated function getPermFromDB(int id) returns string|error{
+    string perm = "ADMIN";
+    string|error ing = check dbClient->queryRow(
+        `SELECT perm FROM users_perms WHERE perm = ${perm} and user_id = ${id}`
+    );
+    return ing;
+}
+
 public isolated function getUserByIdFromDB(int id) returns model:User|error{
     model:User|error ing = check dbClient->queryRow(
         `SELECT * FROM users WHERE user_id = ${id}`
@@ -202,7 +220,7 @@ public isolated function getAllUsers() returns model:User[]|error?|model:NotFoun
     model:User[] users = [];
     int[]|error array = findUsersByIdsFromDB();
     if array is error{
-        return notFound("users_NOT_FOUND","No users were found");
+        return notFound("USERS_NOT_FOUND","No users were found");
     }
     foreach int n in array {
         model:User?|error|model:NotFoundError sand = getUserById(n);
@@ -226,6 +244,25 @@ public isolated function findUsersByIdsFromDB() returns int[]|error{
     }
     return array;
 }
+
+public isolated function addPermissionToUser(int id) returns model:User|model:NotFoundError|error|model:ValidationError{
+    boolean flag = checkUserById(id);
+    boolean flag1 = checkUserPermById(id);
+    string perm = "ADMIN";
+    if flag == false{
+        return notFound("USER_ID_NOT_FOUND","The searched user has not founded");
+    }
+    if flag1 == true{
+        return validationError("DUPLICATED_PERM","The user already have that permission");
+    }
+    sql:ExecutionResult _ = check dbClient->execute(`INSERT INTO users_perms (user_id, perm) VALUES (${id}, ${perm})`);
+    model:User|model:NotFoundError r = getUserById(id);
+    return r;
+
+
+}
+
+
 
 public isolated function notFound(string codeMessage,string messageError) returns model:NotFoundError{
     return <model:NotFoundError>{

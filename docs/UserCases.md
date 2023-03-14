@@ -41,5 +41,5 @@
 - [x]  US14: Get customer by tax identification number
 - [x]  US15: Get customer authentication data
 - [x]  US16: Get all customers
-- [ ]  US17: Add permissions to user
+- [x]  US17: Add permissions to user
 - [ ]  US18: Generate JWT

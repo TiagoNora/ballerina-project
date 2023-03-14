@@ -27,9 +27,9 @@ service /users on new http:Listener(8082) {
         return repository:getAllUsers();
     }
 
-    //isolated resource function post permissions(@http:Payload model:UserDTO sand, int id) returns error|model:ValidationError|model:User?|model:NotFoundError{
-    //    return repository:addPermissionToUser(sand);
-    //}
+    isolated resource function post permissions(int id) returns error|model:ValidationError|model:User?|model:NotFoundError{
+        return repository:addPermissionToUser(id);
+    }
     
 
 }
