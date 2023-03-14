@@ -61,7 +61,7 @@ You should change the spaces that contains the keyword **secret** with your cred
 
 ## API Documentation
 
-[API Documentation](https://github.com/TiagoNora/ballerina-project/blob/fe611e643f987d1098c92e0ae58d614024d34fab/docs/apiDocumentation.md)
+[API Documentation](https://github.com/TiagoNora/ballerina-project/blob/aadb3b63f9472f75f8c05a05dd9c3e92a8716e4a/docs/ApiDocumentation.md)
 
 ## License
 
