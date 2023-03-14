@@ -67,22 +67,22 @@ You should change the spaces that contains the keyword **secret** with your cred
 
 ### Review management
 
-- [] US17: Add review of a ordered sandwich
-- [] US18: Vote in a review
-- [] US19: List all reviews
+- [] US18: Add review of a ordered sandwich
+- [] US19: Vote in a review
+- [] US20: List all reviews
 
 ### Shop management
 
-- [] US20: Create shop
-- [] US21: List all shops
-- [] US22: List shop by id
-- [] US23: List shop by designation
-- [] US24: List shop by address
+- [] US21: Create shop
+- [] US22: List all shops
+- [] US23: List shop by id
+- [] US24: List shop by designation
+- [] US25: List shop by address
 
 ### Order management
 
-- [] US25: Create order
-- [] US26: List orders in a shop
+- [] US26: Create order
+- [] US27: List orders in a shop
 
 ### Customer management
 
@@ -92,6 +92,7 @@ You should change the spaces that contains the keyword **secret** with your cred
 - [x]  US14: Get customer by tax identification number
 - []  US15: Get customer authentication data
 - []  US16: Add permissions to user
+- []  US17: Generate JWT
 
 
 ## Calendar
@@ -104,7 +105,7 @@ You should change the spaces that contains the keyword **secret** with your cred
 |   |                       | WRITING THE STATE OF THE ART TO INCLUDE IN THE REPORT (DIFERENTS ARCHITECTURES)| DONE :white_check_mark:   | 
 | 3 | 08/03/2023-15/03/2023 | ALTER US05 TO BE ABLE MAKE A REQUEST TO A SERVICE TO VERIFY THE LANGUAGE OF THE TEXT|  IN PROGRESS :construction: |
 |   |                       | WRITING ABOUT TECHNOLOGIES TO INCLUDE IN THE REPORT |  IN PROGRESS :construction: |
-|   |                       | US01-US10             | IN PROGRESS :construction:  |
+|   |                       | US11-US17             | IN PROGRESS :construction:  |
 
 
 ## API Documentation
