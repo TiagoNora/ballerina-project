@@ -81,8 +81,8 @@ You should change the spaces that contains the keyword **secret** with your cred
 
 ### Order management
 
-- [] US27: Create order
-- [] US28: List orders in a shop
+- [ ] US27: Create order
+- [ ] US28: List orders in a shop
 
 ### Customer management
 
