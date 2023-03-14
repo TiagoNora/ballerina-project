@@ -14,19 +14,19 @@ service /users on new http:Listener(8082) {
     isolated resource function get searchByEmail(string email) returns model:User?|error|model:NotFoundError {
         return repository:getUserByEmail(email);
     }
-//
+
     isolated resource function get searchByTaxIdentificationNumber(string tax) returns model:User?|error|model:NotFoundError {
         return repository:getUserByTaxIdentificationNumber(tax);
     }
-//
-    //isolated resource function get autenticationData(int id) returns model:AuthenticationData?|error|model:NotFoundError {
-    //    return repository:getautenticationDataFromUser(id);
-    //}
-    //
-    //isolated resource function get .() returns model:User[]|error?|model:NotFoundError {
-    //    return repository:getAllUsers();
-    //}
-//
+
+    isolated resource function get autenticationData(int id) returns model:Roles?|error|model:NotFoundError {
+        return repository:getAutenticationDataFromUser(id);
+    }
+
+    isolated resource function get .() returns model:User[]|error?|model:NotFoundError {
+        return repository:getAllUsers();
+    }
+
     //isolated resource function post permissions(@http:Payload model:UserDTO sand, int id) returns error|model:ValidationError|model:User?|model:NotFoundError{
     //    return repository:addPermissionToUser(sand);
     //}

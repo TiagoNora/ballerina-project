@@ -78,7 +78,7 @@ public isolated function addUserToDB(model:UserDTO user) returns int|model:NotFo
 }
 
 public isolated function getUserById(int id) returns model:User|model:NotFoundError{
-        model:User|error r = getUserByIdFromDB(id);
+    model:User|error r = getUserByIdFromDB(id);
     if r is error{
         return notFound("QUERY_ERROR","To the given id no useres were found");
     }
@@ -183,7 +183,49 @@ public isolated function findUserPermsByIdFromDB(int id) returns string[]|error{
     return arrayString;
 }
 
+public isolated function getAutenticationDataFromUser(int id) returns model:Roles?|error|model:NotFoundError{
+    model:User|error r = getUserByIdFromDB(id);
+    if r is error{
+        return notFound("QUERY_ERROR","To the given id no useres were found");
+    }
+    string[]|error array = findUserPermsByIdFromDB(id);
+    if array is error{
+        return notFound("QUERY_ERROR","To the given id no perms were found");
+    }
+    model:Roles roles = {
+        perms: array
+    };
+    return roles;
+}
 
+public isolated function getAllUsers() returns model:User[]|error?|model:NotFoundError{
+    model:User[] users = [];
+    int[]|error array = findUsersByIdsFromDB();
+    if array is error{
+        return notFound("users_NOT_FOUND","No users were found");
+    }
+    foreach int n in array {
+        model:User?|error|model:NotFoundError sand = getUserById(n);
+        users.push(<model:User>check sand);
+    }
+    return users;
+}
+
+public isolated function findUsersByIdsFromDB() returns int[]|error{
+    model:User[] infos = [];
+    int[] array = [];
+    stream<model:User, sql:Error?> resultStream = dbClient->query(`SELECT * from users`);
+    check from model:User info in resultStream
+        do {
+            infos.push(info);
+        };
+    check resultStream.close();
+    foreach model:User n in infos {
+        array.push(n.user_id);
+        
+    }
+    return array;
+}
 
 public isolated function notFound(string codeMessage,string messageError) returns model:NotFoundError{
     return <model:NotFoundError>{

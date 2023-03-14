@@ -42,3 +42,7 @@ public type Login record {
    string email;
    string password;
 };
+
+public type Roles record {
+   string[] perms;
+};

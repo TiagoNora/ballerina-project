@@ -67,22 +67,22 @@ You should change the spaces that contains the keyword **secret** with your cred
 
 ### Review management
 
-- [] US18: Add review of a ordered sandwich
-- [] US19: Vote in a review
-- [] US20: List all reviews
+- [ ] US19: Add review of a ordered sandwich
+- [ ] US20: Vote in a review
+- [ ] US21: List all reviews
 
 ### Shop management
 
-- [] US21: Create shop
-- [] US22: List all shops
-- [] US23: List shop by id
-- [] US24: List shop by designation
-- [] US25: List shop by address
+- [ ] US22: Create shop
+- [ ] US23: List all shops
+- [ ] US24: List shop by id
+- [ ] US25: List shop by designation
+- [ ] US26: List shop by address
 
 ### Order management
 
-- [] US26: Create order
-- [] US27: List orders in a shop
+- [] US27: Create order
+- [] US28: List orders in a shop
 
 ### Customer management
 
@@ -90,9 +90,10 @@ You should change the spaces that contains the keyword **secret** with your cred
 - [x]  US12: Get customer by id
 - [x]  US13: Get customer by email
 - [x]  US14: Get customer by tax identification number
-- []  US15: Get customer authentication data
-- []  US16: Add permissions to user
-- []  US17: Generate JWT
+- [x]  US15: Get customer authentication data
+- [x]  US16: Get all customers
+- [ ]  US17: Add permissions to user
+- [ ]  US18: Generate JWT
 
 
 ## Calendar
