@@ -41,11 +41,11 @@ bal version or bal
 > :warning: **Documentation of Ballerina**: [LINK](https://ballerina.io/learn/)
 
 # Open-Source tools and technologies used
-- Ballerina (Programming Language)
-- Podman (Container manager)
-- Mysql (Database)
-- Insomnia (API Client)
-- JMeter (Load test tool)
+- [Ballerina (Programming Language)](https://ballerina.io/)
+- [Podman (Container manager)](https://podman.io/)
+- [Mysql (Database)](https://www.mysql.com/)
+- [Insomnia (API Client)](https://insomnia.rest/)
+- [JMeter (Load test tool)](https://jmeter.apache.org/)
 
 ## Open and run
 1. Open project
