@@ -10,6 +10,13 @@ Welcome to my GitHub project! This project is being developed under the curricul
 - Create the container with the mysql image
 - Create a user with all the permissions
 
+You can enter your container  with the following code:
+
+```
+podman exec -it <container-name> bin/bash
+mysql -u root -p
+```
+
 2. Ballerina
 - Install Ballerina 2201.0.0 (Swan Lake) or greater, the link can be found [here](https://ballerina.io/learn/install-ballerina/set-up-ballerina/)
 - Install a text editor like [Visual Studio Code](https://code.visualstudio.com/)
