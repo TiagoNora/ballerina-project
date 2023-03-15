@@ -38,7 +38,7 @@ You can check if the installation of Ballerina was successful with the following
 ```
 bal version or bal
 ```
-> :warning: **Documentation**: [LINK](https://ballerina.io/learn/)
+> :warning: **Documentation of Ballerina**: [LINK](https://ballerina.io/learn/)
 
 # Open-Source tools and technologies used
 - Ballerina (Programming Language)
