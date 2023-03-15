@@ -30,6 +30,11 @@ service /users on new http:Listener(8082) {
     isolated resource function post permissions(int id) returns error|model:ValidationError|model:User?|model:NotFoundError{
         return repository:addPermissionToUser(id);
     }
+
+    isolated resource function post jwt(@http:Payload model:Login login) returns model:NotFoundError|string{
+        return repository:jwt(login);
+    }
+
     
 
 }

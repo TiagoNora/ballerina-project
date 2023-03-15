@@ -42,4 +42,4 @@
 - [x]  US15: Get customer authentication data
 - [x]  US16: Get all customers
 - [x]  US17: Add permissions to user
-- [ ]  US18: Generate JWT
+- [x]  US18: Generate JWT

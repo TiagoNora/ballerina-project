@@ -3,6 +3,7 @@ import ballerinax/mysql.driver as _;
 import ballerina/sql;
 import user.model;
 import ballerina/regex;
+import ballerina/jwt;
 
 configurable string USER = ?;
 configurable string PASSWORD = ?;
@@ -147,6 +148,23 @@ public isolated function checkUserById(int id) returns boolean{
     }
 }
 
+public isolated function checkUserDetails(model:Login login) returns boolean{
+    model:User|error ing = getUserDetailsFromDB(login);
+    if ing is error{
+           return false;
+    }
+    else {
+        return true;
+    }
+}
+
+public isolated function getUserDetailsFromDB(model:Login login) returns model:User|error{
+    model:User|error ing = check dbClient->queryRow(
+        `SELECT * FROM users WHERE email = ${login.email} and password = ${login.password}`
+    );
+    return ing;
+}
+
 public isolated function checkUserPermById(int id) returns boolean{
     string|error ing = getPermFromDB(id);
     if ing is error{
@@ -262,6 +280,36 @@ public isolated function addPermissionToUser(int id) returns model:User|model:No
 
 }
 
+public isolated function jwt(model:Login login) returns model:NotFoundError|string{
+    boolean flag = checkUserDetails(login);
+        if flag == false{
+        return notFound("USER_NOT_FOUND","The user has not founded");
+    }
+    model:User|error r = getUserByEmailFromDB(login.email);
+    if r is error{
+        return notFound("QUERY_ERROR","To the given email no users were found");
+    }
+    string[]|error array = findUserPermsByIdFromDB(r.user_id);
+    if array is error{
+        return notFound("QUERY_ERROR","To the given id no perms were found");
+    }
+    json userDetails = {"id": r.user_id,"roles":array};
+    jwt:IssuerConfig issuerConfig = {
+        customClaims: <map<json>> userDetails,
+        issuer: "userApplication",
+        expTime: 3600,
+        signatureConfig: {
+            config: {
+                keyFile: "../perms/private.key"
+            }
+        }
+    };
+    string|error jwt = jwt:issue(issuerConfig);
+    if jwt is error{
+        return notFound("JWT_ERROR","Error when creating jwt");
+    }
+    return jwt;
+}
 
 
 public isolated function notFound(string codeMessage,string messageError) returns model:NotFoundError{
