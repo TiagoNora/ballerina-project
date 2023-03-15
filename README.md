@@ -16,13 +16,13 @@ podman run --name my-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=mypassword -d mys
 
 - Create a user with all the permissions
 
-You can enter your container and create the user with the following code:
+You can enter your container with the following code:
 
 ```
 podman exec -it <container-name> bin/bash
 mysql -u root -p
 ```
-Insert your password
+Insert your password and to create the user insert this code:
 ```
 CREATE USER ‘myUser’@’%’ IDENTIFIED BY ‘myPassword’; 
 GRANT ALL PRIVILEGES ON *.* TO 'myUser'@'%';
