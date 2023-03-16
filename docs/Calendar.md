@@ -8,4 +8,4 @@
 |   |                       | WRITING THE STATE OF THE ART TO INCLUDE IN THE REPORT (DIFERENTS ARCHITECTURES)| DONE :white_check_mark:   | 
 | 3 | 08/03/2023-15/03/2023 | ALTER US05 TO BE ABLE MAKE A REQUEST TO A SERVICE TO VERIFY THE LANGUAGE OF THE TEXT|  IN PROGRESS :construction: |
 |   |                       | WRITING ABOUT TECHNOLOGIES TO INCLUDE IN THE REPORT |  IN PROGRESS :construction: |
-|   |                       | US11-US17             | IN PROGRESS :construction:  |
+|   |                       | US11-US18             | DONE :white_check_mark:  |
