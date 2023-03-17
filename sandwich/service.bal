@@ -3,7 +3,7 @@ import sandwich.model;
 import sandwich.repository;
 service /sandwiches on new http:Listener(8081) {
 
-    isolated resource function post .(@http:Payload model:SandwichDTO sand) returns error|model:ValidationError|model:Sandwich?|model:NotFoundError{
+    isolated resource function post .(@http:Payload model:SandwichDTO sand) returns model:ServiceError|model:Sandwich|error|model:NotFoundError|model:ValidationError{
         return repository:addSandwich(sand);
     }
     
@@ -19,7 +19,7 @@ service /sandwiches on new http:Listener(8081) {
         return repository:addIngredients(ns,id);
     }
 
-    isolated resource function post descriptions(@http:Payload model:Descriptions des,int id) returns model:Sandwich|error|model:NotFoundError|model:ValidationError{
+    isolated resource function post descriptions(@http:Payload model:DescriptionsDTO des,int id) returns model:ServiceError|model:Sandwich|error|model:NotFoundError|model:ValidationError{
         return repository:addDescriptions(des,id);
     }
 

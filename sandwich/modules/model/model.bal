@@ -17,13 +17,18 @@ public type SandwichDTO record {
     string designation;
     float selling_price;
     int[] ingredients_id;
-    Description[] descriptions;
+    DescriptionDTO[] descriptions;
 };
 
 public type Description record {
     string text;
     string language;
 };
+
+public type DescriptionDTO record {
+    string text;
+};
+
 
 public type Error record {|
    string code;
@@ -44,6 +49,12 @@ public type NotFoundError record {|
    ErrorResponse body;
 |};
 
+public type ServiceError record {|
+   *http:ServiceUnavailable;
+   ErrorResponse body;
+|};
+
+
 public type N record {
     int ingredient_id;
 };
@@ -54,6 +65,10 @@ public type Ns record {
 
 public type Descriptions record {
     Description[] descriptions;
+};
+
+public type DescriptionsDTO record {
+    DescriptionDTO[] descriptions;
 };
 
 public type NQuery record {

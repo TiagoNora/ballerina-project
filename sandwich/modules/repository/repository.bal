@@ -10,12 +10,13 @@ configurable string HOST = ?;
 configurable int PORT = ?;
 
 final mysql:Client dbClient;
+final http:Client language;
 
 function init() returns error? {
     mysql:Client dbClientCreate = check new(host=HOST, user=USER, password=PASSWORD, port=PORT);
     sql:ExecutionResult _ = check dbClientCreate->execute(`CREATE DATABASE IF NOT EXISTS Sandwich`);
     check dbClientCreate.close();
-
+    language = check new (url = "http://localhost:5000");
     dbClient = check new(host=HOST, user=USER, password=PASSWORD, port=PORT, database="Sandwich"); 
     sql:ExecutionResult _ = check dbClient->execute(`CREATE TABLE IF NOT EXISTS Sandwich.sandwiches (
                                                     sandwich_id INT NOT NULL AUTO_INCREMENT, 
@@ -38,8 +39,8 @@ function init() returns error? {
                                                     )`);                                    
 }
 
-public isolated function addSandwich(model:SandwichDTO san) returns error|model:ValidationError|model:Sandwich?|error|model:NotFoundError{
-    if san.ingredients_id.length() == 0{
+public isolated function addSandwich(model:SandwichDTO san) returns model:ServiceError|model:Sandwich|error|model:NotFoundError|model:ValidationError|model:NotFoundError{
+    if san.ingredients_id.length() < 3{
         return validationError("SANDWICH_WITH_NO_INGREDIENTS","The sandwich that has received contains no ingredients");
     }
     else {
@@ -54,7 +55,31 @@ public isolated function addSandwich(model:SandwichDTO san) returns error|model:
         }
     }
     if san.descriptions.length() == 0{
-        return validationError("SANDWICH_WITH_NO_DESCRIPTIONS","The sandwich that has received contains no descriptions");
+        return validationError("SANDWICH_WITH_NO_DESCRIPTIONS","The sandwich that has been received contains no descriptions");
+    }
+    json a = san.descriptions.toJson();
+    json|error postResponse = language->post(path = "/language", message = a);
+    if postResponse is error{
+        return serviceError("SERVICE_ERROR","SERVICE ERROR");
+    }
+    json|error received = postResponse.languages;
+    if received is error{
+        return notFound("LANGUAGE_NOT_FOUND","The language inserted into the list doesn´t exists");
+    }
+    json[] c  = check postResponse.languages.ensureType();
+    string[] languages = [];
+    foreach var item in c{
+        languages.push(item.toString());
+    }
+    model:Description[] descriptions = [];
+    int i = 0;
+    foreach model:DescriptionDTO item in san.descriptions {
+        model:Description d = {
+            "text": item.text,
+            "language" : languages[i]
+        };
+        descriptions.push(d);
+        i += 1;
     }
 
     int|model:NotFoundError|error lastIdInserted = addSandwichToDB(san.selling_price,san.designation);
@@ -65,7 +90,7 @@ public isolated function addSandwich(model:SandwichDTO san) returns error|model:
     foreach int ingrediend_id in san.ingredients_id {
         sql:ExecutionResult _ = check dbClient->execute(`INSERT INTO sandwich_ingredients (sandwich_id, ingredient_id) VALUES (${n}, ${ingrediend_id})`);
     }
-    foreach model:Description description in san.descriptions {
+    foreach model:Description description in descriptions {
         sql:ExecutionResult _ = check dbClient->execute(`INSERT INTO sandwich_descriptions (sandwich_id , text, language) VALUES (${n}, ${description.text}, ${description.language})`);
     }
 
@@ -260,7 +285,7 @@ public isolated function checkArrayReceivedAndFound (int[] received, int[] found
     }
 }
 
-public isolated function addDescriptions(model:Descriptions des, int id) returns model:Sandwich|error|model:NotFoundError|model:ValidationError{
+public isolated function addDescriptions(model:DescriptionsDTO des, int id) returns model:ServiceError|model:Sandwich|error|model:NotFoundError|error|model:ValidationError|model:NotFoundError{
     boolean flag = checkSandwichId(id);
     if flag == false{
         return notFound("SANDWICH_ID_NOT_FOUND","The searched sandwich has not founded");
@@ -269,11 +294,39 @@ public isolated function addDescriptions(model:Descriptions des, int id) returns
     if found is error{
         return notFound("QUERY_ERROR","To the given id no descriptions were found");
     }
-    boolean aux = checkDescriptionsDuplicated(found,des);
+    json a = des.descriptions.toJson();
+    json|error postResponse = language->post(path = "/language", message = a);
+    if postResponse is error{
+        return serviceError("SERVICE_ERROR","SERVICE ERROR");
+    }
+    json|error received = postResponse.languages;
+    if received is error{
+        return notFound("LANGUAGE_NOT_FOUND","The language inserted into the list doesn´t exists");
+    }
+    json[] c  = check postResponse.languages.ensureType();
+    string[] languages = [];
+    foreach var item in c{
+        languages.push(item.toString());
+    }
+    model:Description[] descriptions = [];
+    int i = 0;
+    foreach model:DescriptionDTO item in des.descriptions {
+        model:Description d = {
+            "text": item.text,
+            "language" : languages[i]
+        };
+        descriptions.push(d);
+
+        i += 1;
+    }
+    model:Descriptions desc = {
+        descriptions:descriptions
+    };
+    boolean aux = checkDescriptionsDuplicated(found,desc);
     if aux == false{
         return validationError("DESCRIPTIONS_DUPLICATED","The description received were duplicated");
     }
-    foreach model:Description de in des.descriptions {
+    foreach model:Description de in descriptions {
         sql:ExecutionResult _ = check dbClient->execute(`INSERT INTO sandwich_descriptions (sandwich_id , text, language) VALUES (${id}, ${de.text}, ${de.language})`);
     }
 
@@ -354,6 +407,18 @@ public isolated function notFound(string codeMessage,string messageError) return
 
 public isolated function validationError(string codeMessage,string messageError) returns model:ValidationError{
     return <model:ValidationError>{
+            body: {
+                'error: {
+                    code: codeMessage,
+                    message: messageError
+                }
+            }
+               
+    };
+}
+
+public isolated function serviceError(string codeMessage,string messageError) returns model:ServiceError{
+    return <model:ServiceError>{
             body: {
                 'error: {
                     code: codeMessage,
