@@ -10,3 +10,4 @@
 | 4 | 15/03/2023-22/03/2023 | ALTER US05 TO BE ABLE MAKE A REQUEST TO A SERVICE TO VERIFY THE LANGUAGE OF THE TEXT|  DONE :white_check_mark: |
 |   |                       | WRITING ABOUT TECHNOLOGIES TO INCLUDE IN THE REPORT |  IN PROGRESS :construction: |
 |   |                       | STUDYING ABOUT LANGUAGE DETECTION |  IN PROGRESS :construction: |
+| 5 | 22/03/2023-29/03/2023 | |  |
