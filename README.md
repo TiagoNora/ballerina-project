@@ -29,7 +29,7 @@ GRANT ALL PRIVILEGES ON *.* TO 'myUser'@'%';
 ```
 
 2. Ballerina
-- Install Ballerina 2201.0.0 (Swan Lake) or greater, the link can be found [here](https://ballerina.io/learn/install-ballerina/set-up-ballerina/)
+- Install Ballerina, the link can be found [here](https://ballerina.io/learn/install-ballerina/set-up-ballerina/)
 - Install a text editor like [Visual Studio Code](https://code.visualstudio.com/)
 - To install the addon only available on VSC follow this [link](https://marketplace.visualstudio.com/items?itemName=WSO2.ballerina)
 
