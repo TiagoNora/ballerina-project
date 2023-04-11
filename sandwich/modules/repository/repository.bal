@@ -4,10 +4,10 @@ import ballerina/sql;
 import ballerina/http;
 import sandwich.model;
 
-configurable string USER = ?;
-configurable string PASSWORD = ?;
-configurable string HOST = ?;
-configurable int PORT = ?;
+string USER="myUser";
+string PASSWORD="myPassword";
+string HOST="localhost";
+int PORT=3306;
 
 final mysql:Client dbClient;
 final http:Client language;

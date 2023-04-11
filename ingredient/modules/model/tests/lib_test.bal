@@ -1,19 +1,28 @@
-import ballerina/io;
 import ballerina/test;
 
-// Before Suite Function
-
-@test:BeforeSuite
-function beforeSuiteFunc() {
-    io:println("I'm the before suite function!");
+@test:Config {}
+function testIngredientDesignation() {
+    IngredientDTO ing = {
+        designation: "Example"
+    };
+    test:assertEquals(ing.designation, "Example");
 }
 
-// Test function
-
-
-// After Suite Function
-
-@test:AfterSuite
-function afterSuiteFunc() {
-    io:println("I'm the after suite function!");
+@test:Config {}
+function testIngredientChangeDesignation() {
+    IngredientDTO ing = {
+        designation: "Example"
+    };
+    ing.designation = "Example1";
+    test:assertEquals(ing.designation, "Example1");
 }
+
+
+@test:Config {}
+function testIngredienteError() {
+    IngredientDTO ing = {
+        designation: "Example"
+    };
+    test:assertNotEquals(ing.designation, "Example1");
+}
+
