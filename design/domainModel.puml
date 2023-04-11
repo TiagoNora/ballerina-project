@@ -8,15 +8,23 @@
   }
 
   class AuthorizationData{
-    - perms: list<Roles>
+
+  }
+
+  class Role{
+    - designation : string
   }
   class Sandwich {
     - sandwichId: int
     - designation: string
     - sellingPrice: float
-    - ingredients : list<Ingredient>
-    - descriptions: list<Description>
   }
+
+  class Description{
+    - text: string
+    - language: string
+  }
+
   class Ingredient {
     - ingredientId: int
     - designation: string
@@ -35,8 +43,6 @@
     - shopId: int
     - designation: string
     - address: string
-    - personInCharge: PersonInCharge
-    - openingHours: list<OpeningHours>
   }
 
   class PersonInCharge{
@@ -46,6 +52,7 @@
   }
 
   class OpeningHours{
+    - openingHoursId: int
     - shopId: int
     - dayOfTheWeek: int
     - time: Date
@@ -56,13 +63,33 @@
     - customerId: int
     - shopId: int
     - dateOfDelivery: Date
-    - sandwiches: list<SandwichDelivery>
     - totalPrice: float
+    - status: string
   }
 
   class SandwichDelivery{
+    - orderId: int
     - sandwichId: int
     - quantity: int
   }
+
+  class IngredientsInSandwich{
+    - sandwichId: int
+    - ingredientId: int
+  }
+
+  Customer "1" --- "*" AuthorizationData: has >
+  AuthorizationData "1" --- "*" Role: has >
+  Sandwich "*" --- "*" Ingredient: has >
+  (Sandwich,Ingredient) .. IngredientsInSandwich
+  Sandwich "1" --- "*" Description: has >
+  Shop "1" --- "*" OpeningHours: has >
+  Shop --> PersonInCharge: has >
+  Order "*" --- "*" Sandwich: has >
+  (Order, Sandwich) .. SandwichDelivery
+  Customer "1" --- "*" Order: makes >
+  Customer "1" --- "*" Review: makes >
+  Sandwich "1" --- "*" Review: has >
+  Order "*" --- "1" Shop: fullfills <
 
 @enduml

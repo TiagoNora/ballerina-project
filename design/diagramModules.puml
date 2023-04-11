@@ -1,0 +1,17 @@
+@startuml
+
+[Sandwich]
+[Ingredient]
+[Review]
+[Shop]
+[Order]
+[Customer]
+
+
+ Sandwich --(0 Ingredient
+ Customer --(0 Order
+
+
+
+
+@enduml

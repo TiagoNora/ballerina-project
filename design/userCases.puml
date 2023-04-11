@@ -1,0 +1,130 @@
+@startuml
+
+left to right direction
+
+
+:Anonymous Customer: as aCostumer
+:Registered Customer: as rCostumer
+:Moderator: as moderator
+
+
+(US01  - Create ingrendient) as US01
+(US02  - Get ingrendient by id) as US02
+(US03  - Get ingrendient by designation) as US03
+(US04  - Get all ingrendients) as US04
+
+(US05  - Create sandwich) as US05
+(US06  - Get sandwich by id) as US06
+(US07  - Get all sandwiches) as US07
+(US08  - Add ingrendient or ingrendients to sandwich) as US08
+(US09  - Add description or descriptions to sandwich) as US09
+(US10  - Get all sandwiches that doesn´t have a particular ingrendient) as US10
+
+(US11  - Add customer) as US11
+(US12  - Get customer by id) as US12
+(US13  - Get customer by email) as US13
+(US14  - Get customer by tax identification number) as US14
+(US15  - Get customer authentication data) as US15
+(US16  - Get all customers) as US16
+(US17  - Add permissions to user) as US17
+(US18  - Generate JWT) as US18
+
+(US19  - Add review of a ordered sandwich) as US19 
+(US20  - Vote in a review) as US20
+(US21  - List all reviews) as US21
+
+(US22  - Create shop) as US22
+(US23  - List all shops) as US23
+(US24 - List shop by id) as US24
+(US25  - List shop by designation) as US25
+(US26  - List shop by address) as US26
+
+
+(US27  - Create order) as US27
+(US28  - List orders in a shop) as US28
+(US29  - Change status of order) as US29
+
+
+moderator --> US01
+
+moderator --> US02
+aCostumer --> US02
+rCostumer --> US02
+
+moderator --> US03
+aCostumer --> US03
+rCostumer --> US03
+
+moderator --> US04
+aCostumer --> US04
+rCostumer --> US04
+
+moderator --> US05
+
+moderator --> US06
+aCostumer --> US06
+rCostumer --> US06
+
+moderator --> US07
+aCostumer --> US07
+rCostumer --> US07
+
+moderator --> US08
+
+moderator --> US09
+
+moderator --> US10
+aCostumer --> US10
+rCostumer --> US10
+
+moderator --> US11
+aCostumer --> US11
+
+
+moderator --> US12
+moderator --> US13
+moderator --> US14
+moderator --> US15
+moderator --> US16
+moderator --> US17
+
+moderator --> US18
+aCostumer --> US18
+
+rCostumer --> US19
+
+rCostumer --> US20
+
+moderator --> US21
+aCostumer --> US21
+rCostumer --> US21
+
+moderator --> US22
+
+moderator --> US23
+aCostumer --> US23
+rCostumer --> US23
+
+moderator --> US24
+aCostumer --> US24
+rCostumer --> US24
+
+moderator --> US25
+aCostumer --> US25
+rCostumer --> US25
+
+moderator --> US26
+aCostumer --> US26
+rCostumer --> US26
+
+rCostumer --> US27
+
+moderator --> US28
+
+moderator --> US29
+
+
+
+
+
+
