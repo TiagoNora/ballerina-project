@@ -1,0 +1,68 @@
+@startuml
+  class Customer {
+    - customerId: int
+    - name: string
+    - taxIdenticationNumber: string
+    - email: string
+    - address: string
+  }
+
+  class AuthorizationData{
+    - perms: list<Roles>
+  }
+  class Sandwich {
+    - sandwichId: int
+    - designation: string
+    - sellingPrice: float
+    - ingredients : list<Ingredient>
+    - descriptions: list<Description>
+  }
+  class Ingredient {
+    - ingredientId: int
+    - designation: string
+  }
+
+  class Review{
+    - userId: int
+    - reviewId: int
+    - sandwichId: int
+    - text: string
+    - likes: int
+    - dislikes: int
+  }
+
+  class Shop{
+    - shopId: int
+    - designation: string
+    - address: string
+    - personInCharge: PersonInCharge
+    - openingHours: list<OpeningHours>
+  }
+
+  class PersonInCharge{
+    - personId: int
+    - name: string
+    - email: string
+  }
+
+  class OpeningHours{
+    - shopId: int
+    - dayOfTheWeek: int
+    - time: Date
+  }
+
+  class Order{
+    - orderId: int
+    - customerId: int
+    - shopId: int
+    - dateOfDelivery: Date
+    - sandwiches: list<SandwichDelivery>
+    - totalPrice: float
+  }
+
+  class SandwichDelivery{
+    - sandwichId: int
+    - quantity: int
+  }
+
+@enduml
