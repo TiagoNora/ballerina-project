@@ -1,4 +1,4 @@
-@startuml
+@startuml Diagram of Modules 2
 
 left to right direction
 skinparam linetype polyline

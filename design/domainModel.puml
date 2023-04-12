@@ -1,4 +1,4 @@
-@startuml
+@startuml Domain Model
   class Customer {
     - customerId: int
     - name: string
