@@ -1,0 +1,37 @@
+@startuml
+
+skinparam defaultTextAlignment center
+
+left to right direction
+
+:Utilizador Anónimo, \nCliente, \nPessoa responsável pela loja: as c
+:Administrador: as admin
+
+
+
+(UC05 - Criar uma sanduíche) as UC05
+(UC06 - Obter uma sanduíche por ID) as UC06
+(UC07 - Obter todas as sanduíches) as UC07
+(UC08 - Adicionar ingrediente/s a uma sanduíche) as UC08
+(UC09 - Adicionar descrição/ões a uma sanduíche) as UC09
+(UC10 - Obter todas as sanduíches que não possuam um ingrediente específico) as UC10
+(UC30 - Eliminar sanduíches) as UC30
+(UC34 - Alterar os dados de uma sanduíche) as UC34
+
+admin -- UC05 
+admin -- UC06
+admin -- UC07
+admin -- UC10
+
+UC06 -- c
+UC07 -- c 
+
+admin -- UC08 
+admin -- UC09 
+
+UC10 -- c
+
+admin -- UC30
+admin -- UC34 
+
+@enduml

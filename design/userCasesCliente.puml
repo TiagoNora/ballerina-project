@@ -1,0 +1,37 @@
+@startuml
+
+left to right direction
+skinparam defaultTextAlignment center
+
+
+:Utilizador Anónimo: as aCostumer
+:Cliente: as rCostumer
+:Administrador e \nPessoa responsável: as admin
+
+(UC11 - Adicionar cliente) as UC11
+(UC12 - Obter cliente por ID) as UC12
+(UC13 - Obter cliente por e-mail) as UC13
+(UC14 - Obter cliente por número de identificação fiscal) as UC14
+(UC15 - Obter dados de autenticação do cliente) as UC15
+(UC16 - Obter todos os clientes) as UC16
+(UC17 - Adicionar permissões a um usuário) as UC17
+(UC18 - Gerar JWT) as UC18
+
+(UC40 - Alterar os dados do cliente) as UC40
+(UC41 - Visualizar os dados do cliente) as UC41
+
+admin -- UC12
+admin -- UC13
+admin -- UC14
+admin -- UC15
+admin -- UC16
+admin -- UC17
+
+
+aCostumer -- UC11
+aCostumer -- UC18
+
+rCostumer -- UC40
+rCostumer -- UC41
+
+@end

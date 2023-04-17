@@ -3,6 +3,13 @@
 left to right direction
 skinparam linetype polyline
 
+[Sandwich Database] <<Component>> as sandwichDatabase
+[Ingredient Database] <<Component>> as ingredientDatabase
+[Review Database] <<Component>> as reviewDatabase
+[Shop Database] <<Component>> as shopDatabase
+[Order Database] <<Component>> as orderDatabase
+[Customer Database] <<Component>> as customerDatabase
+
 
 node API {
     [API Gateway]
@@ -10,37 +17,31 @@ node API {
 
 node Sandwich{
     [Sandwich Service] <<Component>> as sandwichService
-    [Sandwich Database] <<Component>> as sandwichDatabase
     sandwichService ..> sandwichDatabase
 }
 
 node Ingredient{
     [Ingredient Service] <<Component>> as ingredientService
-    [Ingredient Database] <<Component>> as ingredientDatabase
     ingredientService ..> ingredientDatabase
 }
 
 node Review{
     [Review Service] <<Component>> as reviewService
-    [Review Database] <<Component>> as reviewDatabase
     reviewService ..> reviewDatabase
 }
 
 node Shop{
     [Shop Service] <<Component>> as shopService
-    [Shop Database] <<Component>> as shopDatabase
     shopService ..> shopDatabase
 }
 
 node Order{
     [Order Service] <<Component>> as orderService
-    [Order Database] <<Component>> as orderDatabase
     orderService ..> orderDatabase
 }
 
 node Customer{
     [Customer Service] <<Component>> as customerService
-    [Customer Database] <<Component>> as customerDatabase
     customerService ..> customerDatabase
 }
 

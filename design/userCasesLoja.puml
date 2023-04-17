@@ -1,0 +1,43 @@
+@startuml
+
+skinparam defaultTextAlignment center
+
+left to right direction
+
+:Utilizador Anónimo e \nCliente: as c
+:Pessoa responsável pela loja: as person
+:Administrador: as admin
+
+(UC22 - Criar loja) as UC22
+(UC23 - Listar todas as lojas) as UC23
+(UC24 - Listar loja por ID) as UC24
+(UC25 - Listar loja por designação) as UC25
+(UC26 - Listar loja por endereço) as UC26
+(UC31 - Eliminar lojas) as UC31
+(UC42 - Editar os dados de uma loja) as UC42
+
+admin -- UC22
+
+admin -- UC23
+admin-- UC24
+admin -- UC25
+admin -- UC26
+
+
+UC23 -- person
+UC24 -- person
+UC25 -- person 
+UC26 -- person 
+
+
+c -- UC23
+c-- UC24
+c -- UC25
+c -- UC26
+
+admin -- UC31
+UC42 -- person
+
+
+
+@end
