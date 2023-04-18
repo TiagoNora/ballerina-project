@@ -4,7 +4,15 @@
     - name: string
     - taxIdenticationNumber: string
     - email: string
-    - address: string
+  }
+
+  class Address{
+    - zipCode: string
+    - streetName: string
+    - doorNumber: int
+    - location: string
+    - country: string
+
   }
 
   class AuthorizationData{
@@ -22,27 +30,25 @@
 
   class Description{
     - text: string
-    - language: string
+    - language: ISO
   }
 
   class Ingredient {
     - ingredientId: int
     - designation: string
   }
+  class Category{
+    - classe: string
+  }
 
   class Review{
-    - userId: int
-    - reviewId: int
-    - sandwichId: int
-    - text: string
-    - likes: int
-    - dislikes: int
+    - comment: string
+    - rating: int
   }
 
   class Shop{
     - shopId: int
     - designation: string
-    - address: string
   }
 
   class PersonInCharge{
@@ -53,43 +59,35 @@
 
   class OpeningHours{
     - openingHoursId: int
-    - shopId: int
     - dayOfTheWeek: int
     - time: Date
   }
 
   class Order{
     - orderId: int
-    - customerId: int
-    - shopId: int
     - dateOfDelivery: Date
     - totalPrice: float
     - status: string
   }
 
-  class SandwichDelivery{
-    - orderId: int
-    - sandwichId: int
+  class OrderItem{
     - quantity: int
   }
 
-  class IngredientsInSandwich{
-    - sandwichId: int
-    - ingredientId: int
-  }
 
   Customer "1" --- "*" AuthorizationData: has >
   AuthorizationData "1" --- "*" Role: has >
   Sandwich "*" --- "*" Ingredient: has >
-  (Sandwich,Ingredient) .. IngredientsInSandwich
   Sandwich "1" --- "*" Description: has >
   Shop "1" --- "*" OpeningHours: has >
   Shop --> PersonInCharge: has >
-  Order "*" --- "*" Sandwich: has >
-  (Order, Sandwich) .. SandwichDelivery
+  Order "*" --- "*" OrderItem: has >
   Customer "1" --- "*" Order: makes >
   Customer "1" --- "*" Review: makes >
   Sandwich "1" --- "*" Review: has >
   Order "*" --- "1" Shop: fullfills <
+  Ingredient --- Category: has >
+  Shop --- Address: has >
+  OrderItem "*" --- "1" Sandwich: has >
 
 @enduml
