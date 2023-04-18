@@ -1,9 +1,16 @@
 @startuml Domain Model
   class Customer {
-    - customerId: int
+  }
+
+  class PersonInCharge{
+  }
+
+  class Person{
+    - personId: int
     - name: string
     - taxIdenticationNumber: string
     - email: string
+
   }
 
   class Address{
@@ -38,7 +45,7 @@
     - designation: string
   }
   class Category{
-    - classe: string
+    - class: string
   }
 
   class Review{
@@ -51,12 +58,6 @@
     - designation: string
   }
 
-  class PersonInCharge{
-    - personId: int
-    - name: string
-    - email: string
-  }
-
   class OpeningHours{
     - openingHoursId: int
     - dayOfTheWeek: int
@@ -66,6 +67,7 @@
   class Order{
     - orderId: int
     - dateOfDelivery: Date
+    - dateOfCreation: Date
     - totalPrice: float
     - status: string
   }
@@ -74,8 +76,13 @@
     - quantity: int
   }
 
+  class ReviewAvaliation{
+    - isLiked: boolean
+    - dateOfCreation: Date
+  }
 
-  Customer "1" --- "*" AuthorizationData: has >
+
+  Person "1" --- "*" AuthorizationData: has >
   AuthorizationData "1" --- "*" Role: has >
   Sandwich "*" --- "*" Ingredient: has >
   Sandwich "1" --- "*" Description: has >
@@ -85,9 +92,14 @@
   Customer "1" --- "*" Order: makes >
   Customer "1" --- "*" Review: makes >
   Sandwich "1" --- "*" Review: has >
+  Review "1" --- "*" ReviewAvaliation: has >
+  Customer "1" --- "*" ReviewAvaliation: makes >
   Order "*" --- "1" Shop: fullfills <
-  Ingredient --- Category: has >
-  Shop --- Address: has >
+  Ingredient "*" --- "1" Category: has >
+  Shop "1" --- "1" Address: has >
   OrderItem "*" --- "1" Sandwich: has >
+  Customer --|> Person
+  PersonInCharge --|> Person
+  Person "*" --- "*" Address
 
 @enduml
