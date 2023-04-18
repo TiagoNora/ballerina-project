@@ -81,8 +81,13 @@
     - dateOfCreation: Date
   }
 
+  class Language{
+    - language: string
+  }
+
 
   Person "1" --- "*" AuthorizationData: has >
+  Person "*" --- "*" Language: knows >
   AuthorizationData "1" --- "*" Role: has >
   Sandwich "*" --- "*" Ingredient: has >
   Sandwich "1" --- "*" Description: has >
@@ -100,6 +105,6 @@
   OrderItem "*" --- "1" Sandwich: has >
   Customer --|> Person
   PersonInCharge --|> Person
-  Person "*" --- "*" Address
+  Person "*" --- "*" Address: has >
 
 @enduml
