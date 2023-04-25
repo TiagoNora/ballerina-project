@@ -15,7 +15,7 @@ left to right direction
 (UC08 - Adicionar ingrediente/s a uma sanduíche) as UC08
 (UC09 - Adicionar descrição/ões a uma sanduíche) as UC09
 (UC10 - Obter todas as sanduíches que não possuam um ingrediente específico) as UC10
-(UC30 - Eliminar sanduíches) as UC30
+(UC30 - Alterar estado de um sanduíche) as UC30
 (UC34 - Alterar os dados de uma sanduíche) as UC34
 
 admin -- UC05 

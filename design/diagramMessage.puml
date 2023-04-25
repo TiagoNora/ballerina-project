@@ -19,6 +19,8 @@ node "RabbitMQ"{
     }
     queue sendCustomer as sendCustomer{
     }
+    queue sendOrder as sendOrder{
+    }
 
 }
 
@@ -51,5 +53,7 @@ order <-- sendShop
 sendCustomer <-left- customer
 order <-- sendCustomer
 sendCustomer --> review
+order --> sendOrder
+sendOrder --> review
 
 @enduml

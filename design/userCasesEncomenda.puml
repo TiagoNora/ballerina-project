@@ -10,13 +10,11 @@ left to right direction
 (UC27 - Criar uma encomenda) as UC27
 (UC28 - Listar encomendas de uma loja) as UC28
 (UC37 - Alterar a estado da encomenda) as UC37
-(UC38 - Retirar a encomenda do cliente) as UC38
 (UC39 - Listar as encomendas do cliente) as UC39
 
 c -- UC27
 person -- UC28
 person -- UC37
-c -- UC38
 c -- UC39
 person -- UC39
 

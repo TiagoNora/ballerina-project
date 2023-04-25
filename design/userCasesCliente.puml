@@ -14,8 +14,8 @@ skinparam defaultTextAlignment center
 (UC14 - Obter cliente por número de identificação fiscal) as UC14
 (UC15 - Obter dados de autenticação do cliente) as UC15
 (UC16 - Obter todos os clientes) as UC16
-(UC17 - Adicionar permissões a um usuário) as UC17
-(UC18 - Gerar JWT) as UC18
+(UC17 - Adicionar permissões a um cliente) as UC17
+(UC18 - Fazer login) as UC18
 
 (UC40 - Alterar os dados do cliente) as UC40
 (UC41 - Visualizar os dados do cliente) as UC41

@@ -1,0 +1,13 @@
+@startuml 
+
+left to right direction
+
+[*] --> Ativo
+
+state Inativo{
+
+}
+
+Ativo --> Inativo: inativar
+Inativo --> Ativo: ativar
+@enduml

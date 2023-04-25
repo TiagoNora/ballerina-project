@@ -1,0 +1,23 @@
+@startuml
+left to right direction
+
+[*] --> estado
+
+state "Estado Inicial" as estado {
+}
+
+state Denunciada {
+
+}
+
+state Eliminada {
+
+}
+
+
+estado --> Denunciada : denunciar
+Denunciada   --> Eliminada: eliminar
+Denunciada  --> estado: voltar ao estado inicial
+
+
+@enduml

@@ -11,7 +11,7 @@ left to right direction
 (UC02 - Obter um ingrediente por ID) as UC02
 (UC03 - Obter um ingrediente por designação) as UC03
 (UC04 - Obter todos os ingredientes) as UC04
-(UC29 - Eliminar ingredientes) as UC29
+(UC29 - Alterar estado de um ingrediente) as UC29
 (UC35 - Obter todos os ingredientes da uma certa categoria) as UC35
 
 UC01 -- admin

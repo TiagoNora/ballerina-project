@@ -33,6 +33,7 @@
     - sandwichId: int
     - designation: string
     - sellingPrice: float
+    - isActive: boolean
   }
 
   class Description{
@@ -43,6 +44,7 @@
   class Ingredient {
     - ingredientId: int
     - designation: string
+    - isActive: boolean
   }
   class Category{
     - class: string
