@@ -12,11 +12,11 @@ final mysql:Client dbClient;
 
 function init() returns error? {
     mysql:Client dbClientCreate = check new(host=HOST, user=USER, password=PASSWORD, port=PORT);
-    sql:ExecutionResult _ = check dbClientCreate->execute(`CREATE DATABASE IF NOT EXISTS Ingredient`);
+    sql:ExecutionResult _ = check dbClientCreate->execute(`CREATE DATABASE IF NOT EXISTS Ingredients`);
     check dbClientCreate.close();
 
-    dbClient = check new(host=HOST, user=USER, password=PASSWORD, port=PORT, database="Ingredient"); 
-    sql:ExecutionResult _ = check dbClient->execute(`CREATE TABLE IF NOT EXISTS Ingredient.Ingredients (
+    dbClient = check new(host=HOST, user=USER, password=PASSWORD, port=PORT, database="Ingredients"); 
+    sql:ExecutionResult _ = check dbClient->execute(`CREATE TABLE IF NOT EXISTS Ingredients.Ingredients (
                                            ingredient_id INT AUTO_INCREMENT,
                                            designation VARCHAR(255), 
                                            PRIMARY KEY (ingredient_id)

@@ -14,23 +14,23 @@ final http:Client language;
 
 function init() returns error? {
     mysql:Client dbClientCreate = check new(host=HOST, user=USER, password=PASSWORD, port=PORT);
-    sql:ExecutionResult _ = check dbClientCreate->execute(`CREATE DATABASE IF NOT EXISTS Sandwich`);
+    sql:ExecutionResult _ = check dbClientCreate->execute(`CREATE DATABASE IF NOT EXISTS Sandwiches`);
     check dbClientCreate.close();
     language = check new (url = "http://localhost:5000");
-    dbClient = check new(host=HOST, user=USER, password=PASSWORD, port=PORT, database="Sandwich"); 
-    sql:ExecutionResult _ = check dbClient->execute(`CREATE TABLE IF NOT EXISTS Sandwich.sandwiches (
+    dbClient = check new(host=HOST, user=USER, password=PASSWORD, port=PORT, database="Sandwiches"); 
+    sql:ExecutionResult _ = check dbClient->execute(`CREATE TABLE IF NOT EXISTS Sandwiches.sandwiches (
                                                     sandwich_id INT NOT NULL AUTO_INCREMENT, 
                                                     selling_price FLOAT(6), 
                                                     designation VARCHAR(30), 
                                                     PRIMARY KEY (sandwich_id)
                                                     )`); 
-    sql:ExecutionResult _ = check dbClient->execute(`CREATE TABLE IF NOT EXISTS Sandwich.sandwich_ingredients (
+    sql:ExecutionResult _ = check dbClient->execute(`CREATE TABLE IF NOT EXISTS Sandwiches.sandwich_ingredients (
                                                     sandwich_id INT NOT NULL, 
                                                     ingredient_id INT NOT NULL, 
                                                     PRIMARY KEY (sandwich_id, ingredient_id), 
                                                     FOREIGN KEY (sandwich_id) REFERENCES sandwiches(sandwich_id)
                                                     )`);
-    sql:ExecutionResult _ = check dbClient->execute(`CREATE TABLE IF NOT EXISTS Sandwich.sandwich_descriptions (
+    sql:ExecutionResult _ = check dbClient->execute(`CREATE TABLE IF NOT EXISTS Sandwiches.sandwich_descriptions (
                                                     sandwich_id INT NOT NULL, 
                                                     text VARCHAR(500), 
                                                     language VARCHAR(5), 

@@ -14,11 +14,11 @@ final mysql:Client dbClient;
 
 function init() returns error? {
     mysql:Client dbClientCreate = check new(host=HOST, user=USER, password=PASSWORD, port=PORT);
-    sql:ExecutionResult _ = check dbClientCreate->execute(`CREATE DATABASE IF NOT EXISTS User`);
+    sql:ExecutionResult _ = check dbClientCreate->execute(`CREATE DATABASE IF NOT EXISTS Users`);
     check dbClientCreate.close();
 
-    dbClient = check new(host=HOST, user=USER, password=PASSWORD, port=PORT, database="User"); 
-    sql:ExecutionResult _ = check dbClient->execute(`CREATE TABLE IF NOT EXISTS User.users (
+    dbClient = check new(host=HOST, user=USER, password=PASSWORD, port=PORT, database="Users"); 
+    sql:ExecutionResult _ = check dbClient->execute(`CREATE TABLE IF NOT EXISTS Users.users (
                                                     user_id INT NOT NULL AUTO_INCREMENT, 
                                                     name VARCHAR(255),
                                                     password VARCHAR(255),
@@ -26,7 +26,7 @@ function init() returns error? {
                                                     address VARCHAR(255),
                                                     email VARCHAR(255),
                                                     PRIMARY KEY (user_id, email))`); 
-    sql:ExecutionResult _ = check dbClient->execute(`CREATE TABLE IF NOT EXISTS User.users_perms (
+    sql:ExecutionResult _ = check dbClient->execute(`CREATE TABLE IF NOT EXISTS Users.users_perms (
                                                     user_id INT NOT NULL, 
                                                     perm VARCHAR(255), 
                                                     PRIMARY KEY (user_id, perm), 

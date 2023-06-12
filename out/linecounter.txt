@@ -1,0 +1,1723 @@
+===============================================================================
+EXTENSION NAME : linecounter
+EXTENSION VERSION : 0.2.7
+-------------------------------------------------------------------------------
+count time : 2023-06-12 16:38:11
+count workspace : c:\Users\tiago\Desktop\Projeto\ballerina-project
+total files : 1671
+total code lines : 183068
+total comment lines : 62681
+total blank lines : 37656
+
+    statistics
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |               |           2782|            140|            256|    1.5|
+   |           .bib|              9|              0|              2| 0.0049|
+   |           .tex|            370|              3|            172|   0.20|
+   |            .md|            403|             33|            101|   0.22|
+   |          .toml|           1364|              0|            153|   0.75|
+   |          .puml|            424|              0|            154|   0.23|
+   |          .json|            647|              0|              0|   0.35|
+   |           .key|             28|              1|              0|  0.015|
+   |           .crt|             21|              0|              0|  0.011|
+   |           .bal|           1253|             30|            230|   0.68|
+   |            .js|            325|             17|             48|   0.18|
+   |    .virtualenv|              0|              0|              0|    0.0|
+   |            .py|         167499|          61223|          36151|     91|
+   |           .txt|            162|              3|             19|  0.088|
+   |           .rst|            138|              0|             30|  0.075|
+   |         .typed|              2|              0|              0| 0.0011|
+   |           .pdf|            292|           1193|              1|   0.16|
+   |           .pth|              2|              0|              0| 0.0011|
+   |    .properties|            135|              0|              0|  0.074|
+   |           .css|            130|              1|             19|  0.071|
+   |           .pyi|            880|              0|             50|   0.48|
+   |          .sha1|              3|              0|              0| 0.0016|
+   |          .tmpl|              9|              0|              0| 0.0049|
+   |  .repositories|              9|              0|              0| 0.0049|
+   |           .xml|            120|              1|              0|  0.066|
+   |           .pem|           4129|             25|            128|    2.3|
+   |           .cfg|             84|              0|              8|  0.046|
+   |             .c|            253|              6|             61|   0.14|
+   |            .nu|             42|              0|             10|  0.023|
+   |           .bat|             24|              0|              5|  0.013|
+   |          .fish|             45|              2|              9|  0.025|
+   |           .ps1|             43|              0|             11|  0.023|
+   |           .iml|             21|              0|              0|  0.011|
+   |           .eps|           1166|              1|              0|   0.64|
+   |           .cls|            252|              2|             37|   0.14|
+   |            .MF|              2|              0|              1| 0.0011|
+   -------------------------------------------------------------------------
+API's\NodeJSAPI\index.js, code is 21, comment is 0, blank is 10.
+API's\NodeJSAPI\package-lock.json, code is 601, comment is 0, blank is 0.
+API's\NodeJSAPI\package.json, code is 15, comment is 0, blank is 0.
+API's\PythonAPI\.idea\.gitignore, code is 8, comment is 0, blank is 0.
+API's\PythonAPI\.idea\inspectionProfiles\profiles_settings.xml, code is 6, comment is 0, blank is 0.
+API's\PythonAPI\.idea\inspectionProfiles\Project_Default.xml, code is 13, comment is 0, blank is 0.
+API's\PythonAPI\.idea\misc.xml, code is 4, comment is 0, blank is 0.
+API's\PythonAPI\.idea\modules.xml, code is 8, comment is 0, blank is 0.
+API's\PythonAPI\.idea\PythonAPI.iml, code is 21, comment is 0, blank is 0.
+API's\PythonAPI\.idea\workspace.xml, code is 75, comment is 0, blank is 0.
+API's\PythonAPI\__pycache__\app.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\app.py, code is 16, comment is 0, blank is 11.
+API's\PythonAPI\venv\.gitignore, code is 2, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\__pycache__\_virtualenv.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\__pycache__\six.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\_distutils_hack\__init__.py, code is 89, comment is 15, blank is 48.
+API's\PythonAPI\venv\Lib\site-packages\_distutils_hack\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\_distutils_hack\__pycache__\override.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\_distutils_hack\override.py, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\_virtualenv.pth, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\_virtualenv.py, code is 83, comment is 20, blank is 26.
+API's\PythonAPI\venv\Lib\site-packages\click-8.1.3.dist-info\INSTALLER, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\click-8.1.3.dist-info\LICENSE.rst, code is 23, comment is 0, blank is 5.
+API's\PythonAPI\venv\Lib\site-packages\click-8.1.3.dist-info\METADATA, code is 81, comment is 18, blank is 29.
+API's\PythonAPI\venv\Lib\site-packages\click-8.1.3.dist-info\RECORD, code is 39, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\click-8.1.3.dist-info\top_level.txt, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\click-8.1.3.dist-info\WHEEL, code is 4, comment is 0, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\click\__init__.py, code is 66, comment is 0, blank is 2.
+API's\PythonAPI\venv\Lib\site-packages\click\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\click\__pycache__\_compat.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\click\__pycache__\_termui_impl.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\click\__pycache__\_textwrap.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\click\__pycache__\_winconsole.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\click\__pycache__\core.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\click\__pycache__\decorators.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\click\__pycache__\exceptions.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\click\__pycache__\formatting.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\click\__pycache__\globals.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\click\__pycache__\parser.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\click\__pycache__\shell_completion.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\click\__pycache__\termui.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\click\__pycache__\testing.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\click\__pycache__\types.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\click\__pycache__\utils.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\click\_compat.py, code is 435, comment is 43, blank is 137.
+API's\PythonAPI\venv\Lib\site-packages\click\_termui_impl.py, code is 506, comment is 77, blank is 118.
+API's\PythonAPI\venv\Lib\site-packages\click\_textwrap.py, code is 39, comment is 0, blank is 10.
+API's\PythonAPI\venv\Lib\site-packages\click\_winconsole.py, code is 214, comment is 14, blank is 54.
+API's\PythonAPI\venv\Lib\site-packages\click\core.py, code is 1552, comment is 195, blank is 516.
+API's\PythonAPI\venv\Lib\site-packages\click\decorators.py, code is 250, comment is 18, blank is 103.
+API's\PythonAPI\venv\Lib\site-packages\click\exceptions.py, code is 169, comment is 4, blank is 66.
+API's\PythonAPI\venv\Lib\site-packages\click\formatting.py, code is 191, comment is 3, blank is 58.
+API's\PythonAPI\venv\Lib\site-packages\click\globals.py, code is 30, comment is 0, blank is 22.
+API's\PythonAPI\venv\Lib\site-packages\click\parser.py, code is 152, comment is 35, blank is 44.
+API's\PythonAPI\venv\Lib\site-packages\click\py.typed, code is 0, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\click\shell_completion.py, code is 251, comment is 17, blank is 116.
+API's\PythonAPI\venv\Lib\site-packages\click\termui.py, code is 323, comment is 18, blank is 81.
+API's\PythonAPI\venv\Lib\site-packages\click\testing.py, code is 309, comment is 24, blank is 76.
+API's\PythonAPI\venv\Lib\site-packages\click\types.py, code is 605, comment is 59, blank is 201.
+API's\PythonAPI\venv\Lib\site-packages\click\utils.py, code is 280, comment is 34, blank is 107.
+API's\PythonAPI\venv\Lib\site-packages\colorama-0.4.6.dist-info\INSTALLER, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\colorama-0.4.6.dist-info\licenses\LICENSE.txt, code is 22, comment is 0, blank is 5.
+API's\PythonAPI\venv\Lib\site-packages\colorama-0.4.6.dist-info\METADATA, code is 210, comment is 18, blank is 64.
+API's\PythonAPI\venv\Lib\site-packages\colorama-0.4.6.dist-info\RECORD, code is 31, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\colorama-0.4.6.dist-info\WHEEL, code is 5, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\colorama\__init__.py, code is 4, comment is 1, blank is 2.
+API's\PythonAPI\venv\Lib\site-packages\colorama\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\colorama\__pycache__\ansi.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\colorama\__pycache__\ansitowin32.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\colorama\__pycache__\initialise.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\colorama\__pycache__\win32.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\colorama\__pycache__\winterm.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\colorama\ansi.py, code is 73, comment is 10, blank is 19.
+API's\PythonAPI\venv\Lib\site-packages\colorama\ansitowin32.py, code is 187, comment is 51, blank is 43.
+API's\PythonAPI\venv\Lib\site-packages\colorama\initialise.py, code is 83, comment is 9, blank is 30.
+API's\PythonAPI\venv\Lib\site-packages\colorama\tests\__init__.py, code is 0, comment is 1, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\colorama\tests\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\colorama\tests\__pycache__\ansi_test.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\colorama\tests\__pycache__\ansitowin32_test.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\colorama\tests\__pycache__\initialise_test.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\colorama\tests\__pycache__\isatty_test.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\colorama\tests\__pycache__\utils.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\colorama\tests\__pycache__\winterm_test.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\colorama\tests\ansi_test.py, code is 55, comment is 5, blank is 16.
+API's\PythonAPI\venv\Lib\site-packages\colorama\tests\ansitowin32_test.py, code is 243, comment is 14, blank is 43.
+API's\PythonAPI\venv\Lib\site-packages\colorama\tests\initialise_test.py, code is 145, comment is 10, blank is 34.
+API's\PythonAPI\venv\Lib\site-packages\colorama\tests\isatty_test.py, code is 43, comment is 1, blank is 13.
+API's\PythonAPI\venv\Lib\site-packages\colorama\tests\utils.py, code is 41, comment is 1, blank is 7.
+API's\PythonAPI\venv\Lib\site-packages\colorama\tests\winterm_test.py, code is 99, comment is 1, blank is 31.
+API's\PythonAPI\venv\Lib\site-packages\colorama\win32.py, code is 144, comment is 11, blank is 25.
+API's\PythonAPI\venv\Lib\site-packages\colorama\winterm.py, code is 143, comment is 32, blank is 23.
+API's\PythonAPI\venv\Lib\site-packages\distutils-precedence.pth, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\Flask-2.2.3.dist-info\entry_points.txt, code is 2, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\Flask-2.2.3.dist-info\INSTALLER, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\Flask-2.2.3.dist-info\LICENSE.rst, code is 23, comment is 0, blank is 5.
+API's\PythonAPI\venv\Lib\site-packages\Flask-2.2.3.dist-info\METADATA, code is 48, comment is 8, blank is 3.
+API's\PythonAPI\venv\Lib\site-packages\Flask-2.2.3.dist-info\RECORD, code is 54, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\Flask-2.2.3.dist-info\REQUESTED, code is 0, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\Flask-2.2.3.dist-info\top_level.txt, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\Flask-2.2.3.dist-info\WHEEL, code is 4, comment is 0, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\flask\__init__.py, code is 63, comment is 0, blank is 8.
+API's\PythonAPI\venv\Lib\site-packages\flask\__main__.py, code is 2, comment is 0, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\flask\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\flask\__pycache__\__main__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\flask\__pycache__\app.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\flask\__pycache__\blueprints.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\flask\__pycache__\cli.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\flask\__pycache__\config.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\flask\__pycache__\ctx.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\flask\__pycache__\debughelpers.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\flask\__pycache__\globals.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\flask\__pycache__\helpers.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\flask\__pycache__\logging.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\flask\__pycache__\scaffold.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\flask\__pycache__\sessions.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\flask\__pycache__\signals.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\flask\__pycache__\templating.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\flask\__pycache__\testing.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\flask\__pycache__\typing.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\flask\__pycache__\views.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\flask\__pycache__\wrappers.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\flask\app.py, code is 984, comment is 266, blank is 360.
+API's\PythonAPI\venv\Lib\site-packages\flask\blueprints.py, code is 387, comment is 18, blank is 127.
+API's\PythonAPI\venv\Lib\site-packages\flask\cli.py, code is 614, comment is 84, blank is 237.
+API's\PythonAPI\venv\Lib\site-packages\flask\config.py, code is 122, comment is 5, blank is 41.
+API's\PythonAPI\venv\Lib\site-packages\flask\ctx.py, code is 188, comment is 21, blank is 80.
+API's\PythonAPI\venv\Lib\site-packages\flask\debughelpers.py, code is 99, comment is 0, blank is 46.
+API's\PythonAPI\venv\Lib\site-packages\flask\globals.py, code is 76, comment is 7, blank is 19.
+API's\PythonAPI\venv\Lib\site-packages\flask\helpers.py, code is 229, comment is 37, blank is 92.
+API's\PythonAPI\venv\Lib\site-packages\flask\json\__init__.py, code is 104, comment is 1, blank is 60.
+API's\PythonAPI\venv\Lib\site-packages\flask\json\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\flask\json\__pycache__\provider.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\flask\json\__pycache__\tag.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\flask\json\provider.py, code is 135, comment is 2, blank is 78.
+API's\PythonAPI\venv\Lib\site-packages\flask\json\tag.py, code is 146, comment is 6, blank is 86.
+API's\PythonAPI\venv\Lib\site-packages\flask\logging.py, code is 31, comment is 5, blank is 21.
+API's\PythonAPI\venv\Lib\site-packages\flask\py.typed, code is 0, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\flask\scaffold.py, code is 345, comment is 139, blank is 130.
+API's\PythonAPI\venv\Lib\site-packages\flask\sessions.py, code is 180, comment is 52, blank is 88.
+API's\PythonAPI\venv\Lib\site-packages\flask\signals.py, code is 33, comment is 5, blank is 15.
+API's\PythonAPI\venv\Lib\site-packages\flask\templating.py, code is 131, comment is 7, blank is 46.
+API's\PythonAPI\venv\Lib\site-packages\flask\testing.py, code is 161, comment is 19, blank is 47.
+API's\PythonAPI\venv\Lib\site-packages\flask\typing.py, code is 56, comment is 20, blank is 9.
+API's\PythonAPI\venv\Lib\site-packages\flask\views.py, code is 61, comment is 34, blank is 28.
+API's\PythonAPI\venv\Lib\site-packages\flask\wrappers.py, code is 63, comment is 22, blank is 37.
+API's\PythonAPI\venv\Lib\site-packages\itsdangerous-2.1.2.dist-info\INSTALLER, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\itsdangerous-2.1.2.dist-info\LICENSE.rst, code is 23, comment is 0, blank is 5.
+API's\PythonAPI\venv\Lib\site-packages\itsdangerous-2.1.2.dist-info\METADATA, code is 33, comment is 8, blank is 4.
+API's\PythonAPI\venv\Lib\site-packages\itsdangerous-2.1.2.dist-info\RECORD, code is 23, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\itsdangerous-2.1.2.dist-info\top_level.txt, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\itsdangerous-2.1.2.dist-info\WHEEL, code is 4, comment is 0, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\itsdangerous\__init__.py, code is 18, comment is 0, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\itsdangerous\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\itsdangerous\__pycache__\_json.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\itsdangerous\__pycache__\encoding.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\itsdangerous\__pycache__\exc.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\itsdangerous\__pycache__\serializer.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\itsdangerous\__pycache__\signer.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\itsdangerous\__pycache__\timed.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\itsdangerous\__pycache__\url_safe.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\itsdangerous\_json.py, code is 11, comment is 0, blank is 5.
+API's\PythonAPI\venv\Lib\site-packages\itsdangerous\encoding.py, code is 30, comment is 1, blank is 19.
+API's\PythonAPI\venv\Lib\site-packages\itsdangerous\exc.py, code is 39, comment is 19, blank is 30.
+API's\PythonAPI\venv\Lib\site-packages\itsdangerous\py.typed, code is 0, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\itsdangerous\serializer.py, code is 137, comment is 12, blank is 58.
+API's\PythonAPI\venv\Lib\site-packages\itsdangerous\signer.py, code is 118, comment is 19, blank is 64.
+API's\PythonAPI\venv\Lib\site-packages\itsdangerous\timed.py, code is 141, comment is 21, blank is 45.
+API's\PythonAPI\venv\Lib\site-packages\itsdangerous\url_safe.py, code is 50, comment is 0, blank is 21.
+API's\PythonAPI\venv\Lib\site-packages\Jinja2-3.1.2.dist-info\entry_points.txt, code is 2, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\Jinja2-3.1.2.dist-info\INSTALLER, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\Jinja2-3.1.2.dist-info\LICENSE.rst, code is 23, comment is 0, blank is 5.
+API's\PythonAPI\venv\Lib\site-packages\Jinja2-3.1.2.dist-info\METADATA, code is 52, comment is 8, blank is 5.
+API's\PythonAPI\venv\Lib\site-packages\Jinja2-3.1.2.dist-info\RECORD, code is 58, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\Jinja2-3.1.2.dist-info\top_level.txt, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\Jinja2-3.1.2.dist-info\WHEEL, code is 4, comment is 0, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\__init__.py, code is 32, comment is 0, blank is 2.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\__pycache__\_identifier.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\__pycache__\async_utils.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\__pycache__\bccache.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\__pycache__\compiler.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\__pycache__\constants.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\__pycache__\debug.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\__pycache__\defaults.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\__pycache__\environment.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\__pycache__\exceptions.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\__pycache__\ext.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\__pycache__\filters.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\__pycache__\idtracking.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\__pycache__\lexer.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\__pycache__\loaders.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\__pycache__\meta.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\__pycache__\nativetypes.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\__pycache__\nodes.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\__pycache__\optimizer.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\__pycache__\parser.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\__pycache__\runtime.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\__pycache__\sandbox.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\__pycache__\tests.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\__pycache__\utils.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\__pycache__\visitor.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\_identifier.py, code is 4, comment is 2, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\async_utils.py, code is 53, comment is 8, blank is 26.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\bccache.py, code is 209, comment is 22, blank is 69.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\compiler.py, code is 1411, comment is 134, blank is 349.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\constants.py, code is 1, comment is 1, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\debug.py, code is 111, comment is 26, blank is 34.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\defaults.py, code is 39, comment is 5, blank is 6.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\environment.py, code is 922, comment is 64, blank is 246.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\exceptions.py, code is 82, comment is 12, blank is 49.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\ext.py, code is 548, comment is 55, blank is 149.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\filters.py, code is 808, comment is 31, blank is 281.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\idtracking.py, code is 230, comment is 8, blank is 80.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\lexer.py, code is 589, comment is 76, blank is 144.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\loaders.py, code is 350, comment is 47, blank is 108.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\meta.py, code is 48, comment is 12, blank is 21.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\nativetypes.py, code is 80, comment is 9, blank is 33.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\nodes.py, code is 625, comment is 17, blank is 386.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\optimizer.py, code is 25, comment is 2, blank is 11.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\parser.py, code is 837, comment is 34, blank is 125.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\py.typed, code is 0, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\runtime.py, code is 614, comment is 70, blank is 226.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\sandbox.py, code is 243, comment is 44, blank is 71.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\tests.py, code is 106, comment is 2, blank is 76.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\utils.py, code is 358, comment is 28, blank is 162.
+API's\PythonAPI\venv\Lib\site-packages\jinja2\visitor.py, code is 45, comment is 0, blank is 23.
+API's\PythonAPI\venv\Lib\site-packages\langdetect-1.0.9.dist-info\INSTALLER, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect-1.0.9.dist-info\LICENSE, code is 10, comment is 1, blank is 3.
+API's\PythonAPI\venv\Lib\site-packages\langdetect-1.0.9.dist-info\METADATA, code is 44, comment is 6, blank is 29.
+API's\PythonAPI\venv\Lib\site-packages\langdetect-1.0.9.dist-info\NOTICE, code is 6, comment is 1, blank is 4.
+API's\PythonAPI\venv\Lib\site-packages\langdetect-1.0.9.dist-info\RECORD, code is 90, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect-1.0.9.dist-info\REQUESTED, code is 0, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect-1.0.9.dist-info\top_level.txt, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect-1.0.9.dist-info\WHEEL, code is 4, comment is 0, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\__init__.py, code is 2, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\__pycache__\detector.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\__pycache__\detector_factory.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\__pycache__\lang_detect_exception.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\__pycache__\language.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\detector.py, code is 166, comment is 51, blank is 32.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\detector_factory.py, code is 100, comment is 14, blank is 23.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\lang_detect_exception.py, code is 18, comment is 0, blank is 4.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\language.py, code is 10, comment is 4, blank is 3.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\af, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\ar, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\bg, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\bn, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\ca, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\cs, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\cy, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\da, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\de, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\el, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\en, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\es, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\et, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\fa, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\fi, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\fr, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\gu, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\he, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\hi, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\hr, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\hu, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\id, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\it, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\ja, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\kn, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\ko, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\lt, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\lv, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\mk, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\ml, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\mr, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\ne, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\nl, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\no, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\pa, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\pl, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\pt, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\ro, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\ru, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\sk, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\sl, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\so, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\sq, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\sv, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\sw, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\ta, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\te, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\th, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\tl, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\tr, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\uk, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\ur, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\vi, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\zh-cn, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\profiles\zh-tw, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\tests\__init__.py, code is 0, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\tests\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\tests\__pycache__\test_detector.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\tests\__pycache__\test_language.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\tests\test_detector.py, code is 54, comment is 0, blank is 14.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\tests\test_language.py, code is 18, comment is 0, blank is 6.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\utils\__init__.py, code is 0, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\utils\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\utils\__pycache__\lang_profile.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\utils\__pycache__\messages.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\utils\__pycache__\ngram.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\utils\__pycache__\unicode_block.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\utils\lang_profile.py, code is 51, comment is 9, blank is 13.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\utils\messages.properties, code is 135, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\utils\messages.py, code is 17, comment is 0, blank is 6.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\utils\ngram.py, code is 238, comment is 11, blank is 15.
+API's\PythonAPI\venv\Lib\site-packages\langdetect\utils\unicode_block.py, code is 457, comment is 3, blank is 5.
+API's\PythonAPI\venv\Lib\site-packages\MarkupSafe-2.1.2.dist-info\INSTALLER, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\MarkupSafe-2.1.2.dist-info\LICENSE.rst, code is 23, comment is 0, blank is 5.
+API's\PythonAPI\venv\Lib\site-packages\MarkupSafe-2.1.2.dist-info\METADATA, code is 75, comment is 18, blank is 23.
+API's\PythonAPI\venv\Lib\site-packages\MarkupSafe-2.1.2.dist-info\RECORD, code is 14, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\MarkupSafe-2.1.2.dist-info\top_level.txt, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\MarkupSafe-2.1.2.dist-info\WHEEL, code is 4, comment is 0, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\markupsafe\__init__.py, code is 171, comment is 13, blank is 72.
+API's\PythonAPI\venv\Lib\site-packages\markupsafe\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\markupsafe\__pycache__\_native.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\markupsafe\_native.py, code is 21, comment is 1, blank is 12.
+API's\PythonAPI\venv\Lib\site-packages\markupsafe\_speedups.c, code is 253, comment is 6, blank is 61.
+API's\PythonAPI\venv\Lib\site-packages\markupsafe\_speedups.cp311-win_amd64.pyd, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\markupsafe\_speedups.pyi, code is 7, comment is 0, blank is 2.
+API's\PythonAPI\venv\Lib\site-packages\markupsafe\py.typed, code is 0, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\pip-21.3.1.dist-info\entry_points.txt, code is 4, comment is 0, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\pip-21.3.1.dist-info\INSTALLER, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\pip-21.3.1.dist-info\LICENSE.txt, code is 17, comment is 0, blank is 3.
+API's\PythonAPI\venv\Lib\site-packages\pip-21.3.1.dist-info\METADATA, code is 54, comment is 8, blank is 15.
+API's\PythonAPI\venv\Lib\site-packages\pip-21.3.1.dist-info\RECORD, code is 877, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\pip-21.3.1.dist-info\top_level.txt, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\pip-21.3.1.dist-info\WHEEL, code is 4, comment is 0, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\pip-21.3.1.virtualenv, code is 0, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\pip\__init__.py, code is 5, comment is 0, blank is 5.
+API's\PythonAPI\venv\Lib\site-packages\pip\__main__.py, code is 14, comment is 13, blank is 4.
+API's\PythonAPI\venv\Lib\site-packages\pip\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\__pycache__\__main__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\__init__.py, code is 7, comment is 3, blank is 6.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\__pycache__\build_env.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\__pycache__\cache.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\__pycache__\configuration.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\__pycache__\exceptions.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\__pycache__\pyproject.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\__pycache__\self_outdated_check.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\__pycache__\wheel_builder.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\build_env.py, code is 213, comment is 10, blank is 39.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\cache.py, code is 159, comment is 17, blank is 57.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\cli\__init__.py, code is 0, comment is 1, blank is 2.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\cli\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\cli\__pycache__\autocompletion.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\cli\__pycache__\base_command.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\cli\__pycache__\cmdoptions.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\cli\__pycache__\command_context.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\cli\__pycache__\main.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\cli\__pycache__\main_parser.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\cli\__pycache__\parser.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\cli\__pycache__\progress_bars.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\cli\__pycache__\req_command.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\cli\__pycache__\spinners.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\cli\__pycache__\status_codes.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\cli\autocompletion.py, code is 111, comment is 19, blank is 19.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\cli\base_command.py, code is 149, comment is 17, blank is 45.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\cli\cmdoptions.py, code is 713, comment is 38, blank is 206.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\cli\command_context.py, code is 20, comment is 0, blank is 7.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\cli\main.py, code is 28, comment is 26, blank is 15.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\cli\main_parser.py, code is 48, comment is 15, blank is 24.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\cli\parser.py, code is 189, comment is 23, blank is 62.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\cli\progress_bars.py, code is 129, comment is 50, blank is 59.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\cli\req_command.py, code is 328, comment is 25, blank is 81.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\cli\spinners.py, code is 113, comment is 18, blank is 26.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\cli\status_codes.py, code is 6, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\commands\__init__.py, code is 101, comment is 7, blank is 15.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\commands\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\commands\__pycache__\install.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\commands\__pycache__\list.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\commands\cache.py, code is 134, comment is 20, blank is 44.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\commands\check.py, code is 41, comment is 0, blank is 11.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\commands\completion.py, code is 55, comment is 0, blank is 11.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\commands\configuration.py, code is 181, comment is 10, blank is 51.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\commands\debug.py, code is 135, comment is 8, blank is 55.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\commands\download.py, code is 97, comment is 2, blank is 25.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\commands\freeze.py, code is 74, comment is 0, blank is 18.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\commands\hash.py, code is 42, comment is 0, blank is 12.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\commands\help.py, code is 27, comment is 2, blank is 12.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\commands\index.py, code is 96, comment is 4, blank is 32.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\commands\install.py, code is 550, comment is 36, blank is 159.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\commands\list.py, code is 273, comment is 13, blank is 61.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\commands\search.py, code is 134, comment is 2, blank is 33.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\commands\show.py, code is 172, comment is 3, blank is 34.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\commands\uninstall.py, code is 77, comment is 0, blank is 18.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\commands\wheel.py, code is 126, comment is 2, blank is 32.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\configuration.py, code is 217, comment is 39, blank is 87.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\distributions\__init__.py, code is 12, comment is 4, blank is 5.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\distributions\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\distributions\__pycache__\base.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\distributions\__pycache__\installed.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\distributions\__pycache__\sdist.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\distributions\__pycache__\wheel.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\distributions\base.py, code is 16, comment is 0, blank is 7.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\distributions\installed.py, code is 12, comment is 0, blank is 6.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\distributions\sdist.py, code is 88, comment is 17, blank is 20.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\distributions\wheel.py, code is 18, comment is 0, blank is 7.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\exceptions.py, code is 175, comment is 10, blank is 143.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\index\__init__.py, code is 0, comment is 0, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\index\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\index\__pycache__\collector.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\index\__pycache__\package_finder.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\index\__pycache__\sources.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\index\collector.py, code is 325, comment is 37, blank is 105.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\index\package_finder.py, code is 621, comment is 45, blank is 152.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\index\sources.py, code is 153, comment is 2, blank is 48.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\locations\__init__.py, code is 300, comment is 33, blank is 88.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\locations\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\locations\__pycache__\_distutils.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\locations\__pycache__\_sysconfig.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\locations\__pycache__\base.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\locations\_distutils.py, code is 109, comment is 18, blank is 26.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\locations\_sysconfig.py, code is 125, comment is 20, blank is 36.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\locations\base.py, code is 29, comment is 8, blank is 12.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\main.py, code is 4, comment is 0, blank is 4.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\metadata\__init__.py, code is 21, comment is 0, blank is 14.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\metadata\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\metadata\__pycache__\base.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\metadata\__pycache__\pkg_resources.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\metadata\base.py, code is 200, comment is 13, blank is 59.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\metadata\pkg_resources.py, code is 99, comment is 13, blank is 32.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\models\__init__.py, code is 0, comment is 0, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\models\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\models\__pycache__\candidate.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\models\__pycache__\direct_url.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\models\__pycache__\format_control.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\models\__pycache__\index.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\models\__pycache__\link.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\models\__pycache__\scheme.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\models\__pycache__\search_scope.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\models\__pycache__\selection_prefs.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\models\__pycache__\target_python.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\models\__pycache__\wheel.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\models\candidate.py, code is 26, comment is 0, blank is 8.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\models\direct_url.py, code is 171, comment is 0, blank is 46.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\models\format_control.py, code is 63, comment is 1, blank is 16.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\models\index.py, code is 16, comment is 3, blank is 9.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\models\link.py, code is 178, comment is 11, blank is 53.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\models\scheme.py, code is 16, comment is 0, blank is 8.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\models\search_scope.py, code is 76, comment is 18, blank is 27.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\models\selection_prefs.py, code is 26, comment is 4, blank is 7.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\models\target_python.py, code is 64, comment is 4, blank is 20.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\models\wheel.py, code is 35, comment is 3, blank is 18.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\network\__init__.py, code is 0, comment is 0, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\network\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\network\__pycache__\auth.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\network\__pycache__\cache.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\network\__pycache__\download.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\network\__pycache__\lazy_wheel.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\network\__pycache__\session.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\network\__pycache__\utils.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\network\auth.py, code is 193, comment is 52, blank is 58.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\network\cache.py, code is 41, comment is 3, blank is 19.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\network\download.py, code is 136, comment is 4, blank is 37.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\network\lazy_wheel.py, code is 116, comment is 9, blank is 48.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\network\session.py, code is 280, comment is 81, blank is 78.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\network\utils.py, code is 38, comment is 47, blank is 11.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\network\xmlrpc.py, code is 47, comment is 0, blank is 10.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\operations\__init__.py, code is 0, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\operations\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\operations\__pycache__\check.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\operations\__pycache__\prepare.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\operations\build\__init__.py, code is 0, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\operations\build\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\operations\build\__pycache__\metadata.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\operations\build\__pycache__\metadata_editable.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\operations\build\__pycache__\metadata_legacy.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\operations\build\__pycache__\wheel.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\operations\build\__pycache__\wheel_editable.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\operations\build\__pycache__\wheel_legacy.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\operations\build\metadata.py, code is 13, comment is 3, blank is 10.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\operations\build\metadata_editable.py, code is 16, comment is 3, blank is 11.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\operations\build\metadata_legacy.py, code is 45, comment is 1, blank is 17.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\operations\build\wheel.py, code is 27, comment is 0, blank is 7.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\operations\build\wheel_editable.py, code is 35, comment is 0, blank is 8.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\operations\build\wheel_legacy.py, code is 82, comment is 1, blank is 19.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\operations\check.py, code is 92, comment is 10, blank is 40.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\operations\freeze.py, code is 204, comment is 12, blank is 35.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\operations\install\__init__.py, code is 0, comment is 0, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\operations\install\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\operations\install\__pycache__\editable_legacy.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\operations\install\__pycache__\legacy.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\operations\install\__pycache__\wheel.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\operations\install\editable_legacy.py, code is 35, comment is 0, blank is 8.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\operations\install\legacy.py, code is 95, comment is 6, blank is 23.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\operations\install\wheel.py, code is 470, comment is 94, blank is 137.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\operations\prepare.py, code is 413, comment is 94, blank is 113.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\pyproject.py, code is 88, comment is 40, blank is 35.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\req\__init__.py, code is 71, comment is 1, blank is 18.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\req\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\req\__pycache__\constructors.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\req\__pycache__\req_file.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\req\__pycache__\req_install.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\req\__pycache__\req_set.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\req\__pycache__\req_tracker.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\req\__pycache__\req_uninstall.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\req\constructors.py, code is 331, comment is 21, blank is 75.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\req\req_file.py, code is 344, comment is 38, blank is 92.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\req\req_install.py, code is 632, comment is 78, blank is 117.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\req\req_set.py, code is 125, comment is 19, blank is 32.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\req\req_tracker.py, code is 88, comment is 9, blank is 28.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\req\req_uninstall.py, code is 426, comment is 53, blank is 110.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\resolution\__init__.py, code is 0, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\resolution\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\resolution\__pycache__\base.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\resolution\base.py, code is 15, comment is 0, blank is 5.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\resolution\legacy\__init__.py, code is 0, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\resolution\legacy\resolver.py, code is 280, comment is 49, blank is 67.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\resolution\resolvelib\__init__.py, code is 0, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\resolution\resolvelib\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\resolution\resolvelib\__pycache__\base.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\resolution\resolvelib\__pycache__\candidates.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\resolution\resolvelib\__pycache__\factory.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\resolution\resolvelib\__pycache__\found_candidates.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\resolution\resolvelib\__pycache__\provider.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\resolution\resolvelib\__pycache__\reporter.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\resolution\resolvelib\__pycache__\requirements.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\resolution\resolvelib\__pycache__\resolver.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\resolution\resolvelib\base.py, code is 87, comment is 4, blank is 32.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\resolution\resolvelib\candidates.py, code is 393, comment is 19, blank is 93.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\resolution\resolvelib\factory.py, code is 539, comment is 63, blank is 84.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\resolution\resolvelib\found_candidates.py, code is 81, comment is 18, blank is 23.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\resolution\resolvelib\provider.py, code is 119, comment is 36, blank is 27.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\resolution\resolvelib\reporter.py, code is 39, comment is 0, blank is 29.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\resolution\resolvelib\requirements.py, code is 110, comment is 12, blank is 44.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\resolution\resolvelib\resolver.py, code is 166, comment is 16, blank is 39.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\self_outdated_check.py, code is 113, comment is 24, blank is 37.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\__init__.py, code is 0, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\__pycache__\_log.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\__pycache__\appdirs.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\__pycache__\compat.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\__pycache__\compatibility_tags.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\__pycache__\deprecation.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\__pycache__\direct_url_helpers.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\__pycache__\distutils_args.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\__pycache__\egg_link.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\__pycache__\encoding.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\__pycache__\filesystem.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\__pycache__\filetypes.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\__pycache__\glibc.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\__pycache__\hashes.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\__pycache__\inject_securetransport.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\__pycache__\logging.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\__pycache__\misc.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\__pycache__\models.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\__pycache__\packaging.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\__pycache__\parallel.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\__pycache__\pkg_resources.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\__pycache__\setuptools_build.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\__pycache__\subprocess.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\__pycache__\temp_dir.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\__pycache__\unpacking.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\__pycache__\urls.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\__pycache__\virtualenv.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\__pycache__\wheel.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\_log.py, code is 11, comment is 2, blank is 13.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\appdirs.py, code is 25, comment is 5, blank is 16.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\compat.py, code is 26, comment is 11, blank is 17.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\compatibility_tags.py, code is 109, comment is 16, blank is 28.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\datetime.py, code is 5, comment is 0, blank is 5.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\deprecation.py, code is 69, comment is 7, blank is 25.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\direct_url_helpers.py, code is 70, comment is 10, blank is 8.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\distutils_args.py, code is 28, comment is 5, blank is 6.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\egg_link.py, code is 38, comment is 2, blank is 13.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\encoding.py, code is 28, comment is 1, blank is 5.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\entrypoints.py, code is 7, comment is 0, blank is 10.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\filesystem.py, code is 110, comment is 22, blank is 37.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\filetypes.py, code is 19, comment is 0, blank is 7.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\glibc.py, code is 34, comment is 33, blank is 17.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\hashes.py, code is 76, comment is 12, blank is 36.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\inject_securetransport.py, code is 16, comment is 2, blank is 10.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\logging.py, code is 236, comment is 31, blank is 69.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\misc.py, code is 370, comment is 29, blank is 171.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\models.py, code is 23, comment is 0, blank is 15.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\packaging.py, code is 47, comment is 8, blank is 16.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\parallel.py, code is 44, comment is 6, blank is 21.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\pkg_resources.py, code is 21, comment is 1, blank is 11.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\setuptools_build.py, code is 113, comment is 10, blank is 36.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\subprocess.py, code is 180, comment is 45, blank is 37.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\temp_dir.py, code is 131, comment is 20, blank is 53.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\unpacking.py, code is 184, comment is 18, blank is 38.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\urls.py, code is 37, comment is 9, blank is 15.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\virtualenv.py, code is 48, comment is 8, blank is 27.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\utils\wheel.py, code is 96, comment is 8, blank is 50.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\vcs\__init__.py, code is 11, comment is 6, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\vcs\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\vcs\__pycache__\bazaar.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\vcs\__pycache__\git.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\vcs\__pycache__\mercurial.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\vcs\__pycache__\subversion.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\vcs\__pycache__\versioncontrol.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\vcs\bazaar.py, code is 77, comment is 1, blank is 15.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\vcs\git.py, code is 325, comment is 56, blank is 71.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\vcs\mercurial.py, code is 123, comment is 1, blank is 21.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\vcs\subversion.py, code is 202, comment is 46, blank is 48.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\vcs\versioncontrol.py, code is 382, comment is 24, blank is 126.
+API's\PythonAPI\venv\Lib\site-packages\pip\_internal\wheel_builder.py, code is 284, comment is 19, blank is 58.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\__init__.py, code is 69, comment is 26, blank is 10.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\__pycache__\pyparsing.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\__pycache__\six.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\cachecontrol\__init__.py, code is 6, comment is 0, blank is 2.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\cachecontrol\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\cachecontrol\__pycache__\adapter.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\cachecontrol\__pycache__\cache.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\cachecontrol\__pycache__\compat.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\cachecontrol\__pycache__\controller.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\cachecontrol\__pycache__\filewrapper.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\cachecontrol\__pycache__\serialize.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\cachecontrol\__pycache__\wrapper.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\cachecontrol\_cmd.py, code is 35, comment is 4, blank is 18.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\cachecontrol\adapter.py, code is 83, comment is 17, blank is 25.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\cachecontrol\cache.py, code is 23, comment is 0, blank is 13.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\cachecontrol\caches\__init__.py, code is 2, comment is 2, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\cachecontrol\caches\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\cachecontrol\caches\__pycache__\file_cache.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\cachecontrol\caches\__pycache__\redis_cache.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\cachecontrol\caches\file_cache.py, code is 88, comment is 21, blank is 30.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\cachecontrol\caches\redis_cache.py, code is 21, comment is 0, blank is 11.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\cachecontrol\compat.py, code is 20, comment is 3, blank is 6.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\cachecontrol\controller.py, code is 224, comment is 60, blank is 74.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\cachecontrol\filewrapper.py, code is 37, comment is 17, blank is 17.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\cachecontrol\heuristics.py, code is 69, comment is 0, blank is 39.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\cachecontrol\serialize.py, code is 103, comment is 46, blank is 37.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\cachecontrol\wrapper.py, code is 25, comment is 0, blank is 4.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\certifi\__init__.py, code is 2, comment is 0, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\certifi\__main__.py, code is 9, comment is 0, blank is 3.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\certifi\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\certifi\__pycache__\core.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\certifi\cacert.pem, code is 4129, comment is 25, blank is 128.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\certifi\core.py, code is 30, comment is 25, blank is 16.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__init__.py, code is 42, comment is 18, blank is 13.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\big5freq.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\big5prober.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\chardistribution.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\charsetgroupprober.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\charsetprober.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\codingstatemachine.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\cp949prober.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\enums.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\escprober.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\escsm.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\eucjpprober.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\euckrfreq.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\euckrprober.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\euctwfreq.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\euctwprober.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\gb2312freq.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\gb2312prober.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\hebrewprober.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\jisfreq.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\jpcntx.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\langbulgarianmodel.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\langgreekmodel.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\langhebrewmodel.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\langrussianmodel.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\langthaimodel.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\langturkishmodel.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\latin1prober.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\mbcharsetprober.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\mbcsgroupprober.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\mbcssm.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\sbcharsetprober.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\sbcsgroupprober.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\sjisprober.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\universaldetector.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\utf8prober.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\__pycache__\version.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\big5freq.py, code is 340, comment is 377, blank is 5.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\big5prober.py, code is 16, comment is 26, blank is 5.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\chardistribution.py, code is 131, comment is 72, blank is 32.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\charsetgroupprober.py, code is 73, comment is 26, blank is 8.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\charsetprober.py, code is 56, comment is 44, blank is 24.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\cli\__init__.py, code is 0, comment is 0, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\cli\chardetect.py, code is 41, comment is 2, blank is 13.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\codingstatemachine.py, code is 29, comment is 29, blank is 10.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\compat.py, code is 13, comment is 20, blank is 3.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\cp949prober.py, code is 16, comment is 28, blank is 5.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\enums.py, code is 35, comment is 0, blank is 21.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\escprober.py, code is 61, comment is 26, blank is 10.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\escsm.py, code is 201, comment is 182, blank is 19.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\eucjpprober.py, code is 54, comment is 27, blank is 11.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\euckrfreq.py, code is 151, comment is 39, blank is 6.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\euckrprober.py, code is 16, comment is 26, blank is 5.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\euctwfreq.py, code is 340, comment is 377, blank is 6.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\euctwprober.py, code is 16, comment is 26, blank is 4.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\gb2312freq.py, code is 239, comment is 39, blank is 6.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\gb2312prober.py, code is 16, comment is 26, blank is 4.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\hebrewprober.py, code is 83, comment is 186, blank is 23.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\jisfreq.py, code is 277, comment is 314, blank is 7.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\jpcntx.py, code is 169, comment is 46, blank is 20.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\langbulgarianmodel.py, code is 4628, comment is 4556, blank is 10.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\langgreekmodel.py, code is 4376, comment is 4306, blank is 10.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\langhebrewmodel.py, code is 4363, comment is 4300, blank is 8.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\langhungarianmodel.py, code is 4628, comment is 4556, blank is 10.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\langrussianmodel.py, code is 5688, comment is 5580, blank is 18.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\langthaimodel.py, code is 4363, comment is 4300, blank is 8.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\langturkishmodel.py, code is 4363, comment is 4300, blank is 8.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\latin1prober.py, code is 97, comment is 83, blank is 14.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\mbcharsetprober.py, code is 48, comment is 28, blank is 13.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\mbcsgroupprober.py, code is 23, comment is 28, blank is 3.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\mbcssm.py, code is 476, comment is 420, blank is 52.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\metadata\__init__.py, code is 0, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\metadata\languages.py, code is 242, comment is 36, blank is 9.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\sbcharsetprober.py, code is 91, comment is 41, blank is 14.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\sbcsgroupprober.py, code is 41, comment is 39, blank is 3.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\sjisprober.py, code is 55, comment is 26, blank is 11.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\universaldetector.py, code is 161, comment is 55, blank is 26.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\utf8prober.py, code is 44, comment is 26, blank is 12.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\chardet\version.py, code is 2, comment is 0, blank is 2.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\colorama\__init__.py, code is 4, comment is 1, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\colorama\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\colorama\__pycache__\ansi.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\colorama\__pycache__\ansitowin32.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\colorama\__pycache__\initialise.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\colorama\__pycache__\win32.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\colorama\__pycache__\winterm.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\colorama\ansi.py, code is 73, comment is 10, blank is 19.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\colorama\ansitowin32.py, code is 174, comment is 49, blank is 39.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\colorama\initialise.py, code is 57, comment is 2, blank is 22.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\colorama\win32.py, code is 121, comment is 11, blank is 20.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\colorama\winterm.py, code is 123, comment is 31, blank is 18.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\distlib\__init__.py, code is 13, comment is 7, blank is 4.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\distlib\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\distlib\__pycache__\compat.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\distlib\__pycache__\resources.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\distlib\__pycache__\scripts.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\distlib\__pycache__\util.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\distlib\_backport\__init__.py, code is 0, comment is 0, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\distlib\_backport\misc.py, code is 26, comment is 5, blank is 10.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\distlib\_backport\shutil.py, code is 468, comment is 32, blank is 112.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\distlib\_backport\sysconfig.cfg, code is 76, comment is 0, blank is 8.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\distlib\_backport\sysconfig.py, code is 485, comment is 115, blank is 133.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\distlib\_backport\tarfile.py, code is 1654, comment is 352, blank is 448.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\distlib\compat.py, code is 739, comment is 178, blank is 190.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\distlib\database.py, code is 766, comment is 58, blank is 210.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\distlib\index.py, code is 286, comment is 19, blank is 48.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\distlib\locators.py, code is 819, comment is 115, blank is 138.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\distlib\manifest.py, code is 201, comment is 54, blank is 63.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\distlib\markers.py, code is 103, comment is 9, blank is 21.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\distlib\metadata.py, code is 784, comment is 70, blank is 168.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\distlib\resources.py, code is 243, comment is 20, blank is 67.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\distlib\scripts.py, code is 286, comment is 92, blank is 45.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\distlib\t32.exe, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\distlib\t64-arm.exe, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\distlib\t64.exe, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\distlib\util.py, code is 1413, comment is 186, blank is 254.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\distlib\version.py, code is 480, comment is 108, blank is 128.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\distlib\w32.exe, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\distlib\w64-arm.exe, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\distlib\w64.exe, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\distlib\wheel.py, code is 810, comment is 99, blank is 114.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\distro.py, code is 465, comment is 160, blank is 171.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\__init__.py, code is 9, comment is 2, blank is 4.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\__pycache__\_ihatexml.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\__pycache__\_inputstream.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\__pycache__\_tokenizer.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\__pycache__\_utils.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\__pycache__\constants.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\__pycache__\html5parser.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\__pycache__\serializer.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\_ihatexml.py, code is 162, comment is 7, blank is 48.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\_inputstream.py, code is 609, comment is 105, blank is 149.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\_tokenizer.py, code is 1530, comment is 75, blank is 109.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\_trie\__init__.py, code is 3, comment is 0, blank is 2.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\_trie\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\_trie\__pycache__\_base.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\_trie\__pycache__\py.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\_trie\_base.py, code is 26, comment is 2, blank is 13.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\_trie\py.py, code is 48, comment is 0, blank is 19.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\_utils.py, code is 99, comment is 15, blank is 37.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\constants.py, code is 2875, comment is 37, blank is 66.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\filters\__init__.py, code is 0, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\filters\alphabeticalattributes.py, code is 15, comment is 0, blank is 8.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\filters\base.py, code is 8, comment is 0, blank is 4.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\filters\inject_meta_charset.py, code is 53, comment is 3, blank is 11.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\filters\lint.py, code is 67, comment is 0, blank is 16.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\filters\optionaltags.py, code is 115, comment is 85, blank is 7.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\filters\sanitizer.py, code is 804, comment is 35, blank is 42.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\filters\whitespace.py, code is 24, comment is 1, blank is 13.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\html5parser.py, code is 2063, comment is 189, blank is 438.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\serializer.py, code is 168, comment is 10, blank is 61.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\treeadapters\__init__.py, code is 9, comment is 1, blank is 4.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\treeadapters\genshi.py, code is 37, comment is 1, blank is 11.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\treeadapters\sax.py, code is 36, comment is 0, blank is 8.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\treebuilders\__init__.py, code is 24, comment is 3, blank is 7.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\treebuilders\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\treebuilders\__pycache__\base.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\treebuilders\__pycache__\etree.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\treebuilders\base.py, code is 228, comment is 50, blank is 85.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\treebuilders\dom.py, code is 190, comment is 5, blank is 46.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\treebuilders\etree.py, code is 269, comment is 10, blank is 66.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\treebuilders\etree_lxml.py, code is 293, comment is 15, blank is 75.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\treewalkers\__init__.py, code is 95, comment is 4, blank is 20.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\treewalkers\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\treewalkers\base.py, code is 119, comment is 0, blank is 42.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\treewalkers\dom.py, code is 31, comment is 0, blank is 12.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\treewalkers\etree.py, code is 97, comment is 3, blank is 21.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\treewalkers\etree_lxml.py, code is 163, comment is 10, blank is 47.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\html5lib\treewalkers\genshi.py, code is 53, comment is 2, blank is 14.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\idna\__init__.py, code is 43, comment is 0, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\idna\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\idna\__pycache__\core.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\idna\__pycache__\idnadata.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\idna\__pycache__\intranges.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\idna\__pycache__\package_data.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\idna\codec.py, code is 84, comment is 14, blank is 24.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\idna\compat.py, code is 9, comment is 3, blank is 4.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\idna\core.py, code is 305, comment is 29, blank is 78.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\idna\idnadata.py, code is 2048, comment is 1, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\idna\intranges.py, code is 32, comment is 7, blank is 10.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\idna\package_data.py, code is 1, comment is 0, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\idna\uts46data.py, code is 8272, comment is 82, blank is 85.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\msgpack\__init__.py, code is 24, comment is 2, blank is 15.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\msgpack\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\msgpack\__pycache__\_version.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\msgpack\__pycache__\exceptions.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\msgpack\__pycache__\ext.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\msgpack\__pycache__\fallback.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\msgpack\_version.py, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\msgpack\exceptions.py, code is 17, comment is 2, blank is 20.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\msgpack\ext.py, code is 93, comment is 5, blank is 38.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\msgpack\fallback.py, code is 790, comment is 33, blank is 103.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\packaging\__about__.py, code is 18, comment is 3, blank is 5.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\packaging\__init__.py, code is 20, comment is 3, blank is 2.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\packaging\__pycache__\__about__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\packaging\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\packaging\__pycache__\_manylinux.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\packaging\__pycache__\_musllinux.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\packaging\__pycache__\_structures.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\packaging\__pycache__\markers.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\packaging\__pycache__\requirements.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\packaging\__pycache__\specifiers.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\packaging\__pycache__\tags.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\packaging\__pycache__\utils.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\packaging\__pycache__\version.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\packaging\_manylinux.py, code is 196, comment is 52, blank is 42.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\packaging\_musllinux.py, code is 85, comment is 11, blank is 23.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\packaging\_structures.py, code is 40, comment is 3, blank is 24.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\packaging\markers.py, code is 208, comment is 15, blank is 75.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\packaging\requirements.py, code is 97, comment is 10, blank is 33.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\packaging\specifiers.py, code is 401, comment is 134, blank is 169.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\packaging\tags.py, code is 306, comment is 29, blank is 87.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\packaging\utils.py, code is 81, comment is 16, blank is 32.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\packaging\version.py, code is 294, comment is 58, blank is 115.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\pep517\__init__.py, code is 2, comment is 1, blank is 3.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\pep517\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\pep517\__pycache__\compat.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\pep517\__pycache__\wrappers.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\pep517\build.py, code is 88, comment is 1, blank is 28.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\pep517\check.py, code is 163, comment is 1, blank is 42.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\pep517\colorlog.py, code is 61, comment is 25, blank is 16.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\pep517\compat.py, code is 33, comment is 8, blank is 14.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\pep517\dirtools.py, code is 33, comment is 0, blank is 9.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\pep517\envbuild.py, code is 101, comment is 20, blank is 30.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\pep517\in_process\__init__.py, code is 10, comment is 0, blank is 3.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\pep517\in_process\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\pep517\in_process\_in_process.py, code is 224, comment is 9, blank is 81.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\pep517\meta.py, code is 64, comment is 0, blank is 23.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\pep517\wrappers.py, code is 204, comment is 12, blank is 66.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\pkg_resources\__init__.py, code is 1824, comment is 164, blank is 723.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\pkg_resources\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\pkg_resources\__pycache__\py31compat.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\pkg_resources\py31compat.py, code is 15, comment is 3, blank is 5.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\platformdirs\__init__.py, code is 163, comment is 3, blank is 63.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\platformdirs\__main__.py, code is 34, comment is 0, blank is 10.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\platformdirs\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\platformdirs\__pycache__\api.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\platformdirs\__pycache__\version.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\platformdirs\__pycache__\windows.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\platformdirs\android.py, code is 67, comment is 7, blank is 33.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\platformdirs\api.py, code is 84, comment is 4, blank is 47.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\platformdirs\macos.py, code is 33, comment is 0, blank is 24.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\platformdirs\unix.py, code is 99, comment is 6, blank is 40.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\platformdirs\version.py, code is 2, comment is 0, blank is 2.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\platformdirs\windows.py, code is 110, comment is 4, blank is 43.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\progress\__init__.py, code is 139, comment is 16, blank is 35.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\progress\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\progress\__pycache__\bar.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\progress\__pycache__\colors.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\progress\__pycache__\spinner.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\progress\bar.py, code is 57, comment is 17, blank is 22.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\progress\colors.py, code is 50, comment is 16, blank is 13.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\progress\counter.py, code is 22, comment is 14, blank is 11.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\progress\spinner.py, code is 18, comment is 14, blank is 13.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\pyparsing.py, code is 786, comment is 4430, blank is 189.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\__init__.py, code is 78, comment is 24, blank is 21.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\__pycache__\__version__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\__pycache__\_internal_utils.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\__pycache__\adapters.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\__pycache__\api.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\__pycache__\auth.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\__pycache__\certs.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\__pycache__\compat.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\__pycache__\cookies.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\__pycache__\exceptions.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\__pycache__\hooks.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\__pycache__\models.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\__pycache__\packages.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\__pycache__\sessions.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\__pycache__\status_codes.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\__pycache__\structures.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\__pycache__\utils.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\__version__.py, code is 10, comment is 3, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\_internal_utils.py, code is 17, comment is 1, blank is 10.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\adapters.py, code is 280, comment is 21, blank is 93.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\api.py, code is 26, comment is 4, blank is 28.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\auth.py, code is 194, comment is 28, blank is 72.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\certs.py, code is 3, comment is 2, blank is 3.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\compat.py, code is 36, comment is 19, blank is 15.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\cookies.py, code is 281, comment is 14, blank is 117.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\exceptions.py, code is 33, comment is 2, blank is 77.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\help.py, code is 99, comment is 2, blank is 24.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\hooks.py, code is 14, comment is 2, blank is 8.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\models.py, code is 521, comment is 119, blank is 197.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\packages.py, code is 8, comment is 5, blank is 3.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\sessions.py, code is 353, comment is 119, blank is 155.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\status_codes.py, code is 88, comment is 6, blank is 12.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\structures.py, code is 44, comment is 6, blank is 26.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\requests\utils.py, code is 516, comment is 90, blank is 219.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\resolvelib\__init__.py, code is 23, comment is 0, blank is 3.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\resolvelib\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\resolvelib\__pycache__\providers.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\resolvelib\__pycache__\reporters.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\resolvelib\__pycache__\resolvers.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\resolvelib\__pycache__\structs.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\resolvelib\compat\__init__.py, code is 0, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\resolvelib\compat\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\resolvelib\compat\__pycache__\collections_abc.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\resolvelib\compat\collections_abc.py, code is 5, comment is 0, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\resolvelib\providers.py, code is 28, comment is 0, blank is 16.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\resolvelib\reporters.py, code is 8, comment is 0, blank is 15.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\resolvelib\resolvers.py, code is 290, comment is 30, blank is 85.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\resolvelib\structs.py, code is 105, comment is 5, blank is 47.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\six.py, code is 687, comment is 61, blank is 203.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\tenacity\__init__.py, code is 336, comment is 84, blank is 108.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\tenacity\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\tenacity\__pycache__\_asyncio.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\tenacity\__pycache__\_utils.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\tenacity\__pycache__\after.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\tenacity\__pycache__\before.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\tenacity\__pycache__\before_sleep.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\tenacity\__pycache__\nap.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\tenacity\__pycache__\retry.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\tenacity\__pycache__\stop.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\tenacity\__pycache__\wait.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\tenacity\_asyncio.py, code is 61, comment is 20, blank is 13.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\tenacity\_utils.py, code is 36, comment is 19, blank is 10.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\tenacity\after.py, code is 19, comment is 15, blank is 12.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\tenacity\before.py, code is 14, comment is 15, blank is 12.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\tenacity\before_sleep.py, code is 29, comment is 16, blank is 14.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\tenacity\nap.py, code is 11, comment is 18, blank is 10.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\tenacity\retry.py, code is 122, comment is 18, blank is 73.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\tenacity\stop.py, code is 42, comment is 15, blank is 39.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\tenacity\tornadoweb.py, code is 37, comment is 15, blank is 9.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\tenacity\wait.py, code is 81, comment is 20, blank is 45.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\tomli\__init__.py, code is 3, comment is 1, blank is 3.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\tomli\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\tomli\__pycache__\_parser.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\tomli\__pycache__\_re.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\tomli\_parser.py, code is 546, comment is 59, blank is 112.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\tomli\_re.py, code is 65, comment is 9, blank is 11.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\__init__.py, code is 49, comment is 11, blank is 16.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\__pycache__\_collections.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\__pycache__\_version.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\__pycache__\connection.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\__pycache__\connectionpool.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\__pycache__\exceptions.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\__pycache__\fields.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\__pycache__\filepost.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\__pycache__\poolmanager.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\__pycache__\request.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\__pycache__\response.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\_collections.py, code is 195, comment is 22, blank is 68.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\_version.py, code is 1, comment is 1, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\connection.py, code is 351, comment is 59, blank is 111.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\connectionpool.py, code is 577, comment is 109, blank is 155.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\contrib\__init__.py, code is 0, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\contrib\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\contrib\__pycache__\_appengine_environ.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\contrib\__pycache__\socks.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\contrib\_appengine_environ.py, code is 15, comment is 0, blank is 14.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\contrib\_securetransport\__init__.py, code is 0, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\contrib\_securetransport\bindings.py, code is 380, comment is 10, blank is 95.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\contrib\_securetransport\low_level.py, code is 218, comment is 60, blank is 71.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\contrib\appengine.py, code is 194, comment is 12, blank is 54.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\contrib\ntlmpool.py, code is 89, comment is 7, blank is 24.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\contrib\pyopenssl.py, code is 306, comment is 32, blank is 104.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\contrib\securetransport.py, code is 543, comment is 138, blank is 142.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\contrib\socks.py, code is 125, comment is 8, blank is 39.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\exceptions.py, code is 127, comment is 10, blank is 164.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\fields.py, code is 125, comment is 7, blank is 47.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\filepost.py, code is 46, comment is 1, blank is 25.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\packages\__init__.py, code is 3, comment is 0, blank is 2.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\packages\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\packages\__pycache__\six.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\packages\backports\__init__.py, code is 0, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\packages\backports\makefile.py, code is 39, comment is 1, blank is 3.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\packages\six.py, code is 734, comment is 61, blank is 235.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\packages\ssl_match_hostname\__init__.py, code is 14, comment is 9, blank is 3.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\packages\ssl_match_hostname\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\packages\ssl_match_hostname\__pycache__\_implementation.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\packages\ssl_match_hostname\_implementation.py, code is 83, comment is 36, blank is 28.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\poolmanager.py, code is 263, comment is 59, blank is 96.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\request.py, code is 70, comment is 1, blank is 28.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\response.py, code is 483, comment is 79, blank is 140.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\util\__init__.py, code is 46, comment is 1, blank is 2.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\util\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\util\__pycache__\connection.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\util\__pycache__\proxy.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\util\__pycache__\queue.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\util\__pycache__\request.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\util\__pycache__\response.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\util\__pycache__\retry.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\util\__pycache__\ssl_.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\util\__pycache__\ssltransport.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\util\__pycache__\timeout.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\util\__pycache__\url.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\util\__pycache__\wait.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\util\connection.py, code is 79, comment is 22, blank is 33.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\util\proxy.py, code is 30, comment is 4, blank is 11.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\util\queue.py, code is 14, comment is 2, blank is 7.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\util\request.py, code is 69, comment is 7, blank is 23.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\util\response.py, code is 44, comment is 21, blank is 21.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\util\retry.py, code is 315, comment is 30, blank is 95.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\util\ssl_.py, code is 260, comment is 67, blank is 94.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\util\ssltransport.py, code is 151, comment is 3, blank is 46.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\util\timeout.py, code is 84, comment is 12, blank is 39.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\util\url.py, code is 262, comment is 36, blank is 76.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\urllib3\util\wait.py, code is 83, comment is 39, blank is 28.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\vendor.txt, code is 22, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\webencodings\__init__.py, code is 127, comment is 17, blank is 55.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\webencodings\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\webencodings\__pycache__\labels.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\webencodings\labels.py, code is 216, comment is 2, blank is 3.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\webencodings\mklabels.py, code is 24, comment is 17, blank is 9.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\webencodings\tests.py, code is 116, comment is 9, blank is 25.
+API's\PythonAPI\venv\Lib\site-packages\pip\_vendor\webencodings\x_user_defined.py, code is 29, comment is 7, blank is 279.
+API's\PythonAPI\venv\Lib\site-packages\pip\py.typed, code is 2, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\__init__.py, code is 1824, comment is 165, blank is 730.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\_vendor\__init__.py, code is 0, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\_vendor\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\_vendor\__pycache__\appdirs.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\_vendor\__pycache__\pyparsing.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\_vendor\appdirs.py, code is 306, comment is 30, blank is 65.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\_vendor\packaging\__about__.py, code is 18, comment is 3, blank is 5.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\_vendor\packaging\__init__.py, code is 20, comment is 3, blank is 2.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\_vendor\packaging\__pycache__\__about__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\_vendor\packaging\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\_vendor\packaging\__pycache__\_manylinux.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\_vendor\packaging\__pycache__\_musllinux.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\_vendor\packaging\__pycache__\_structures.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\_vendor\packaging\__pycache__\markers.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\_vendor\packaging\__pycache__\requirements.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\_vendor\packaging\__pycache__\specifiers.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\_vendor\packaging\__pycache__\tags.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\_vendor\packaging\__pycache__\utils.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\_vendor\packaging\__pycache__\version.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\_vendor\packaging\_manylinux.py, code is 196, comment is 52, blank is 42.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\_vendor\packaging\_musllinux.py, code is 85, comment is 11, blank is 23.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\_vendor\packaging\_structures.py, code is 40, comment is 3, blank is 24.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\_vendor\packaging\markers.py, code is 208, comment is 15, blank is 75.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\_vendor\packaging\requirements.py, code is 97, comment is 10, blank is 33.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\_vendor\packaging\specifiers.py, code is 401, comment is 134, blank is 169.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\_vendor\packaging\tags.py, code is 306, comment is 29, blank is 87.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\_vendor\packaging\utils.py, code is 81, comment is 16, blank is 32.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\_vendor\packaging\version.py, code is 294, comment is 58, blank is 115.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\_vendor\pyparsing.py, code is 438, comment is 3445, blank is 81.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\extern\__init__.py, code is 43, comment is 0, blank is 21.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\extern\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\pkg_resources\tests\data\my-test-package-source\setup.py, code is 6, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\setuptools-60.2.0.dist-info\entry_points.txt, code is 52, comment is 0, blank is 4.
+API's\PythonAPI\venv\Lib\site-packages\setuptools-60.2.0.dist-info\INSTALLER, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\setuptools-60.2.0.dist-info\LICENSE, code is 16, comment is 0, blank is 3.
+API's\PythonAPI\venv\Lib\site-packages\setuptools-60.2.0.dist-info\METADATA, code is 92, comment is 24, blank is 23.
+API's\PythonAPI\venv\Lib\site-packages\setuptools-60.2.0.dist-info\RECORD, code is 317, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\setuptools-60.2.0.dist-info\top_level.txt, code is 3, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\setuptools-60.2.0.dist-info\WHEEL, code is 4, comment is 0, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\setuptools-60.2.0.virtualenv, code is 0, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\__init__.py, code is 132, comment is 11, blank is 62.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\__pycache__\_deprecation_warning.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\__pycache__\_imp.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\__pycache__\archive_util.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\__pycache__\config.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\__pycache__\depends.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\__pycache__\dist.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\__pycache__\extension.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\__pycache__\glob.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\__pycache__\logging.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\__pycache__\monkey.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\__pycache__\msvc.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\__pycache__\namespaces.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\__pycache__\package_index.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\__pycache__\py34compat.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\__pycache__\sandbox.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\__pycache__\unicode_utils.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\__pycache__\version.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\__pycache__\wheel.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\__pycache__\windows_support.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_deprecation_warning.py, code is 1, comment is 0, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\__init__.py, code is 7, comment is 4, blank is 5.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\__pycache__\_msvccompiler.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\__pycache__\archive_util.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\__pycache__\ccompiler.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\__pycache__\cmd.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\__pycache__\config.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\__pycache__\core.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\__pycache__\debug.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\__pycache__\dep_util.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\__pycache__\dir_util.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\__pycache__\dist.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\__pycache__\errors.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\__pycache__\extension.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\__pycache__\fancy_getopt.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\__pycache__\file_util.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\__pycache__\filelist.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\__pycache__\log.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\__pycache__\msvc9compiler.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\__pycache__\py35compat.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\__pycache__\spawn.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\__pycache__\sysconfig.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\__pycache__\text_file.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\__pycache__\util.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\_msvccompiler.py, code is 388, comment is 64, blank is 86.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\archive_util.py, code is 164, comment is 9, blank is 42.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\bcppcompiler.py, code is 241, comment is 83, blank is 68.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\ccompiler.py, code is 513, comment is 167, blank is 168.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\cmd.py, code is 173, comment is 71, blank is 70.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\__init__.py, code is 20, comment is 6, blank is 2.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\__pycache__\bdist.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\__pycache__\build.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\__pycache__\build_ext.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\__pycache__\build_py.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\__pycache__\build_scripts.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\__pycache__\install.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\__pycache__\install_lib.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\__pycache__\install_scripts.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\__pycache__\py37compat.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\__pycache__\sdist.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\bdist.py, code is 96, comment is 14, blank is 29.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\bdist_dumb.py, code is 91, comment is 3, blank is 25.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\bdist_msi.py, code is 528, comment is 105, blank is 102.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\bdist_rpm.py, code is 420, comment is 62, blank is 94.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\bdist_wininst.py, code is 254, comment is 64, blank is 59.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\build.py, code is 103, comment is 22, blank is 30.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\build_clib.py, code is 121, comment is 27, blank is 49.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\build_ext.py, code is 454, comment is 157, blank is 113.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\build_py.py, code is 240, comment is 77, blank is 60.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\build_scripts.py, code is 71, comment is 12, blank is 18.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\check.py, code is 101, comment is 7, blank is 27.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\clean.py, code is 57, comment is 6, blank is 11.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\config.py, code is 213, comment is 21, blank is 56.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\install.py, code is 478, comment is 131, blank is 155.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\install_data.py, code is 55, comment is 7, blank is 14.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\install_egg_info.py, code is 43, comment is 3, blank is 22.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\install_headers.py, code is 29, comment is 1, blank is 14.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\install_lib.py, code is 128, comment is 36, blank is 43.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\install_scripts.py, code is 41, comment is 3, blank is 13.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\py37compat.py, code is 19, comment is 0, blank is 8.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\register.py, code is 213, comment is 62, blank is 27.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\sdist.py, code is 297, comment is 51, blank is 88.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\command\upload.py, code is 156, comment is 22, blank is 31.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\config.py, code is 84, comment is 9, blank is 24.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\core.py, code is 109, comment is 26, blank is 39.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\cygwinccompiler.py, code is 173, comment is 103, blank is 60.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\debug.py, code is 2, comment is 2, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\dep_util.py, code is 41, comment is 14, blank is 19.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\dir_util.py, code is 113, comment is 20, blank is 36.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\dist.py, code is 732, comment is 167, blank is 204.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\errors.py, code is 32, comment is 1, blank is 37.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\extension.py, code is 125, comment is 34, blank is 24.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\fancy_getopt.py, code is 241, comment is 90, blank is 86.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\file_util.py, code is 141, comment is 19, blank is 39.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\filelist.py, code is 200, comment is 28, blank is 61.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\log.py, code is 56, comment is 4, blank is 21.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\msvc9compiler.py, code is 525, comment is 109, blank is 101.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\msvccompiler.py, code is 450, comment is 68, blank is 95.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\py35compat.py, code is 13, comment is 0, blank is 5.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\py38compat.py, code is 7, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\spawn.py, code is 56, comment is 7, blank is 19.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\sysconfig.py, code is 328, comment is 83, blank is 94.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\text_file.py, code is 141, comment is 42, blank is 38.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\unixccompiler.py, code is 187, comment is 86, blank is 40.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\util.py, code is 277, comment is 77, blank is 90.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\version.py, code is 128, comment is 98, blank is 54.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_distutils\versionpredicate.py, code is 65, comment is 6, blank is 20.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_imp.py, code is 61, comment is 4, blank is 18.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_vendor\__init__.py, code is 0, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_vendor\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_vendor\__pycache__\ordered_set.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_vendor\more_itertools\__init__.py, code is 3, comment is 2, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_vendor\more_itertools\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_vendor\more_itertools\__pycache__\more.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_vendor\more_itertools\__pycache__\recipes.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_vendor\more_itertools\more.py, code is 1411, comment is 124, blank is 482.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_vendor\more_itertools\recipes.py, code is 198, comment is 4, blank is 96.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_vendor\ordered_set.py, code is 160, comment is 17, blank is 62.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_vendor\packaging\__about__.py, code is 18, comment is 3, blank is 5.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_vendor\packaging\__init__.py, code is 20, comment is 3, blank is 2.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_vendor\packaging\__pycache__\__about__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_vendor\packaging\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_vendor\packaging\__pycache__\_manylinux.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_vendor\packaging\__pycache__\_musllinux.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_vendor\packaging\__pycache__\_structures.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_vendor\packaging\__pycache__\specifiers.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_vendor\packaging\__pycache__\tags.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_vendor\packaging\__pycache__\utils.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_vendor\packaging\__pycache__\version.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_vendor\packaging\_manylinux.py, code is 196, comment is 52, blank is 42.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_vendor\packaging\_musllinux.py, code is 85, comment is 11, blank is 23.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_vendor\packaging\_structures.py, code is 40, comment is 3, blank is 24.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_vendor\packaging\markers.py, code is 208, comment is 15, blank is 75.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_vendor\packaging\requirements.py, code is 97, comment is 10, blank is 33.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_vendor\packaging\specifiers.py, code is 401, comment is 134, blank is 169.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_vendor\packaging\tags.py, code is 306, comment is 29, blank is 87.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_vendor\packaging\utils.py, code is 81, comment is 16, blank is 32.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_vendor\packaging\version.py, code is 294, comment is 58, blank is 115.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\_vendor\pyparsing.py, code is 438, comment is 3445, blank is 81.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\archive_util.py, code is 121, comment is 8, blank is 44.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\build_meta.py, code is 167, comment is 21, blank is 59.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\cli-32.exe, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\cli-64.exe, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\cli-arm64.exe, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\cli.exe, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\__init__.py, code is 6, comment is 0, blank is 2.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\__pycache__\bdist_egg.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\__pycache__\build_ext.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\__pycache__\build_py.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\__pycache__\easy_install.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\__pycache__\egg_info.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\__pycache__\install.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\__pycache__\install_egg_info.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\__pycache__\install_lib.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\__pycache__\install_scripts.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\__pycache__\py36compat.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\__pycache__\sdist.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\__pycache__\setopt.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\alias.py, code is 58, comment is 0, blank is 20.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\bdist_egg.py, code is 333, comment is 21, blank is 87.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\bdist_rpm.py, code is 22, comment is 1, blank is 11.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\build_clib.py, code is 56, comment is 13, blank is 19.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\build_ext.py, code is 254, comment is 35, blank is 43.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\build_py.py, code is 161, comment is 14, blank is 47.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\develop.py, code is 129, comment is 14, blank is 37.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\dist_info.py, code is 22, comment is 0, blank is 11.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\easy_install.py, code is 1526, comment is 190, blank is 350.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\egg_info.py, code is 482, comment is 59, blank is 159.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\install.py, code is 86, comment is 12, blank is 28.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\install_egg_info.py, code is 46, comment is 4, blank is 12.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\install_lib.py, code is 72, comment is 6, blank is 29.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\install_scripts.py, code is 53, comment is 5, blank is 12.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\launcher manifest.xml, code is 14, comment is 1, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\py36compat.py, code is 79, comment is 12, blank is 19.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\register.py, code is 10, comment is 0, blank is 8.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\rotate.py, code is 51, comment is 0, blank is 13.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\saveopts.py, code is 13, comment is 1, blank is 9.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\sdist.py, code is 128, comment is 8, blank is 42.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\setopt.py, code is 116, comment is 0, blank is 24.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\test.py, code is 184, comment is 3, blank is 47.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\upload.py, code is 10, comment is 0, blank is 7.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\command\upload_docs.py, code is 162, comment is 11, blank is 25.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\config.py, code is 415, comment is 17, blank is 171.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\dep_util.py, code is 12, comment is 4, blank is 5.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\depends.py, code is 100, comment is 4, blank is 47.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\dist.py, code is 723, comment is 51, blank is 245.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\errors.py, code is 20, comment is 2, blank is 9.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\extension.py, code is 28, comment is 5, blank is 16.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\extern\__init__.py, code is 43, comment is 0, blank is 21.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\extern\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\glob.py, code is 94, comment is 15, blank is 34.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\gui-32.exe, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\gui-64.exe, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\gui-arm64.exe, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\gui.exe, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\installer.py, code is 79, comment is 10, blank is 10.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\launch.py, code is 19, comment is 2, blank is 9.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\logging.py, code is 18, comment is 0, blank is 7.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\monkey.py, code is 93, comment is 14, blank is 44.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\msvc.py, code is 813, comment is 66, blank is 261.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\namespaces.py, code is 69, comment is 1, blank is 30.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\package_index.py, code is 771, comment is 87, blank is 213.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\py34compat.py, code is 10, comment is 0, blank is 3.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\sandbox.py, code is 350, comment is 8, blank is 125.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\script (dev).tmpl, code is 6, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\script.tmpl, code is 3, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\unicode_utils.py, code is 27, comment is 2, blank is 11.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\version.py, code is 5, comment is 0, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\wheel.py, code is 169, comment is 17, blank is 25.
+API's\PythonAPI\venv\Lib\site-packages\setuptools\windows_support.py, code is 16, comment is 0, blank is 7.
+API's\PythonAPI\venv\Lib\site-packages\six-1.16.0.dist-info\INSTALLER, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\six-1.16.0.dist-info\LICENSE, code is 15, comment is 0, blank is 3.
+API's\PythonAPI\venv\Lib\site-packages\six-1.16.0.dist-info\METADATA, code is 26, comment is 7, blank is 3.
+API's\PythonAPI\venv\Lib\site-packages\six-1.16.0.dist-info\RECORD, code is 8, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\six-1.16.0.dist-info\top_level.txt, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\six-1.16.0.dist-info\WHEEL, code is 5, comment is 0, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\six.py, code is 687, comment is 61, blank is 203.
+API's\PythonAPI\venv\Lib\site-packages\Werkzeug-2.2.3.dist-info\INSTALLER, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\Werkzeug-2.2.3.dist-info\LICENSE.rst, code is 23, comment is 0, blank is 5.
+API's\PythonAPI\venv\Lib\site-packages\Werkzeug-2.2.3.dist-info\METADATA, code is 58, comment is 8, blank is 6.
+API's\PythonAPI\venv\Lib\site-packages\Werkzeug-2.2.3.dist-info\RECORD, code is 98, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\Werkzeug-2.2.3.dist-info\top_level.txt, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\Werkzeug-2.2.3.dist-info\WHEEL, code is 4, comment is 0, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\__init__.py, code is 5, comment is 0, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\__pycache__\_internal.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\__pycache__\_reloader.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\__pycache__\datastructures.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\__pycache__\exceptions.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\__pycache__\formparser.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\__pycache__\http.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\__pycache__\local.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\__pycache__\security.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\__pycache__\serving.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\__pycache__\test.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\__pycache__\testapp.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\__pycache__\urls.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\__pycache__\user_agent.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\__pycache__\utils.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\__pycache__\wsgi.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\_internal.py, code is 91, comment is 3, blank is 4.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\_reloader.py, code is 281, comment is 42, blank is 106.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\datastructures.py, code is 1566, comment is 48, blank is 620.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\datastructures.pyi, code is 873, comment is 0, blank is 48.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\debug\__init__.py, code is 355, comment is 52, blank is 92.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\debug\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\debug\__pycache__\console.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\debug\__pycache__\repr.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\debug\__pycache__\tbtools.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\debug\console.py, code is 162, comment is 11, blank is 56.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\debug\repr.py, code is 220, comment is 7, blank is 42.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\debug\shared\console.png, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\debug\shared\debugger.js, code is 304, comment is 17, blank is 38.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\debug\shared\ICON_LICENSE.md, code is 4, comment is 3, blank is 2.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\debug\shared\less.png, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\debug\shared\more.png, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\debug\shared\style.css, code is 130, comment is 1, blank is 19.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\debug\tbtools.py, code is 234, comment is 7, blank is 62.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\exceptions.py, code is 345, comment is 11, blank is 248.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\formparser.py, code is 306, comment is 8, blank is 72.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\http.py, code is 702, comment is 49, blank is 175.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\local.py, code is 316, comment is 53, blank is 114.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\middleware\__init__.py, code is 0, comment is 0, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\middleware\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\middleware\__pycache__\dispatcher.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\middleware\__pycache__\http_proxy.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\middleware\__pycache__\lint.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\middleware\__pycache__\profiler.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\middleware\__pycache__\proxy_fix.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\middleware\__pycache__\shared_data.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\middleware\dispatcher.py, code is 31, comment is 0, blank is 9.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\middleware\http_proxy.py, code is 135, comment is 1, blank is 36.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\middleware\lint.py, code is 303, comment is 2, blank is 82.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\middleware\profiler.py, code is 69, comment is 2, blank is 15.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\middleware\proxy_fix.py, code is 75, comment is 2, blank is 17.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\middleware\shared_data.py, code is 163, comment is 4, blank is 47.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\py.typed, code is 0, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\routing\__init__.py, code is 27, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\routing\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\routing\__pycache__\converters.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\routing\__pycache__\exceptions.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\routing\__pycache__\map.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\routing\__pycache__\matcher.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\routing\__pycache__\rules.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\routing\converters.py, code is 126, comment is 2, blank is 50.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\routing\exceptions.py, code is 98, comment is 2, blank is 36.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\routing\map.py, code is 480, comment is 27, blank is 88.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\routing\matcher.py, code is 134, comment is 27, blank is 27.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\routing\rules.py, code is 478, comment is 28, blank is 115.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\sansio\__init__.py, code is 0, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\sansio\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\sansio\__pycache__\http.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\sansio\__pycache__\multipart.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\sansio\__pycache__\request.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\sansio\__pycache__\response.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\sansio\__pycache__\utils.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\sansio\http.py, code is 71, comment is 15, blank is 22.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\sansio\multipart.py, code is 207, comment is 31, blank is 45.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\sansio\request.py, code is 250, comment is 54, blank is 97.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\sansio\response.py, code is 425, comment is 26, blank is 92.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\sansio\utils.py, code is 88, comment is 0, blank is 32.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\security.py, code is 64, comment is 2, blank is 32.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\serving.py, code is 663, comment is 74, blank is 191.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\test.py, code is 793, comment is 42, blank is 223.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\testapp.py, code is 91, comment is 1, blank is 26.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\urls.py, code is 578, comment is 55, blank is 180.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\user_agent.py, code is 16, comment is 0, blank is 18.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\utils.py, code is 334, comment is 31, blank is 118.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\wrappers\__init__.py, code is 3, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\wrappers\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\wrappers\__pycache__\request.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\wrappers\__pycache__\response.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\wrappers\request.py, code is 271, comment is 51, blank is 82.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\wrappers\response.py, code is 389, comment is 77, blank is 123.
+API's\PythonAPI\venv\Lib\site-packages\werkzeug\wsgi.py, code is 509, comment is 35, blank is 150.
+API's\PythonAPI\venv\Lib\site-packages\wheel-0.37.1.dist-info\entry_points.txt, code is 4, comment is 0, blank is 2.
+API's\PythonAPI\venv\Lib\site-packages\wheel-0.37.1.dist-info\INSTALLER, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\wheel-0.37.1.dist-info\LICENSE.txt, code is 18, comment is 0, blank is 4.
+API's\PythonAPI\venv\Lib\site-packages\wheel-0.37.1.dist-info\METADATA, code is 52, comment is 7, blank is 11.
+API's\PythonAPI\venv\Lib\site-packages\wheel-0.37.1.dist-info\RECORD, code is 49, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\wheel-0.37.1.dist-info\top_level.txt, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\wheel-0.37.1.dist-info\WHEEL, code is 5, comment is 0, blank is 1.
+API's\PythonAPI\venv\Lib\site-packages\wheel-0.37.1.virtualenv, code is 0, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\wheel\__init__.py, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\wheel\__main__.py, code is 10, comment is 2, blank is 6.
+API's\PythonAPI\venv\Lib\site-packages\wheel\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\wheel\__pycache__\bdist_wheel.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\wheel\__pycache__\macosx_libfile.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\wheel\__pycache__\metadata.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\wheel\__pycache__\pkginfo.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\wheel\__pycache__\util.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\wheel\__pycache__\wheelfile.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\wheel\bdist_wheel.py, code is 351, comment is 37, blank is 100.
+API's\PythonAPI\venv\Lib\site-packages\wheel\cli\__init__.py, code is 60, comment is 1, blank is 26.
+API's\PythonAPI\venv\Lib\site-packages\wheel\cli\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\wheel\cli\convert.py, code is 166, comment is 34, blank is 41.
+API's\PythonAPI\venv\Lib\site-packages\wheel\cli\pack.py, code is 54, comment is 6, blank is 15.
+API's\PythonAPI\venv\Lib\site-packages\wheel\cli\unpack.py, code is 12, comment is 0, blank is 6.
+API's\PythonAPI\venv\Lib\site-packages\wheel\macosx_libfile.py, code is 208, comment is 9, blank is 70.
+API's\PythonAPI\venv\Lib\site-packages\wheel\metadata.py, code is 83, comment is 5, blank is 34.
+API's\PythonAPI\venv\Lib\site-packages\wheel\pkginfo.py, code is 32, comment is 0, blank is 10.
+API's\PythonAPI\venv\Lib\site-packages\wheel\util.py, code is 30, comment is 2, blank is 16.
+API's\PythonAPI\venv\Lib\site-packages\wheel\vendored\__init__.py, code is 0, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\wheel\vendored\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\wheel\vendored\packaging\__init__.py, code is 0, comment is 0, blank is 0.
+API's\PythonAPI\venv\Lib\site-packages\wheel\vendored\packaging\__pycache__\__init__.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\wheel\vendored\packaging\__pycache__\_typing.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\wheel\vendored\packaging\__pycache__\tags.cpython-311.pyc, it is a binary file.
+API's\PythonAPI\venv\Lib\site-packages\wheel\vendored\packaging\_typing.py, code is 10, comment is 11, blank is 4.
+API's\PythonAPI\venv\Lib\site-packages\wheel\vendored\packaging\tags.py, code is 529, comment is 155, blank is 136.
+API's\PythonAPI\venv\Lib\site-packages\wheel\wheelfile.py, code is 136, comment is 11, blank is 32.
+API's\PythonAPI\venv\pyvenv.cfg, code is 8, comment is 0, blank is 0.
+API's\PythonAPI\venv\Scripts\activate, code is 60, comment is 0, blank is 13.
+API's\PythonAPI\venv\Scripts\activate.bat, code is 20, comment is 0, blank is 3.
+API's\PythonAPI\venv\Scripts\activate.fish, code is 45, comment is 2, blank is 9.
+API's\PythonAPI\venv\Scripts\activate.nu, code is 33, comment is 0, blank is 8.
+API's\PythonAPI\venv\Scripts\activate.ps1, code is 43, comment is 0, blank is 11.
+API's\PythonAPI\venv\Scripts\activate_this.py, code is 18, comment is 5, blank is 6.
+API's\PythonAPI\venv\Scripts\deactivate.bat, code is 3, comment is 0, blank is 2.
+API's\PythonAPI\venv\Scripts\deactivate.nu, code is 9, comment is 0, blank is 2.
+API's\PythonAPI\venv\Scripts\flask.exe, it is a binary file.
+API's\PythonAPI\venv\Scripts\pip-3.11.exe, it is a binary file.
+API's\PythonAPI\venv\Scripts\pip.exe, it is a binary file.
+API's\PythonAPI\venv\Scripts\pip3.11.exe, it is a binary file.
+API's\PythonAPI\venv\Scripts\pip3.exe, it is a binary file.
+API's\PythonAPI\venv\Scripts\pydoc.bat, code is 1, comment is 0, blank is 0.
+API's\PythonAPI\venv\Scripts\python.exe, it is a binary file.
+API's\PythonAPI\venv\Scripts\pythonw.exe, it is a binary file.
+API's\PythonAPI\venv\Scripts\wheel-3.11.exe, it is a binary file.
+API's\PythonAPI\venv\Scripts\wheel.exe, it is a binary file.
+API's\PythonAPI\venv\Scripts\wheel3.11.exe, it is a binary file.
+API's\PythonAPI\venv\Scripts\wheel3.exe, it is a binary file.
+design\diagramMessage.puml, code is 44, comment is 0, blank is 9.
+design\diagramModules.puml, code is 44, comment is 0, blank is 16.
+design\domainModel.puml, code is 92, comment is 0, blank is 20.
+design\stateDiagramOrder.puml, code is 20, comment is 0, blank is 13.
+design\stateDiagramReview.puml, code is 17, comment is 0, blank is 12.
+design\stateDiagramSandwich.puml, code is 8, comment is 0, blank is 5.
+design\userCases.puml, code is 52, comment is 0, blank is 18.
+design\userCasesCliente.puml, code is 27, comment is 0, blank is 10.
+design\userCasesCriticas.puml, code is 29, comment is 0, blank is 12.
+design\userCasesEncomenda.puml, code is 15, comment is 0, blank is 7.
+design\userCasesIngrediente.puml, code is 22, comment is 0, blank is 6.
+design\userCasesLoja.puml, code is 29, comment is 0, blank is 14.
+design\userCasesSanduiche.puml, code is 25, comment is 0, blank is 12.
+docs\ApiDocumentation.md, code is 249, comment is 0, blank is 53.
+docs\Calendar.md, code is 12, comment is 0, blank is 1.
+docs\UserCases.md, code is 35, comment is 0, blank is 10.
+LICENSE, code is 17, comment is 0, blank is 4.
+README.md, code is 63, comment is 14, blank is 27.
+Report\chapters\appendixA.tex, code is 9, comment is 0, blank is 6.
+Report\chapters\chapter1.tex, code is 19, comment is 0, blank is 27.
+Report\chapters\chapter2.tex, code is 82, comment is 0, blank is 39.
+Report\chapters\chapter6.tex, code is 7, comment is 0, blank is 11.
+Report\DEEclass.cls, code is 252, comment is 2, blank is 37.
+Report\figures\cap2_fig1-eps-converted-to.pdf, it is a binary file.
+Report\figures\cap2_fig1.eps, code is 1166, comment is 1, blank is 0.
+Report\figures\Inlinefigureexample.png, it is a binary file.
+Report\front\0_acronyms.tex, code is 18, comment is 0, blank is 3.
+Report\front\0_glossary.tex, code is 21, comment is 0, blank is 5.
+Report\front\0_symbols.tex, code is 53, comment is 0, blank is 9.
+Report\front\1_dedicatory.tex, code is 6, comment is 0, blank is 1.
+Report\front\2_acknowledgements.tex, code is 6, comment is 0, blank is 3.
+Report\front\3_abstract.tex, code is 28, comment is 0, blank is 12.
+Report\front\4_frontmatterlists.tex, code is 14, comment is 0, blank is 7.
+Report\front\ISEP_logo.jpg, it is a binary file.
+Report\front\title.tex, code is 7, comment is 0, blank is 15.
+Report\main.tex, code is 72, comment is 3, blank is 18.
+Report\preamble.tex, code is 28, comment is 0, blank is 16.
+Report\Relatorio_Projeto.pdf, code is 292, comment is 1193, blank is 1.
+Report\sampleRefs.bib, code is 9, comment is 0, blank is 2.
+services\ingredient\.devcontainer.json, code is 4, comment is 0, blank is 0.
+services\ingredient\.gitignore, code is 1, comment is 0, blank is 0.
+services\ingredient\Ballerina.toml, code is 11, comment is 0, blank is 2.
+services\ingredient\Config.toml, code is 0, comment is 0, blank is 0.
+services\ingredient\Dependencies.toml, code is 326, comment is 0, blank is 36.
+services\ingredient\modules\model\model.bal, code is 14, comment is 0, blank is 3.
+services\ingredient\modules\model\Module.md, code is 5, comment is 2, blank is 1.
+services\ingredient\modules\model\resources\.keep, code is 0, comment is 0, blank is 0.
+services\ingredient\modules\model\tests\lib_test.bal, code is 23, comment is 0, blank is 5.
+services\ingredient\modules\repository\Module.md, code is 5, comment is 2, blank is 1.
+services\ingredient\modules\repository\repository.bal, code is 96, comment is 0, blank is 14.
+services\ingredient\modules\repository\resources\.keep, code is 0, comment is 0, blank is 0.
+services\ingredient\modules\repository\tests\lib_test.bal, code is 6, comment is 2, blank is 5.
+services\ingredient\service.bal, code is 17, comment is 0, blank is 5.
+services\ingredient\target\build, code is 8, comment is 0, blank is 0.
+services\ingredient\target\cache\tests_cache\model\module_status.json, code is 1, comment is 0, blank is 0.
+services\ingredient\target\cache\tests_cache\native-config\mocked-func-class-map.json, code is 1, comment is 0, blank is 0.
+services\ingredient\target\cache\tests_cache\test_suit.json, code is 1, comment is 0, blank is 0.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\.scannerwork\.sonar_lock, code is 0, comment is 0, blank is 0.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\.scannerwork\report-task.txt, code is 6, comment is 3, blank is 0.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0-testable.jar, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0.jar, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\META-INF\MANIFEST.MF, code is 2, comment is 0, blank is 1.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\$_init$SignalListener.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\$_init.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\$configurationMapper.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\$typedesc$$anonType$_1.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\$typedesc$(tiago$0047ingredient$00580$0058$anonType$_1 & readonly).class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\$value$$anonType$_0.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\$value$$anonType$_1.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\$value$(tiago$0047ingredient$00580$0058$anonType$_1 & readonly).class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\annotations\$_annotations.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\constants\$_array_type_constants.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\constants\$_error_type_constants.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\constants\$_module_constants.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\constants\$_string_constants_0.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\constants\$_tuple_type_constants.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\constants\$_typeref_type_constants.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\constants\$_union_type_constants.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\creators\$_errors.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\creators\$_function_calls.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\creators\$_objects.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\creators\$_records.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\frames\$frame$$annot_func$_91.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\frames\$frame$$annot_func$_92.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\frames\$frame$$annot_func$_93.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\frames\$frame$$anonType$_0_$gen$$get$$0046.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\frames\$frame$$anonType$_0_$gen$$post$$0046.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\frames\$frame$$anonType$_0_$get$searchByDesignation.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\frames\$frame$$anonType$_0_$get$searchById.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\frames\$frame$$anonType$_0_$init$.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\frames\$frame$$anonType$_1$gen$$0046$0060init$0062.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\frames\$frame$$gen$$0046$0060init$0062.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\frames\$frame$$gen$$0046$0060start$0062.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\frames\$frame$$gen$$0046$0060stop$0062.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\frames\$frame$$gen$tiago$0047ingredient$00580$00461$00460$0046$0060init$00620.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\frames\$frame$$gen$tiago$0047ingredient$00580$00461$00460$0046$0060init$00621.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\frames\$frame$$moduleInit.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\frames\$frame$$moduleStart.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\frames\$frame$(tiago$0047ingredient$00580$0058$anonType$_1 & readonly)$gen$$0046$0060init$0062.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\ingredient.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\service.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\types\$_anon_types.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\types\$_error_types.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\types\$_object_types.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\types\$_record_types.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\types\$_tuple_types.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\types\$_types.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient-0.1.0\tiago\ingredient\0\types\$_union_types.class, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient.model-0.1.0-testable.jar, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient.model-0.1.0.jar, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient.repository-0.1.0-testable.jar, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\java11\tiago-ingredient.repository-0.1.0.jar, it is a binary file.
+services\ingredient\target\cache\tiago\ingredient\0.1.0\observe\tiago-ingredient-observability-symbols.jar, it is a binary file.
+services\ingredient\target\platform-libs\mysql\mysql-connector-java\8.0.26\_remote.repositories, code is 3, comment is 0, blank is 0.
+services\ingredient\target\platform-libs\mysql\mysql-connector-java\8.0.26\mysql-connector-java-8.0.26.jar, it is a binary file.
+services\ingredient\target\platform-libs\mysql\mysql-connector-java\8.0.26\mysql-connector-java-8.0.26.jar.sha1, code is 1, comment is 0, blank is 0.
+services\ingredient\target\rerun_test.json, code is 1, comment is 0, blank is 0.
+services\ingredient\tests\service_test.bal, code is 0, comment is 0, blank is 1.
+services\order\.devcontainer.json, code is 4, comment is 0, blank is 0.
+services\order\.gitignore, code is 3, comment is 0, blank is 0.
+services\order\Ballerina.toml, code is 7, comment is 0, blank is 1.
+services\order\service.bal, code is 14, comment is 1, blank is 2.
+services\order\tests\service_test.bal, code is 22, comment is 4, blank is 9.
+services\perms\private.key, code is 28, comment is 1, blank is 0.
+services\perms\public.crt, code is 21, comment is 0, blank is 0.
+services\review\.devcontainer.json, code is 4, comment is 0, blank is 0.
+services\review\.gitignore, code is 3, comment is 0, blank is 0.
+services\review\Ballerina.toml, code is 7, comment is 0, blank is 1.
+services\review\service.bal, code is 14, comment is 1, blank is 2.
+services\review\tests\service_test.bal, code is 22, comment is 4, blank is 9.
+services\sandwich\.devcontainer.json, code is 4, comment is 0, blank is 0.
+services\sandwich\.gitignore, code is 2, comment is 0, blank is 0.
+services\sandwich\Ballerina.toml, code is 11, comment is 0, blank is 2.
+services\sandwich\Config.toml, code is 0, comment is 0, blank is 0.
+services\sandwich\Dependencies.toml, code is 326, comment is 0, blank is 36.
+services\sandwich\modules\model\model.bal, code is 32, comment is 0, blank is 7.
+services\sandwich\modules\model\Module.md, code is 5, comment is 2, blank is 1.
+services\sandwich\modules\model\resources\.keep, code is 0, comment is 0, blank is 0.
+services\sandwich\modules\model\tests\lib_test.bal, code is 26, comment is 2, blank is 6.
+services\sandwich\modules\repository\Module.md, code is 5, comment is 2, blank is 1.
+services\sandwich\modules\repository\repository.bal, code is 365, comment is 0, blank is 45.
+services\sandwich\modules\repository\resources\.keep, code is 0, comment is 0, blank is 0.
+services\sandwich\modules\repository\tests\lib_test.bal, code is 10, comment is 3, blank is 5.
+services\sandwich\service.bal, code is 23, comment is 0, blank is 7.
+services\sandwich\target\build, code is 8, comment is 0, blank is 0.
+services\sandwich\target\cache\tests_cache\native-config\mocked-func-class-map.json, code is 1, comment is 0, blank is 0.
+services\sandwich\target\cache\tiago\sandwich\0.1.0\java11\tiago-sandwich-0.1.0.jar, it is a binary file.
+services\sandwich\target\cache\tiago\sandwich\0.1.0\java11\tiago-sandwich.model-0.1.0.jar, it is a binary file.
+services\sandwich\target\cache\tiago\sandwich\0.1.0\java11\tiago-sandwich.repository-0.1.0.jar, it is a binary file.
+services\sandwich\target\cache\tiago\sandwich\0.1.0\observe\tiago-sandwich-observability-symbols.jar, it is a binary file.
+services\sandwich\target\platform-libs\mysql\mysql-connector-java\8.0.26\_remote.repositories, code is 3, comment is 0, blank is 0.
+services\sandwich\target\platform-libs\mysql\mysql-connector-java\8.0.26\mysql-connector-java-8.0.26.jar, it is a binary file.
+services\sandwich\target\platform-libs\mysql\mysql-connector-java\8.0.26\mysql-connector-java-8.0.26.jar.sha1, code is 1, comment is 0, blank is 0.
+services\sandwich\target\rerun_test.json, code is 1, comment is 0, blank is 0.
+services\sandwich\tests\service_test.bal, code is 22, comment is 4, blank is 9.
+services\store\.devcontainer.json, code is 4, comment is 0, blank is 0.
+services\store\.gitignore, code is 3, comment is 0, blank is 0.
+services\store\Ballerina.toml, code is 7, comment is 0, blank is 1.
+services\store\Config.toml, code is 5, comment is 0, blank is 0.
+services\store\Dependencies.toml, code is 314, comment is 0, blank is 35.
+services\store\modules\model\model.bal, code is 7, comment is 0, blank is 1.
+services\store\modules\model\Module.md, code is 5, comment is 2, blank is 1.
+services\store\modules\model\resources\.keep, code is 0, comment is 0, blank is 0.
+services\store\modules\model\tests\lib_test.bal, code is 0, comment is 0, blank is 0.
+services\store\modules\repository\Module.md, code is 5, comment is 2, blank is 1.
+services\store\modules\repository\repository.bal, code is 176, comment is 0, blank is 28.
+services\store\modules\repository\resources\.keep, code is 0, comment is 0, blank is 0.
+services\store\modules\repository\tests\lib_test.bal, code is 0, comment is 0, blank is 0.
+services\store\service.bal, code is 8, comment is 0, blank is 1.
+services\store\target\build, code is 8, comment is 0, blank is 0.
+services\store\target\cache\tiago\store\0.1.0\java11\tiago-store-0.1.0.jar, it is a binary file.
+services\store\target\cache\tiago\store\0.1.0\java11\tiago-store.model-0.1.0.jar, it is a binary file.
+services\store\target\cache\tiago\store\0.1.0\java11\tiago-store.repository-0.1.0.jar, it is a binary file.
+services\store\target\cache\tiago\store\0.1.0\observe\tiago-store-observability-symbols.jar, it is a binary file.
+services\store\tests\service_test.bal, code is 0, comment is 0, blank is 0.
+services\user\.devcontainer.json, code is 4, comment is 0, blank is 0.
+services\user\.gitignore, code is 3, comment is 0, blank is 0.
+services\user\Ballerina.toml, code is 11, comment is 0, blank is 3.
+services\user\Config.toml, code is 5, comment is 0, blank is 0.
+services\user\Dependencies.toml, code is 334, comment is 0, blank is 36.
+services\user\modules\model\model.bal, code is 7, comment is 0, blank is 1.
+services\user\modules\model\Module.md, code is 5, comment is 2, blank is 1.
+services\user\modules\model\resources\.keep, code is 0, comment is 0, blank is 0.
+services\user\modules\model\tests\lib_test.bal, code is 10, comment is 3, blank is 6.
+services\user\modules\repository\Module.md, code is 5, comment is 2, blank is 1.
+services\user\modules\repository\repository.bal, code is 290, comment is 0, blank is 35.
+services\user\modules\repository\resources\.keep, code is 0, comment is 0, blank is 0.
+services\user\modules\repository\tests\lib_test.bal, code is 10, comment is 3, blank is 5.
+services\user\service.bal, code is 29, comment is 0, blank is 11.
+services\user\target\build, code is 8, comment is 0, blank is 0.
+services\user\target\cache\tests_cache\native-config\mocked-func-class-map.json, code is 1, comment is 0, blank is 0.
+services\user\target\cache\tiago\user\0.1.0\java11\tiago-user-0.1.0.jar, it is a binary file.
+services\user\target\cache\tiago\user\0.1.0\java11\tiago-user.model-0.1.0.jar, it is a binary file.
+services\user\target\cache\tiago\user\0.1.0\java11\tiago-user.repository-0.1.0.jar, it is a binary file.
+services\user\target\cache\tiago\user\0.1.0\observe\tiago-user-observability-symbols.jar, it is a binary file.
+services\user\target\platform-libs\mysql\mysql-connector-java\8.0.26\_remote.repositories, code is 3, comment is 0, blank is 0.
+services\user\target\platform-libs\mysql\mysql-connector-java\8.0.26\mysql-connector-java-8.0.26.jar, it is a binary file.
+services\user\target\platform-libs\mysql\mysql-connector-java\8.0.26\mysql-connector-java-8.0.26.jar.sha1, code is 1, comment is 0, blank is 0.
+services\user\tests\service_test.bal, code is 10, comment is 3, blank is 8.
+===============================================================================

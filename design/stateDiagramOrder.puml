@@ -17,9 +17,17 @@ state Processada {
 state Entregue {
 }
 
-Criada --> aprocessar : prever
+state Cancelada{
+
+}
+
+state c <<choice>>
+
+Criada --> c
+c --> aprocessar: prever
 aprocessar   --> Processada: realizar
 Processada  --> Entregue: entregar
+c --> Cancelada: cancelar
 
 
 @enduml

@@ -1,7 +1,7 @@
 import ballerina/http;
 import user.model;
 import user.repository;
-service /users on new http:Listener(8082) {
+service /users on new http:Listener(8092) {
 
     isolated resource function post .(@http:Payload model:UserDTO user) returns model:User?|error|model:NotFoundError|model:ValidationError{
         return repository:addUser(user);

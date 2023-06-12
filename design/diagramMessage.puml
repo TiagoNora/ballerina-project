@@ -24,18 +24,12 @@ node "RabbitMQ"{
 
 }
 
-database "Sandwich Database" as sand{
-}
-database "Ingredient Database" as i{
-}
-database "Review Database" as r{
-}
-database "Shop Database" as s{
-}
-database "Order Database" as o{
-}
-database "Customer Database" as c{
-}
+[Sandwich Database] <<Component>> as sand
+[Ingredient Database] <<Component>> as i
+[Review Database] <<Component>> as r
+[Shop Database] <<Component>> as s
+[Order Database] <<Component>> as o
+[Customer Database] <<Component>> as c
 
 sandwich <-right-> sand
 ingredient <-right-> i

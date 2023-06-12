@@ -1,23 +1,29 @@
 @startuml
 left to right direction
 
-[*] --> estado
+[*] --> Criada
 
-state "Estado Inicial" as estado {
+state Criada {
 }
 
 state Denunciada {
 
 }
 
+state c <<choice>>
+state h <<choice>>
+ 
+
 state Eliminada {
 
 }
 
 
-estado --> Denunciada : denunciar
-Denunciada   --> Eliminada: eliminar
-Denunciada  --> estado: voltar ao estado inicial
+Criada --> c
+c --> Denunciada: denunciada
+Denunciada --> h
+h   --> Eliminada: contém palavras ofensivas
+h  --> Criada: não contém ofensivas
 
 
 @enduml

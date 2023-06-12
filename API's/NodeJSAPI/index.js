@@ -9,7 +9,6 @@ app.use(express.json());
 app.post('/language', (req, res) => {
     const content = req.body;
     let languages = [];
-    let languagesWithoutPro = [];
 
     content.forEach(text => {
         const language = lngDetector.detect(text.text,1);
@@ -23,6 +22,10 @@ app.post('/language', (req, res) => {
     res.json(data);
 });
 
-app.listen(3000, () => {
-    console.log('Server running on port 3000');
+app.listen(5000, () => {
+    console.log('Server running on port 5000');
 });
+
+
+
+

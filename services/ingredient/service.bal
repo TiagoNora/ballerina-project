@@ -1,7 +1,7 @@
 import ballerina/http;
 import ingredient.model;
 import ingredient.repository;
-service /ingredients on new http:Listener(8080) {
+service /ingredients on new http:Listener(8090) {
 
     isolated resource function post .(@http:Payload model:IngredientDTO ing) returns error|model:ValidationError|model:Ingredient?|model:NotFoundError{
         return repository:addIngredient(ing);

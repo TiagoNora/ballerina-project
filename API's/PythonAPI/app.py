@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 
 @app.route('/language', methods=['GET', 'POST'])
-def hello_world():
+def getLanguage():
     content = request.json
     languages = []
 
@@ -21,3 +21,7 @@ def hello_world():
 
 if __name__ == '__main__':
     app.run()
+
+
+
+
