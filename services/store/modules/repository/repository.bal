@@ -117,6 +117,17 @@ public isolated function deleteStoreById(int id) returns model:Deleted|error|mod
     _ = check dbClient->execute(`DELETE from stores WHERE store_id = ${id}`);
     return deleted("DELETED","The store was deleted with success!");
 }
+public isolated function updateClosingHoursById(model:ClosingHours hours, int id) returns model:Store?|error|model:NotFoundError {
+    _ = check dbClient->execute(`UPDATE closingHours SET hour=${hours.hour} , minute=${hours.minute} WHERE store_id = ${id} and dayOfTheWeek = ${hours.dayOfTheWeek}`);
+    model:Store|error|model:NotFoundError s = getStoreById(id);
+    return s;
+}
+
+public isolated function updateOpeningHoursById(model:OpeningHours hours, int id) returns model:Store?|error|model:NotFoundError {
+    _ = check dbClient->execute(`UPDATE openingHours SET hour=${hours.hour} , minute=${hours.minute} WHERE store_id = ${id} and dayOfTheWeek = ${hours.dayOfTheWeek}`);
+    model:Store|error|model:NotFoundError s = getStoreById(id);
+    return s;
+}
 
 public isolated function getStoreByDesignation(string designation) returns model:Store|error|model:NotFoundError{
     model:StoreAux|error aux = findStoreByDesignationFromDB(designation);

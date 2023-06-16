@@ -26,4 +26,12 @@ service /stores on new http:Listener(8093) {
         return repository:deleteStoreById(id);
     }
 
+    isolated resource function put closingHours(@http:Payload model:ClosingHours hours, int id) returns model:Store?|error|model:NotFoundError {
+        return repository:updateClosingHoursById(hours, id);
+    }
+
+    isolated resource function put openingHours(@http:Payload model:OpeningHours hours, int id) returns model:Store?|error|model:NotFoundError {
+        return repository:updateOpeningHoursById(hours, id);
+    }
+
 }
