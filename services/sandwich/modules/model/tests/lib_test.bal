@@ -24,7 +24,6 @@ function testSandwich() {
     test:assertEquals(sandwich.descriptions[1].text, "Un délicieux sandwich végétarien");
     test:assertEquals(sandwich.descriptions.length(), 2);
     test:assertEquals(sandwich.ingredients_id.length(), 3);
-
 }
 
 // After Suite Function
