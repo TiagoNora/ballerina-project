@@ -227,7 +227,19 @@ breaklinks=true,
  breaklines=true,                   % sets automatic line breaking
  breakatwhitespace=false,           % sets if automatic breaks should only happen at whitespace
  escapeinside={\%*}{*)},            % if you want to add a comment within your code
- morekeywords={*,var,template,new}  % if you want to add more keywords to the set
+ morekeywords={*,var,template,new}
+ literate=
+{á}{{\'a}}1
+{à}{{\`a}}1
+{ã}{{\~a}}1
+{é}{{\'e}}1
+{ê}{{\^e}}1
+{í}{{\'i}}1
+{ó}{{\'o}}1
+{õ}{{\~o}}1
+{ú}{{\'u}}1
+{ü}{{\"u}}1
+{ç}{{\c{c}}}1% if you want to add more keywords to the set
 }
 
 \RequirePackage[calc,portuguese]{datetime2}	% For date format
@@ -506,17 +518,9 @@ KOMA-script documentation for details.}]{fancyhdr}
 \providecaptionname{english}{\advisorlabel}{Scientific Guidance}
 \providecaptionname{portuguese}{\advisorlabel}{Orienta\c{c}\~{a}o Cient\'{i}fica}
 
-\newcommand{\coadvisorlabel}{Scientific Co-Guidance}
-\providecaptionname{english}{\coadvisorlabel}{Scientific Co-Guidance}
-\providecaptionname{portuguese}{\coadvisorlabel}{Coorienta\c{c}\~{a}o Cient\'{i}fica}
-
-\newcommand{\supervisorlabel}{Advisor}
-\providecaptionname{english}{\supervisorlabel}{Advisor}
-\providecaptionname{portuguese}{\supervisorlabel}{Orientador}
-
-\newcommand{\companylabel}{Company}
-\providecaptionname{english}{\companylabel}{Company}
-\providecaptionname{portuguese}{\companylabel}{Empresa}
+\newcommand{\companylabel}{Organização}
+\providecaptionname{english}{\companylabel}{Organization}
+\providecaptionname{portuguese}{\companylabel}{Organização}
 
 %%1st page
 \newcommand{\printcoverpage}{
@@ -556,7 +560,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 	{{\small\bf\studentlabel:} \large \authorname, \nblabel \stdnumber, \url{\stdemail}}\\[4pt]
 	{{\small\bf\advisorlabel:} \large \advname }\\[4pt]
 	\ifdefined\coadvname {{\small\bf\coadvisorlabel:} \coadvname}\\[4pt] \fi
-	\ifdefined\companyname {{\small\bf\companylabel:} \companyname\\{\small\bf\supervisorlabel:} \supname}\\ \fi
+	\ifdefined\companyname {{\small\bf\companylabel:} \companyname\\{\small\bf\supervisorlabel} \supname}\\ \fi
 	\vfill
 	\includegraphics[width=6.5cm]{ISEP_logo.jpg} \\		
 	{\scshape\large \department}\\
@@ -662,7 +666,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 
 \newcommand{\acronymsname}{List of Acronyms}
 \providecaptionname{english,british,american}{\acronymsname}{List of Acronyms}
-\providecaptionname{portuguese}{\acronymsname}{Lista de Acr\'{o}nimos}
+\providecaptionname{portuguese}{\acronymsname}{Lista de Acr\'{o}nimos e Siglas}
 
 \newglossarystyle{leftlong}{%
   \setglossarystyle{long}%
@@ -756,6 +760,8 @@ KOMA-script documentation for details.}]{fancyhdr}
 %\newcommand{\file}[1]{\texttt{\bfseries#1}}
 \newcommand{\file}[1]{\texttt{#1}}
 \newcommand{\option}[1]{\texttt{\itshape#1}}
+
+
 
 %----------------------------------------------------------------------------------------
 \endinput

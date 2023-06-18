@@ -39,11 +39,10 @@ portuguese,		% Select document language, options: portuguese or english
 
 \advisor{Isabel Azevedo}{ifp@isep.ipp.pt}	% Your ISEP advisor name and email
 \company{GILT - Games, Interaction and Learning Technologies}	% The company name where you developed your work, comment this line if not needed
-\supervisor{Isabel Azevedo}{ifp@isep.ipp.pt} % Your company supervisor name, comment this line if not needed
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% USER DEFINED LISTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \makeglossaries						% Consider the following files in the 'front' folder:
-\input{front/0_glossary}			% Edit to define your glossary entries list
+\input{front/0_glossary}            % Edit to define your glossary entries list
 \input{front/0_acronyms}			% Edit to define your acronyms entries list
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -66,12 +65,12 @@ portuguese,		% Select document language, options: portuguese or english
 % Include the chapters of the document as separate files from the 'chapters' folder
 
 \include{chapters/chapter1}
-\include{chapters/chapter2}		
-%\include{chapters/chapter3}	% Uncomment the lines as you write the chapters,
-								% where 'chapter3' refers to a file chapter3.tex
-%...							% in the 'chapters' folder
-								
+\include{chapters/chapter2}
+\include{chapters/chapter3}	
+\include{chapters/chapter4}	
+\include{chapters/chapter5}
 \include{chapters/chapter6}
+\include{chapters/chapter7}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Print the bibliographic references using the ieeetr format from the 'sampleRefs.bib' file (root folder)
@@ -79,12 +78,12 @@ portuguese,		% Select document language, options: portuguese or english
 \printrefereces{sampleRefs}		% Change the 'sampleRefs' name to match your .bib file name,
 								% a good option to make bib files is https://www.jabref.org/
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{appendices}
+%\begin{appendices}
 % Include the appendices of the document as separate files from the 'chapters' folder
 
-\include{chapters/appendixA}	% Uncomment the lines as you write the appendices,
+%\include{chapters/appendixA}	% Uncomment the lines as you write the appendices,
 %\include{chapters/appendixB}	% or comment the lines if not used
 
-\end{appendices}
+%\end{appendices}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}  
