@@ -36,7 +36,7 @@ Dado que a empresa abrirá em breve, cerca de 3 meses, o \textit{software} deve 
 
 \section{Modelo de Domínio}
 
-Um modelo de domínio é usado para representar conceitos, objetos e relações com outros objetos que sejam importantes num determinado domínio de negócios. O modelo correspondente ao presente sistema pode ser visto na figura \ref{fig:md}.
+Um modelo de domínio é usado para representar conceitos, objetos e relações com outros objetos que sejam importantes num determinado domínio de negócios. O modelo correspondente ao presente sistema pode ser visto na Figura \ref{fig:md}.
 
 \begin{figure}[H]
     \includegraphics[width=1.1\textwidth,left]{md.png}
@@ -44,6 +44,27 @@ Um modelo de domínio é usado para representar conceitos, objetos e relações 
     \label{fig:md}
 \end{figure}
 
+A Figura \ref{fig:md} apresenta os seguintes conceitos:
+\begin{itemize}
+    \item \textit{Customer}: Representa um utilizador
+    \item \textit{PersonInCharge}: Representa uma pessoa responsável pela loja
+    \item \textit{Person}: Representa uma pessoa em geral
+    \item \textit{Address}: Representa um endereço
+    \item \textit{AuthorizationData}: Representa dados de autorização
+    \item \textit{Role}: Representa os cargos atribuídos a uma certa pessoa
+    \item \textit{Sandwich}: Representa um sanduíche
+    \item \textit{Description}: Representa uma descrição de uma sanduíche
+    \item \textit{Ingredient}: Representa um ingrediente de uma sanduíche
+    \item \textit{Category}: Representa uma categoria do ingrediente
+    \item \textit{Review}: Representa uma avaliação de uma sanduíche
+    \item \textit{Shop}: Representa uma loja
+    \item \textit{OpeningHours}: Representa os horários de abertura de uma loja
+    \item \textit{ClosingHours}: Representa os horários de encerramento de uma loja
+    \item \textit{Order}: Representa um pedido
+    \item \textit{OrderItem}: Representa um item do pedido
+    \item \textit{ReviewAvaliation}: Representa a avaliação de uma revisão
+    \item \textit{Language}: Representa um idioma
+\end{itemize}
 
 \section{Requisitos Funcionais}
 
@@ -74,101 +95,16 @@ RF6 & Gestão de clientes & O sistema disponibiliza  funcionalidades para a gest
 \end{center}
 \end{table}
 
-
-\section{Restrições}
-
-Na tabela \ref{table:restricoes} são apresentadas as restrições que afetam o desenvolvimento do projeto de \textit{software}.
-
-\begin{table}[H]
-\caption{Restrições}
-\label{table:restricoes}
-\begin{center}
-\begin{tabular}{ |p{3cm}|p{3cm}|p{6cm}|  }
-\hline
-\multicolumn{3}{|c|}{Restrições} \\
-\hline
-\textbf{Referência} & \textbf{Restrição} & \textbf{Descrição} \\
-\hline
-R1 & Linguagem & O protótipo deve ser escrito recorrendo a Ballerina\\
-\hline
-R2 & Arquitetura de microsserviços &  A solução deve utilizar a arquitetura de microsserviços\\
-\hline
-R3 & Aplicações e ferramentas open source & Só são permitidas aplicações e ferramentas open source no desenvolvimento do sistema\\
-\hline
-R4 & Tempo & A aplicação deve estar concluída em três meses\\
-\hline
-\end{tabular} 
-\end{center}
-\end{table}
-
-
-\section{Atributos de Qualidade}
-
-Na tabela \ref{table:qualidades} são apresentadas os atributos de qualidade que o sistema deve apresentar recorrendo à norma ISO 25010, que define a qualidade do \textit{software} como um conjunto de características que o mesmo deve possuir para atender às necessidades pretendidas. Esta norma é representada por 8 categorias:
-\begin{itemize}
-    \item Adequação funcional
-    \item Eficiência de desempenho
-    \item Compatibilidade
-    \item Usabilidade
-    \item Confiabilidade
-    \item Segurança
-    \item Manutenibilidade
-    \item Portabilidade
-\end{itemize}
-\begin{flushright}
-\cite{iso25010cat}
-\end{flushright}
-
-\begin{table}[H]
-\caption{Atributos de Qualidade}
-\label{table:qualidades}
-\begin{center}
-\begin{tabular}{ |p{3cm}|p{3cm}|p{6cm}|  }
-\hline
-\multicolumn{3}{|c|}{Atributos de Qualidade} \\
-\hline
-\textbf{Referência} & \textbf{Atributo} & \textbf{Descrição} \\
-\hline
-Q1 & Segurança & Mecanismos de autenticação e autorização devem ser implementados\\
-\hline
-Q2 & Desempenho & A aplicação deve responder as pedidos realizados por 10 utilizadores em simultâneo em menos de 3 segundos\\
-\hline
-Q3 & Manutenibilidade & Pretende-se que a aplicação possa evoluir, pelo que, deverão ser aplicados padrões de \textit{design} apropriados\\
-\hline
-\end{tabular} 
-\end{center}
-\end{table}
-
-Adicionalmente, relativamente ao atributo de qualidade com referência Q1, deve ser mencionado que deverão ser seguidos as dez principais práticas para o desenvolvimento de código seguro. As dez principais práticas são constituídas por:
-\begin{itemize}
-    \item Validação de todas as entradas de fontes de dados não seguras
-    \item Ter atenção aos avisos do compilador e recorrer a ferramentas de análise estática e dinâmica para identificar e eliminar falhas de segurança
-    \item Desenhar um sistema o mais simples e pequeno possível
-    \item O acesso deve ser baseado em permissões em vez de exclusões
-    \item Cada processo deve ter o menor conjunto de privilégios necessários para concluir o trabalho
-    \item Os dados enviados para um sistema complexos devem passar por um processo de limpeza
-    \item Deve ser feito uma gestão de risco com múltiplas estratégias defensivas para prevenir falhas de segurança e limitar as consequências de um possível \textit{exploit}. 
-    \item Deve ser incorporado testes de qualidade do código-fonte, testes de penetração e testes de \textit{fuzz}
-    \item Desenvolver um padrão de codificação seguro para a linguagem e plataforma de desenvolvimento utilizada
-\end{itemize}
-
-\begin{flushright}
-\cite{top10}
-\end{flushright}
-
-
-\section{Casos de Uso}
-
 Os casos de uso são uma ferramenta valiosa na engenharia de \textit{software} para documentar e compreender os requisitos funcionais de um sistema. Por outro lado, os diagramas de caso de uso são as representações gráficas dos casos de uso, estes detalham as interações do sistema com todos os atores do mesmo. Podem ser definidas por meio de \ac{uml}, uma linguagem de modelagem que permite representar um sistema padronizada que pode ser utilizada na visualização, construção e na documentação de artefactos.
 
 A seguir, serão apresentados os casos de uso por área, recorrendo a uma tabela que contém a referência do caso de uso e o diagrama que associa os mesmos aos respetivos atores, o agrupamento destes foi feito tendo em conta os vários elementos apresentados no cenário apresentado.
 
-\subsection{Sanduíches}
+\subsection{Gestão de sanduíches}
 
-Na tabela \ref{table:sanduiche} são apresentados os casos de usos capturados para a gestão de sanduíches. Está acompanhada pelo diagrama \ref{fig:sanduiche}, diagrama de casos de usos para a administração de sanduíches.
+Na Tabela \ref{table:sanduiche} são apresentados os casos de usos capturados para a gestão de sanduíches. Está acompanhada pela Figura \ref{fig:sanduiche}, diagrama de casos de usos para a administração de sanduíches.
 
 \begin{table}[H]
-\caption{Sanduíches}
+\caption{Casos de usos para a gestão de sanduíches}
 \label{table:sanduiche}
 \begin{center}
 \begin{tabular}{ |p{2cm}|p{10cm}|  }
@@ -198,20 +134,20 @@ UC34 & Alterar os dados de uma sanduíche \\
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.7]{sanduiche.png}
-    \caption{Sanduíches}
+    \includegraphics[scale=0.8]{sanduiche.png}
+    \caption{Casos de usos para a gestão de sanduíches}
     \label{fig:sanduiche}
 \end{figure}
 	
 
 \newpage
 
-\subsection{Ingredientes}
+\subsection{Gestão de ingredientes}
 
-Na tabela \ref{table:ingredientes} são apresentados os casos de usos capturados para a gestão de ingredientes. Está acompanhada pelo diagrama \ref{fig:ingrediente}, diagrama de casos de usos para a administração de ingredientes.
+Na Tabela \ref{table:ingredientes} são apresentados os casos de usos capturados para a gestão de ingredientes. Está acompanhada pela Figura \ref{fig:ingrediente}, diagrama de casos de usos para a administração de ingredientes.
 
 \begin{table}[H]
-\caption{Ingredientes}
+\caption{Casos de usos para a gestão de ingredientes}
 \label{table:ingredientes}
 \begin{center}
 \begin{tabular}{ |p{2cm}|p{10cm}|  }
@@ -239,18 +175,18 @@ UC35 & Obter todos os ingredientes de uma certa categoria\\
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.7]{ingrediente.png}
-    \caption{Ingredientes}
+    \includegraphics[scale=0.8]{ingrediente.png}
+    \caption{Casos de usos para a gestão de ingredientes}
     \label{fig:ingrediente}
 \end{figure}
 \newpage
 
-\subsection{Críticas}
+\subsection{Gestão de críticas}
 
-Na tabela \ref{table:criticas} são apresentados os casos de usos capturados para a gestão de críticas. Está acompanhada pelo diagrama \ref{fig:criticas}, diagrama de casos de usos para a administração de críticas.
+Na Tabela \ref{table:criticas} são apresentados os casos de usos capturados para a gestão de críticas. Está acompanhada pela Figura \ref{fig:criticas}, diagrama de casos de usos para a administração de críticas.
 
 \begin{table}[H]
-\caption{Críticas}
+\caption{Casos de usos para a gestão de críticas}
 \label{table:criticas}
 \begin{center}
 \begin{tabular}{ |p{2cm}|p{10cm}|  }
@@ -285,18 +221,18 @@ UC45 & Eliminar critica feita pelo cliente\\
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.8]{critica.png}
-    \caption{Críticas}
+    \includegraphics[scale=1]{critica.png}
+    \caption{Casos de usos para a gestão de críticas}
     \label{fig:criticas}
 \end{figure}
 \newpage
 
-\subsection{Lojas}
+\subsection{Gestão de lojas}
 
-Na tabela \ref{table:lojas} são apresentados os casos de usos capturados para a gestão de lojas. Está acompanhada pelo diagrama \ref{fig:loja}, diagrama de casos de usos para a administração de lojas.
+Na Tabela \ref{table:lojas} são apresentados os casos de usos capturados para a gestão de lojas. Está acompanhada pela Figura \ref{fig:loja}, diagrama de casos de usos para a administração de lojas.
 
 \begin{table}[H]
-\caption{Lojas}
+\caption{Casos de usos para a gestão de lojas}
 \label{table:lojas}
 \begin{center}
 \begin{tabular}{ |p{2cm}|p{10cm}|  }
@@ -326,17 +262,17 @@ UC42 & Editar os dados de uma loja\\
 \begin{figure}[H]
     \centering
     \includegraphics[scale=1]{loja.png}
-    \caption{Lojas}
+    \caption{Casos de usos para a gestão de lojas}
     \label{fig:loja}
 \end{figure}
 
 \newpage
-\subsection{Encomendas}
+\subsection{Gestão de encomendas}
 
-Na tabela \ref{table:encomendas} são apresentados os casos de usos capturados para a gestão de encomendas. Está acompanhada pelo diagrama \ref{fig:encomendas}, diagrama de casos de usos para a administração de encomendas.
+Na Tabela \ref{table:encomendas} são apresentados os casos de usos capturados para a gestão de encomendas. Está acompanhada pela Figura \ref{fig:encomendas}, diagrama de casos de usos para a administração de encomendas.
 
 \begin{table}[H]
-\caption{Encomendas}
+\caption{Casos de usos para a gestão de encomendas}
 \label{table:encomendas}
 \begin{center}
 \begin{tabular}{ |p{2cm}|p{10cm}|  }
@@ -360,18 +296,18 @@ UC39 & Listar as encomendas do cliente\\
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.8]{encomenda.png}
-    \caption{Encomendas}
+    \caption{Casos de usos para a gestão de encomendas}
     \label{fig:encomendas}
 \end{figure}
 
 \newpage
 
-\subsection{Clientes}
+\subsection{Gestão de clientes}
 
-Na tabela \ref{table:clientes} são apresentados os casos de usos capturados para a gestão de clientes. Está acompanhada pelo diagrama \ref{fig:clientes}, diagrama de casos de usos para a administração de clientes.
+Na Tabela \ref{table:clientes} são apresentados os casos de usos capturados para a gestão de clientes. Está acompanhada pela Figura \ref{fig:clientes}, diagrama de casos de usos para a administração de clientes.
 
 \begin{table}[H]
-\caption{Sanduíches}
+\caption{Casos de usos para a gestão de clientes}
 \label{table:clientes}
 \begin{center}
 \begin{tabular}{ |p{2cm}|p{10cm}|  }
@@ -408,10 +344,91 @@ UC41 & Visualizar os dados do cliente\\
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.6]{cliente.png}
-    \caption{Clientes}
+    \includegraphics[scale=0.9]{cliente.png}
+    \caption{Casos de usos para a gestão de clientes}
     \label{fig:clientes}
 \end{figure}
+
+\newpage
+
+\section{Restrições}
+
+Na tabela \ref{table:restricoes} são apresentadas as restrições que afetam o desenvolvimento do projeto de \textit{software}.
+
+\begin{table}[H]
+\caption{Restrições}
+\label{table:restricoes}
+\begin{center}
+\begin{tabular}{ |p{3cm}|p{3cm}|p{6cm}|  }
+\hline
+\multicolumn{3}{|c|}{Restrições} \\
+\hline
+\textbf{Referência} & \textbf{Restrição} & \textbf{Descrição} \\
+\hline
+R1 & Linguagem & O protótipo deve ser escrito recorrendo a Ballerina\\
+\hline
+R2 & Arquitetura de microsserviços &  A solução deve utilizar a arquitetura de microsserviços\\
+\hline
+R3 & Aplicações e ferramentas open source & Só são permitidas aplicações e ferramentas open source no desenvolvimento do sistema\\
+\hline
+R4 & Tempo & A aplicação deve estar concluída em três meses\\
+\hline
+\end{tabular} 
+\end{center}
+\end{table}
+
+
+\section{Atributos de Qualidade}
+
+Na Tabela \ref{table:qualidades} são apresentadas os atributos de qualidade que o sistema deve apresentar recorrendo à norma ISO 25010, que define a qualidade do \textit{software} como um conjunto de características que o mesmo deve possuir para atender às necessidades pretendidas. Esta norma é representada por 8 categorias:
+\begin{itemize}
+    \item Adequação funcional \cite{iso25010cat}
+    \item Eficiência de desempenho \cite{iso25010cat}
+    \item Compatibilidade \cite{iso25010cat}
+    \item Usabilidade \cite{iso25010cat}
+    \item Confiabilidade \cite{iso25010cat}
+    \item Segurança \cite{iso25010cat}
+    \item Manutenibilidade \cite{iso25010cat}
+    \item Portabilidade \cite{iso25010cat}
+\end{itemize}
+
+\begin{table}[H]
+\caption{Atributos de Qualidade}
+\label{table:qualidades}
+\begin{center}
+\begin{tabular}{ |p{3cm}|p{3cm}|p{6cm}|  }
+\hline
+\multicolumn{3}{|c|}{Atributos de Qualidade} \\
+\hline
+\textbf{Referência} & \textbf{Atributo} & \textbf{Descrição} \\
+\hline
+Q1 & Segurança & Mecanismos de autenticação e autorização devem ser implementados\\
+\hline
+Q2 & Desempenho & A aplicação deve responder as pedidos realizados por 10 utilizadores em simultâneo em menos de 3 segundos\\
+\hline
+Q3 & Manutenibilidade & Pretende-se que a aplicação possa evoluir, pelo que, deverão ser aplicados padrões de \textit{design} apropriados\\
+\hline
+\end{tabular} 
+\end{center}
+\end{table}
+
+Adicionalmente, relativamente ao atributo de qualidade com referência Q1, deve ser mencionado que deverão ser seguidos as dez principais práticas para o desenvolvimento de código seguro. As dez principais práticas são constituídas por:
+\begin{itemize}
+    \item Validação de todas as entradas de fontes de dados não seguras \cite{top10}
+    \item Ter atenção aos avisos do compilador e recorrer a ferramentas de análise estática e dinâmica para identificar e eliminar falhas de segurança \cite{top10}
+    \item Criar uma arquitetura de software e conceber o seu software para implementar e aplicar políticas de segurança. \cite{top10}
+    \item Desenhar um sistema o mais simples e pequeno possível \cite{top10}
+    \item O acesso deve ser baseado em permissões em vez de exclusões \cite{top10}
+    \item Cada processo deve ter o menor conjunto de privilégios necessários para concluir o trabalho \cite{top10}
+    \item Os dados enviados para um sistema complexos devem passar por um processo de limpeza \cite{top10}
+    \item Deve ser feito uma gestão de risco com múltiplas estratégias defensivas para prevenir falhas de segurança e limitar as consequências de um possível \textit{exploit} \cite{top10}
+    \item Deve ser incorporado testes de qualidade do código-fonte, testes de penetração e testes de \textit{fuzz} \cite{top10}
+    \item Desenvolver um padrão de codificação seguro para a linguagem e plataforma de desenvolvimento utilizada \cite{top10}
+\end{itemize}
+
+
+
+
 
 
 
