@@ -3,6 +3,61 @@
 
 Welcome to my GitHub project! This project is being developed under the curricular unit of PESTA(internship/project). It will demonstrate how to develop applications in ballerina, a programming language that aims to help developers to build easy and fast cloud-native application.
 
+# Context
+
+A group of former students, some with experience in Computer Engineering,
+decided to create a company dedicated to selling healthy sandwiches
+sandwiches in a physical store. For this, it is necessary to create a computer solution that supports
+the company's needs. It is desired to have a system that has the necessary
+necessary to manage the various dimensions of the company. In the development
+of this prototype an architecture of microservices must be considered, databases must be
+databases unique to each microservice and that these should be called through an API Gateway.
+through an API Gateway. The application should consist of:
+- Sandwich management
+- Ingredient management
+- Review management
+- Store management
+- Order management
+- Customer management
+In the system, each sandwich is identified by a designation, selling price and
+a list of ingredients. In addition, it may have several descriptions, but for authorized languages
+languages, detected by the application itself. Any sandwich must be created
+with a minimum of 3 ingredients, and it is mandatory to contain one type of
+bread. The ingredients in the list must be checked for existence.
+An ingredient has a name and a category, it is used in the formation of the sandwich.
+of the sandwich.
+The customer is allowed to create a review, in which he describes his experience after
+ordering a sandwich using a comment and a scale of 0 to 5 stars.
+5 stars. An initial filtering of the review's content must be done. Other customers can indicate whether they liked or disliked the review, but they can also
+report it if they think the review contains offensive content, among others. Afterwards it will be reviewed by an administrator. It must be
+accompanied by the time of creation.
+A store includes a store name, address and the person in charge.
+A store has opening hours that may vary from day to day. A
+responsible person has a name and an email address. The address of the store is
+consists of the address, house number, postal code, town and country.
+Each order is made up of the identifier of the customer who placed it, the status
+order, a list of sandwiches and their respective quantities, as well as the day of
+delivery and the specific store where it will be delivered.
+total price of the order, it should be taken into account that a sandwich cannot be sold
+be sold below zero, despite any promotions applied.
+Each customer includes his personal details, such as name, tax identification number
+number, address, e-mail address, authentication data, and languages that he or she can speak.
+The customer's address consists of the address, house number, zip code
+city and country.
+System administrator functions include creating, changing and deleting sandwiches, ingredients and stores, adding descriptions, adding ingredients to
+to sandwiches, and viewing customer information. The person in charge of the store
+has the functionality to look up customer information, check orders, and change order
+and change order status. Customer functionalities include viewing customer
+information about their customer data, sandwiches, stores, ingredients and their
+orders.
+The system should respond in less than 3 seconds to 10 simultaneous users, have an authentication and authorization system, be modifiable with respect to introducing new features or changing the order status.
+The system should respond in less than 3 seconds to 10 simultaneous users, contain an authentication and authorization system, be modifiable with respect to the introduction of new features or change some existing ones, tests should be adopted in the various dimensions, this includes the business rules
+rules captured and the correct operation of the application, a messaging system via a message
+a message broker and finally only open source technologies and tools are allowed to be used.
+and open source tools.
+Since the company will be opening soon, about 3 months, the software must be
+available by the opening date.
+
 # Prerequisites
 
 1. Podman
