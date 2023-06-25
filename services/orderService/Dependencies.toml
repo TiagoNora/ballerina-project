@@ -297,6 +297,9 @@ version = "2.2.5"
 dependencies = [
 	{org = "ballerina", name = "jballerina.java"}
 ]
+modules = [
+	{org = "ballerina", packageName = "time", moduleName = "time"}
+]
 
 [[package]]
 org = "ballerina"
@@ -343,20 +346,21 @@ modules = [
 
 [[package]]
 org = "tiago"
-name = "sandwich"
+name = "orderService"
 version = "0.1.0"
 dependencies = [
 	{org = "ballerina", name = "http"},
 	{org = "ballerina", name = "io"},
 	{org = "ballerina", name = "sql"},
 	{org = "ballerina", name = "test"},
+	{org = "ballerina", name = "time"},
 	{org = "ballerinai", name = "observe"},
 	{org = "ballerinax", name = "mysql"},
 	{org = "ballerinax", name = "mysql.driver"}
 ]
 modules = [
-	{org = "tiago", packageName = "sandwich", moduleName = "sandwich"},
-	{org = "tiago", packageName = "sandwich", moduleName = "sandwich.model"},
-	{org = "tiago", packageName = "sandwich", moduleName = "sandwich.repository"}
+	{org = "tiago", packageName = "orderService", moduleName = "orderService"},
+	{org = "tiago", packageName = "orderService", moduleName = "orderService.model"},
+	{org = "tiago", packageName = "orderService", moduleName = "orderService.repository"}
 ]
 

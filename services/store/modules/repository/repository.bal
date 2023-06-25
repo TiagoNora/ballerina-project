@@ -5,10 +5,10 @@ import store.model;
 import ballerina/time;
 import ballerina/io;
 
-configurable string USER = ?;
-configurable string PASSWORD = ?;
-configurable string HOST = ?;
-configurable int PORT = ?;
+string USER = "myUser";
+string PASSWORD = "myPassword";
+string HOST = "localhost";
+int PORT = 3309;
 
 final mysql:Client dbClient;
 

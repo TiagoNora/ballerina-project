@@ -7,7 +7,7 @@ import sandwich.model;
 string USER="myUser";
 string PASSWORD="myPassword";
 string HOST="localhost";
-int PORT=3306;
+int PORT=3307;
 
 final mysql:Client dbClient;
 final http:Client language;
@@ -144,7 +144,7 @@ public isolated function addSandwichToDB(float selling_price, string designation
         return lastInsertId;
     }
     else {
-        return notFound("INGREDIENT_ID_NOT_FOUND","The searched ingredient has not founded");
+        return notFound("SANDWICH_ID_NOT_FOUND","The searched sandwich has not founded");
     }
 
 }

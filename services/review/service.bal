@@ -1,17 +1,30 @@
 import ballerina/http;
+import review.model;
+import review.repository;
+service /reviews on new http:Listener(8095) {
 
-# A service representing a network-accessible API
-# bound to port `9090`.
-service / on new http:Listener(9090) {
-
-    # A resource for generating greetings
-    # + name - the input string name
-    # + return - string name with hello message or error
-    resource function get greeting(string name) returns string|error {
-        // Send a response back to the caller.
-        if name is "" {
-            return error("name should not be empty!");
-        }
-        return "Hello, " + name;
+    isolated resource function post .(@http:Payload model:ReviewDTO review) returns model:Conflict|model:Review|model:NotFoundError|error{
+        return repository:addReview(review);
+    }
+    isolated resource function get searchById(int id) returns model:Review?|error|model:NotFoundError {
+        return repository:getReviewById(id);
+    }
+    isolated resource function get searchByUserId(int id) returns model:Review[]?|error|model:NotFoundError {
+        return repository:getReviewsByUserId(id);
+    }
+    isolated resource function get searchBySandwichId(int id) returns model:Review[]?|error|model:NotFoundError {
+        return repository:getReviewBySandwichId(id);
+    }
+    isolated resource function put report(int id) returns model:Conflict|model:Review|model:NotFoundError|error {
+        return repository:report(id);
+    }
+    isolated resource function get reported(int id) returns model:Conflict|model:Review[]|model:NotFoundError|error {
+        return repository:reported();
+    }
+    isolated resource function put admin/reported(@http:Payload model:ApproveOrDeny b) returns model:Conflict|model:Review|model:NotFoundError|error {
+        return repository:adminReported(b);
+    }
+    isolated resource function post vote(@http:Payload model:Vote b) returns model:Conflict|model:Review|model:NotFoundError|error {
+        return repository:vote(b);
     }
 }
