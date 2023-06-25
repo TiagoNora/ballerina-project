@@ -19,6 +19,7 @@ through an API Gateway. The application should consist of:
 - Store management
 - Order management
 - Customer management
+
 In the system, each sandwich is identified by a designation, selling price and
 a list of ingredients. In addition, it may have several descriptions, but for authorized languages
 languages, detected by the application itself. Any sandwich must be created
