@@ -58,12 +58,6 @@ text_field.pack()
 add_button = tk.Button(window, text="Add Row", command=add_row)
 add_button.pack()
 
-update_button = tk.Button(window, text="Update Row", command=update_row)
-update_button.pack()
-
-delete_button = tk.Button(window, text="Delete Row", command=delete_row)
-delete_button.pack()
-
 table_frame = tk.Frame(window)
 table_frame.pack()
 
