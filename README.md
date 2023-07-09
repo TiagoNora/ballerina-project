@@ -133,11 +133,6 @@ You should change the spaces that contains the keyword **secret** with your cred
 [User Cases](https://github.com/TiagoNora/ballerina-project/blob/1464445bb0ee4a552aed878bb9cdfd032406d621/docs/UserCases.md)
 
 
-## Calendar
-
-[Calendar](https://github.com/TiagoNora/ballerina-project/blob/1464445bb0ee4a552aed878bb9cdfd032406d621/docs/Calendar.md)
-
-
 ## API Documentation
 
 [API Documentation](https://github.com/TiagoNora/ballerina-project/blob/aadb3b63f9472f75f8c05a05dd9c3e92a8716e4a/docs/ApiDocumentation.md)
