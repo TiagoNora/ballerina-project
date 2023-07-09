@@ -165,10 +165,8 @@ public isolated function addSandwichToDB(float selling_price, string designation
 }
 
 public isolated function findIngredientByIdFromRest(int id) returns boolean|error{
-    http:Client ingredientClient = check new ("localhost:8080");
-    string r = "/ingredients/searchById?id=" + id.toString();
-    http:Response response = check ingredientClient->get(r);
-    if response.statusCode == 200{
+    model:SandwichInfo|error ing = check dbClient->queryRow( `SELECT * FROM Ingredients WHERE ingredient_id = ${id}`);
+    if ing is model:SandwichInfo{
         return true;
     }
     else {

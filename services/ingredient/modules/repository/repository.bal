@@ -13,9 +13,7 @@ final mysql:Client dbClient;
 final rabbitmq:Client rabbitmqClient;
 function init() returns error? {
     rabbitmqClient = check new(rabbitmq:DEFAULT_HOST, rabbitmq:DEFAULT_PORT);
-    _ = check rabbitmqClient->exchangeDeclare("ingrediente", rabbitmq:FANOUT_EXCHANGE);
     _ = check rabbitmqClient->queueDeclare("ingredientes");
-    _ = check rabbitmqClient->queueBind("ingredientes", "ingrediente", "routingIngredient");
     mysql:Client dbClientCreate = check new(host=HOST, user=USER, password=PASSWORD, port=PORT);
     sql:ExecutionResult _ = check dbClientCreate->execute(`CREATE DATABASE IF NOT EXISTS Ingredients`);
     check dbClientCreate.close();

@@ -1,6 +1,7 @@
 import ballerina/http;
 import sandwich.model;
 import sandwich.repository;
+import ballerinax/rabbitmq;
 service /sandwiches on new http:Listener(8091) {
 
     isolated resource function post .(@http:Payload model:SandwichDTO sand) returns model:ServiceError|model:Sandwich|error|model:NotFoundError|model:ValidationError{
@@ -27,4 +28,11 @@ service /sandwiches on new http:Listener(8091) {
         return repository:getWithoutId(id);
     }
 
+}
+
+service "IngredientQueue" on new rabbitmq:Listener(rabbitmq:DEFAULT_HOST, rabbitmq:DEFAULT_PORT) {
+
+    remote function onMessage(model:IngredientDTO ingredient) returns error? {
+        _ = check repository:addIngredient(ingredient);
+    }
 }
