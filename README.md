@@ -61,13 +61,13 @@ available by the opening date.
 
 # Prerequisites
 
-1. Podman
-- Install podman in your machine, follow this [link](https://github.com/containers/podman/blob/main/docs/tutorials/podman-for-windows.md)
+1. Docker
+- Install docker in your machine, follow this [link](https://docs.docker.com/engine/install/)
 - Create the container with the mysql image
 
 You can create the container with the following code:
 ```
-podman run --name my-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=mypassword -d mysql
+docker run --name my-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=mypassword -d mysql
 ```
 
 - Create a user with all the permissions
