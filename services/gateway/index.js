@@ -1,4 +1,3 @@
-const axios = require('axios');
 const proxy = require('express-http-proxy')
 const express = require('express');
 const app = express();
