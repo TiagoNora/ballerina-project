@@ -61,13 +61,13 @@ available by the opening date.
 
 # Prerequisites
 
-1. Podman
-- Install podman in your machine, follow this [link](https://github.com/containers/podman/blob/main/docs/tutorials/podman-for-windows.md)
+1. Docker
+- Install docker in your machine, follow this [link](https://docs.docker.com/engine/install/)
 - Create the container with the mysql image
 
 You can create the container with the following code:
 ```
-podman run --name my-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=mypassword -d mysql
+docker run --name my-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=mypassword -d mysql
 ```
 
 - Create a user with all the permissions
@@ -75,7 +75,7 @@ podman run --name my-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=mypassword -d mys
 You can enter your container with the following code:
 
 ```
-podman exec -it <container-name> bin/bash
+docker exec -it <container-name> bin/bash
 mysql -u root -p
 ```
 Insert your password and to create the user insert this code:
@@ -98,10 +98,12 @@ bal version or bal
 
 # Open-Source tools and technologies used
 - [Ballerina (Programming Language)](https://ballerina.io/)
-- [Podman (Container manager)](https://podman.io/)
+- [Docker (Container manager)](https://podman.io/)
 - [Mysql (Database)](https://www.mysql.com/)
-- [Insomnia (API Client)](https://insomnia.rest/)
+- [Postman (API Client)](https://www.postman.com/)
 - [JMeter (Load test tool)](https://jmeter.apache.org/)
+- [NodeJS (Framework)](https://nodejs.org/en)
+- [Python (Programming Language)](https://www.python.org/)
 
 ## Open and run
 1. Open project
@@ -129,11 +131,6 @@ You should change the spaces that contains the keyword **secret** with your cred
 ## User Cases
 
 [User Cases](https://github.com/TiagoNora/ballerina-project/blob/1464445bb0ee4a552aed878bb9cdfd032406d621/docs/UserCases.md)
-
-
-## Calendar
-
-[Calendar](https://github.com/TiagoNora/ballerina-project/blob/1464445bb0ee4a552aed878bb9cdfd032406d621/docs/Calendar.md)
 
 
 ## API Documentation
