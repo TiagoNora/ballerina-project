@@ -98,10 +98,12 @@ bal version or bal
 
 # Open-Source tools and technologies used
 - [Ballerina (Programming Language)](https://ballerina.io/)
-- [Podman (Container manager)](https://podman.io/)
+- [Docker (Container manager)](https://podman.io/)
 - [Mysql (Database)](https://www.mysql.com/)
-- [Insomnia (API Client)](https://insomnia.rest/)
+- [Postman (API Client)](https://www.postman.com/)
 - [JMeter (Load test tool)](https://jmeter.apache.org/)
+- [NodeJS (Framework)](https://nodejs.org/en)
+- [Python (Programming Language)](https://www.python.org/)
 
 ## Open and run
 1. Open project
