@@ -1,7 +1,9 @@
 const axios = require('axios');
 const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
 const PORT = 8080;
+app.use(bodyParser.json());
 
 app.listen(PORT, () => {
   console.log(`API gateway server is running on port ${PORT}`);
@@ -26,7 +28,8 @@ app.all('/sandwiches/*', (req, res) => {
     axios({
         method: req.method,
         url: serviceAUrl,
-        headers: req.headers
+        headers: req.headers,
+        data: req.body
       })
         .then(response => {
           res.json(response.data);
@@ -56,7 +59,8 @@ app.all('/ingredients/*', (req, res) => {
       axios({
           method: req.method,
           url: serviceAUrl,
-          headers: req.headers
+          headers: req.headers,
+          data: req.body
         })
           .then(response => {
             res.json(response.data);
@@ -86,7 +90,8 @@ app.all('/reviews/*', (req, res) => {
       axios({
           method: req.method,
           url: serviceAUrl,
-          headers: req.headers
+          headers: req.headers,
+          data: req.body
         })
           .then(response => {
             res.json(response.data);
@@ -99,6 +104,7 @@ app.all('/reviews/*', (req, res) => {
 
 app.all('/stores/*', (req, res) => {
     const serviceAUrl = `http://localhost:8093${req.originalUrl}`;
+    console.log(req.body);
   
     if (req.method === 'GET' || req.method === 'DELETE') {
       axios({
@@ -116,7 +122,8 @@ app.all('/stores/*', (req, res) => {
       axios({
           method: req.method,
           url: serviceAUrl,
-          headers: req.headers
+          headers: req.headers,
+          data: req.body
         })
           .then(response => {
             res.json(response.data);
@@ -146,7 +153,8 @@ app.all('/orders/*', (req, res) => {
       axios({
           method: req.method,
           url: serviceAUrl,
-          headers: req.headers
+          headers: req.headers,
+          data: req.body
         })
           .then(response => {
             res.json(response.data);
@@ -157,7 +165,7 @@ app.all('/orders/*', (req, res) => {
     }
 });
 
-app.all('/clients/*', (req, res) => {
+app.all('/users/*', (req, res) => {
     const serviceAUrl = `http://localhost:8092${req.originalUrl}`;
   
     if (req.method === 'GET' || req.method === 'DELETE') {
@@ -176,7 +184,8 @@ app.all('/clients/*', (req, res) => {
       axios({
           method: req.method,
           url: serviceAUrl,
-          headers: req.headers
+          headers: req.headers,
+          data: req.body
         })
           .then(response => {
             res.json(response.data);
