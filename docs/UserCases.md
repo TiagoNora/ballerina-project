@@ -16,22 +16,22 @@
 
 ### Review management
 
-- [ ] US19: Add review of a ordered sandwich
-- [ ] US20: Vote in a review
-- [ ] US21: List all reviews
+- [x] US19: Add review of a ordered sandwich
+- [x] US20: Vote in a review
+- [x] US21: List all reviews
 
 ### Shop management
 
-- [ ] US22: Create shop
-- [ ] US23: List all shops
-- [ ] US24: List shop by id
-- [ ] US25: List shop by designation
-- [ ] US26: List shop by address
+- [x] US22: Create shop
+- [x] US23: List all shops
+- [x] US24: List shop by id
+- [x] US25: List shop by designation
+- [x] US26: List shop by address
 
 ### Order management
 
-- [ ] US27: Create order
-- [ ] US28: List orders in a shop
+- [x] US27: Create order
+- [x] US28: List orders in a shop
 
 ### Customer management
 
