@@ -300,3 +300,247 @@ Payload: **JSON**
                       }]
 }]
 ```
+
+#### US11: Add customer
+
+```http
+  POST /users
+```
+Payload: **JSON**
+
+```json
+{
+	"name":"ExempleName",
+	"password": "Exemple",
+	"taxIdentificationNumber": "123456789",
+	"address": "Exemple",
+	"email": "Exemple"
+}
+```
+
+| Status  | Description   |
+| :---------- | :--------- |
+| `200`      | `Customer added` |
+| `404`      | `Customer not found` |
+
+**If 201 returns:**
+```json
+{
+  "user_id": 1,
+	"name":"ExempleName",
+	"password": "Exemple",
+	"taxIdentificationNumber": "123456789",
+	"address": "Exemple",
+	"email": "Exemple"
+}
+```
+
+#### US12: Get customer by id
+
+```http
+  GET /users/searchById?id=id
+```
+
+| Parameter  | Type       | Description                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `int` | **Required** |
+
+
+| Status  | Description   |
+| :---------- | :--------- |
+| `200`      | `Customer found` |
+| `404`      | `Customer not found` |
+
+**If 200 returns:**
+```json
+{
+  "user_id": 1,
+	"name":"ExempleName",
+	"password": "Exemple",
+	"taxIdentificationNumber": "123456789",
+	"address": "Exemple",
+	"email": "Exemple",
+  "permissions": [
+        "CUSTOMER"
+    ]
+}
+```
+
+#### US13: Get customer by email
+
+```http
+  GET /users/searchByEmail?email=email
+```
+
+| Parameter  | Type       | Description                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `int` | **Required** |
+
+
+| Status  | Description   |
+| :---------- | :--------- |
+| `200`      | `Customer found` |
+| `404`      | `Customer not found` |
+
+**If 200 returns:**
+```json
+{
+  "user_id": 1,
+	"name":"ExempleName",
+	"password": "Exemple",
+	"taxIdentificationNumber": "123456789",
+	"address": "Exemple",
+	"email": "Exemple",
+  "permissions": [
+        "CUSTOMER"
+    ]
+}
+```
+
+#### US14: Get customer by tax identification number
+
+```http
+  GET /users/searchByTaxIdentificationNumber?tax=randomIdentificationNumber
+```
+
+| Parameter  | Type       | Description                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `int` | **Required** |
+
+
+| Status  | Description   |
+| :---------- | :--------- |
+| `200`      | `Customer found` |
+| `404`      | `Customer not found` |
+
+**If 200 returns:**
+```json
+{
+  "user_id": 1,
+	"name":"ExempleName",
+	"password": "Exemple",
+	"taxIdentificationNumber": "123456789",
+	"address": "Exemple",
+	"email": "Exemple",
+  "permissions": [
+        "CUSTOMER"
+    ]
+}
+```
+
+#### US15: Get customer authentication data
+
+```http
+  GET /users/autenticationData?id=idUser
+```
+
+| Parameter  | Type       | Description                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `int` | **Required** |
+
+
+| Status  | Description   |
+| :---------- | :--------- |
+| `200`      | `Customer found` |
+| `404`      | `Customer not found` |
+
+**If 200 returns:**
+```json
+{
+  "permissions": [
+        "CUSTOMER"
+    ]
+}
+```
+
+#### US16: Get all customers
+
+```http
+  GET /users/
+```
+
+| Parameter  | Type       | Description                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `int` | **Required** |
+
+
+| Status  | Description   |
+| :---------- | :--------- |
+| `200`      | `Customer found` |
+| `404`      | `Customer or customers not found` |
+
+**If 200 returns:**
+```json
+[{
+  "user_id": 1,
+	"name":"ExempleName",
+	"password": "Exemple",
+	"taxIdentificationNumber": "123456789",
+	"address": "Exemple",
+	"email": "Exemple",
+  "permissions": [
+        "CUSTOMER"
+    ]
+}
+{
+  "user_id": 2,
+	"name":"ExempleName",
+	"password": "Exemple",
+	"taxIdentificationNumber": "123456789",
+	"address": "Exemple",
+	"email": "Exemple",
+  "permissions": [
+        "CUSTOMER"
+    ]
+}
+]
+```
+
+#### US17: Add permissions to user
+
+```http
+  POST /users/permissions
+```
+
+
+| Status  | Description   |
+| :---------- | :--------- |
+| `200`      | `Description or descriptions added` |
+| `404`      | `Sandwiches or sandwich not found` |
+
+**If 201 returns:**
+```json
+{
+    "user_id": 79,
+    "name": "Lance Kilback",
+    "taxIdentificationNumber": "423707376",
+    "address": "68370 Eudora Estates",
+    "email": "larissa.zemlak@example.com",
+    "permissions": [
+        "ADMIN",
+        "CUSTOMER"
+    ]
+}
+```
+
+#### US18: Generate JWT
+```http
+  GET /sandwiches/searchWithoutId?id={id}
+```
+
+| Parameter  | Type       | Description                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `int` | **Required** |
+
+
+| Status  | Description   |
+| :---------- | :--------- |
+| `200`      | `Description or descriptions added` |
+| `404`      | `Sandwiches or sandwich not found` |
+
+**If 201 returns:**
+```json
+STRING
+```
+
+
