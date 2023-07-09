@@ -18,7 +18,7 @@ service /reviews on new http:Listener(8095) {
     isolated resource function put report(int id) returns model:Conflict|model:Review|model:NotFoundError|error {
         return repository:report(id);
     }
-    isolated resource function get reported(int id) returns model:Conflict|model:Review[]|model:NotFoundError|error {
+    isolated resource function get reported() returns model:Conflict|model:Review[]|model:NotFoundError|error {
         return repository:reported();
     }
     isolated resource function put admin/reported(@http:Payload model:ApproveOrDeny b) returns model:Conflict|model:Review|model:NotFoundError|error {

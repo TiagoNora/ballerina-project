@@ -7,6 +7,10 @@ public type Sandwich record {
     Description[] descriptions;
 };
 
+public type IngredientDTO record {
+    string designation;
+};
+
 public type SandwichInfo record {
     int sandwich_id;
     float selling_price;
@@ -24,7 +28,6 @@ public type Description record {
     string text;
     string language;
 };
-
 public type DescriptionDTO record {
     string text;
 };

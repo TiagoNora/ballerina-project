@@ -2,6 +2,7 @@ import ballerinax/mysql;
 import ballerinax/mysql.driver as _; 
 import ballerina/sql;
 import ingredient.model;
+import ballerinax/rabbitmq;
 
 string USER = "myUser";
 string PASSWORD = "myPassword";
@@ -9,8 +10,12 @@ string HOST = "localhost";
 int PORT = 3306;
 
 final mysql:Client dbClient;
-
+final rabbitmq:Client rabbitmqClient;
 function init() returns error? {
+    rabbitmqClient = check new(rabbitmq:DEFAULT_HOST, rabbitmq:DEFAULT_PORT);
+    _ = check rabbitmqClient->exchangeDeclare("ingrediente", rabbitmq:FANOUT_EXCHANGE);
+    _ = check rabbitmqClient->queueDeclare("ingredientes");
+    _ = check rabbitmqClient->queueBind("ingredientes", "ingrediente", "routingIngredient");
     mysql:Client dbClientCreate = check new(host=HOST, user=USER, password=PASSWORD, port=PORT);
     sql:ExecutionResult _ = check dbClientCreate->execute(`CREATE DATABASE IF NOT EXISTS Ingredients`);
     check dbClientCreate.close();
@@ -33,6 +38,7 @@ public isolated function addIngredient(model:IngredientDTO ing) returns error|mo
     VALUES (${ing.designation})`);
     int|string? lastInsertId = result.lastInsertId;
     if lastInsertId is int {
+        check rabbitmqClient->publishMessage({content: ing, routingKey: "ingredientes"});
         return getIngredientById(lastInsertId);
     } else {
         return notFound("INGREDIENT_ID_NOT_FOUND","The searched ingredient has not founded");

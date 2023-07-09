@@ -4,6 +4,8 @@ import ballerina/sql;
 import user.model;
 import ballerina/regex;
 import ballerina/jwt;
+import ballerinax/rabbitmq;
+
 
 configurable string USER = ?;
 configurable string PASSWORD = ?;
@@ -11,8 +13,13 @@ configurable string HOST = ?;
 configurable int PORT = ?;
 
 final mysql:Client dbClient;
+final rabbitmq:Client rabbitmqClient;
 
 function init() returns error? {
+    rabbitmqClient = check new(rabbitmq:DEFAULT_HOST, rabbitmq:DEFAULT_PORT);
+    _ = check rabbitmqClient->exchangeDeclare("user", rabbitmq:FANOUT_EXCHANGE);
+    _ = check rabbitmqClient->queueDeclare("users");
+    _ = check rabbitmqClient->queueBind("users", "user", "routingUser");
     mysql:Client dbClientCreate = check new(host=HOST, user=USER, password=PASSWORD, port=PORT);
     sql:ExecutionResult _ = check dbClientCreate->execute(`CREATE DATABASE IF NOT EXISTS Users`);
     check dbClientCreate.close();
@@ -59,6 +66,9 @@ public isolated function addUser(model:UserDTO user) returns model:User?|error|m
     }
 
     model:User|model:NotFoundError r = getUserById(n);
+    if r is model:User{
+        check rabbitmqClient->publishMessage({content: r, routingKey: "users"});
+    }
 
     return r;
 

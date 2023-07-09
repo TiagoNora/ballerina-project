@@ -51,6 +51,27 @@ public type ApproveOrDeny record{
    boolean approved;
 };
 
+public type Sandwich record {
+    int sandwich_id;
+    float selling_price;
+    string designation;
+    int[] ingredients_id;
+    Description[] descriptions;
+};
+
+public type UserDTO record {
+    string name;
+    string password;
+    string taxIdentificationNumber;
+    string address;
+    string email;
+};
+
+public type Description record {
+    string text;
+    string language;
+};
+
 public type Vote record{
    int review_id;
    int user_id;

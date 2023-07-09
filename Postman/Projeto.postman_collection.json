@@ -1,0 +1,3646 @@
+{
+	"info": {
+		"_postman_id": "f0fe6541-b6b3-4fb3-84c4-966c3c6dbc75",
+		"name": "Projeto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24011362",
+		"_collection_link": "https://interstellar-zodiac-888073.postman.co/workspace/New-Team-Workspace~d1f85f97-08da-47b3-b3f4-bd8041e7fd1f/collection/17818651-f0fe6541-b6b3-4fb3-84c4-966c3c6dbc75?action=share&creator=24011362&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Store",
+			"item": [
+				{
+					"name": "Create a store",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body contains store_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"store_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains designation\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"designation\");\r",
+									"});\r",
+									"pm.test(\"Body contains dateOfCreation\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"dateOfCreation\");\r",
+									"});\r",
+									"pm.test(\"Body contains address\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"address\");\r",
+									"});\r",
+									"pm.test(\"Body contains closingHours\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"closingHours\");\r",
+									"});\r",
+									"pm.test(\"Body contains openingHours\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"openingHours\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.globals.set(\"idStore\", pm.response.json().store_id);\r",
+									"console.log(pm.globals.get(\"idStore\"));\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const r = pm.variables.replaceIn(\"{{$randomWord}}\");\r",
+									"pm.globals.set('randomDesignationStore', r);\r",
+									"\r",
+									"const v = pm.variables.replaceIn(\"{{$randomCity}}\");\r",
+									"pm.globals.set('randomCityStore', v);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"designation\": \"{{randomDesignationStore}}\",\r\n    \"address\":{\r\n        \"zipCode\": \"4000-000\",\r\n        \"streetName\": \"Teste\",\r\n        \"doorNumber\": 1,\r\n        \"location\": \"{{randomCityStore}}\",\r\n        \"country\": \"TesteTeste\"\r\n    },\r\n    \"openingHours\":[{\r\n        \"dayOfTheWeek\": \"Segunda\",\r\n        \"hour\": 8,\r\n        \"minute\": 0},\r\n        {\"dayOfTheWeek\": \"Terça\",\r\n        \"hour\": 8,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Quarta\",\r\n        \"hour\": 8,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Quinta\",\r\n        \"hour\": 8,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Sexta\",\r\n        \"hour\": 8,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Sabado\",\r\n        \"hour\": 8,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Domingo\",\r\n        \"hour\": 8,\r\n        \"minute\": 0\r\n        }\r\n    ],\r\n    \"closingHours\":[{\r\n        \"dayOfTheWeek\": \"Segunda\",\r\n        \"hour\": 20,\r\n        \"minute\": 0},\r\n        {\"dayOfTheWeek\": \"Terça\",\r\n        \"hour\": 20,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Quarta\",\r\n        \"hour\": 20,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Quinta\",\r\n        \"hour\": 20,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Sexta\",\r\n        \"hour\": 20,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Sabado\",\r\n        \"hour\": 20,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Domingo\",\r\n        \"hour\": 20,\r\n        \"minute\": 0\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8093/stores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"stores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a store Without Designation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"address\":{\r\n        \"zipCode\": \"4000-000\",\r\n        \"streetName\": \"Teste\",\r\n        \"doorNumber\": 1,\r\n        \"location\": \"{{randomCityStore}}\",\r\n        \"country\": \"TesteTeste\"\r\n    },\r\n    \"openingHours\":[{\r\n        \"dayOfTheWeek\": \"Segunda\",\r\n        \"hour\": 8,\r\n        \"minute\": 0},\r\n        {\"dayOfTheWeek\": \"Terça\",\r\n        \"hour\": 8,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Quarta\",\r\n        \"hour\": 8,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Quinta\",\r\n        \"hour\": 8,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Sexta\",\r\n        \"hour\": 8,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Sabado\",\r\n        \"hour\": 8,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Domingo\",\r\n        \"hour\": 8,\r\n        \"minute\": 0\r\n        }\r\n    ],\r\n    \"closingHours\":[{\r\n        \"dayOfTheWeek\": \"Segunda\",\r\n        \"hour\": 20,\r\n        \"minute\": 0},\r\n        {\"dayOfTheWeek\": \"Terça\",\r\n        \"hour\": 20,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Quarta\",\r\n        \"hour\": 20,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Quinta\",\r\n        \"hour\": 20,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Sexta\",\r\n        \"hour\": 20,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Sabado\",\r\n        \"hour\": 20,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Domingo\",\r\n        \"hour\": 20,\r\n        \"minute\": 0\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8093/stores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"stores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a store Without Address",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"designation\": \"{{randomDesignationStore}}\",\r\n    \"openingHours\":[{\r\n        \"dayOfTheWeek\": \"Segunda\",\r\n        \"hour\": 8,\r\n        \"minute\": 0},\r\n        {\"dayOfTheWeek\": \"Terça\",\r\n        \"hour\": 8,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Quarta\",\r\n        \"hour\": 8,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Quinta\",\r\n        \"hour\": 8,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Sexta\",\r\n        \"hour\": 8,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Sabado\",\r\n        \"hour\": 8,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Domingo\",\r\n        \"hour\": 8,\r\n        \"minute\": 0\r\n        }\r\n    ],\r\n    \"closingHours\":[{\r\n        \"dayOfTheWeek\": \"Segunda\",\r\n        \"hour\": 20,\r\n        \"minute\": 0},\r\n        {\"dayOfTheWeek\": \"Terça\",\r\n        \"hour\": 20,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Quarta\",\r\n        \"hour\": 20,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Quinta\",\r\n        \"hour\": 20,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Sexta\",\r\n        \"hour\": 20,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Sabado\",\r\n        \"hour\": 20,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Domingo\",\r\n        \"hour\": 20,\r\n        \"minute\": 0\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8093/stores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"stores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a store Without Opening Hours",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"designation\": \"{{randomDesignationStore}}\",\r\n    \"address\":{\r\n        \"zipCode\": \"4000-000\",\r\n        \"streetName\": \"Teste\",\r\n        \"doorNumber\": 1,\r\n        \"location\": \"{{randomCityStore}}\",\r\n        \"country\": \"TesteTeste\"\r\n    },\r\n    \"closingHours\":[{\r\n        \"dayOfTheWeek\": \"Segunda\",\r\n        \"hour\": 20,\r\n        \"minute\": 0},\r\n        {\"dayOfTheWeek\": \"Terça\",\r\n        \"hour\": 20,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Quarta\",\r\n        \"hour\": 20,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Quinta\",\r\n        \"hour\": 20,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Sexta\",\r\n        \"hour\": 20,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Sabado\",\r\n        \"hour\": 20,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Domingo\",\r\n        \"hour\": 20,\r\n        \"minute\": 0\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8093/stores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"stores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a store Without Closing Hours",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"designation\": \"{{randomDesignationStore}}\",\r\n    \"address\":{\r\n        \"zipCode\": \"4000-000\",\r\n        \"streetName\": \"Teste\",\r\n        \"doorNumber\": 1,\r\n        \"location\": \"{{randomCityStore}}\",\r\n        \"country\": \"TesteTeste\"\r\n    },\r\n    \"openingHours\":[{\r\n        \"dayOfTheWeek\": \"Segunda\",\r\n        \"hour\": 8,\r\n        \"minute\": 0},\r\n        {\"dayOfTheWeek\": \"Terça\",\r\n        \"hour\": 8,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Quarta\",\r\n        \"hour\": 8,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Quinta\",\r\n        \"hour\": 8,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Sexta\",\r\n        \"hour\": 8,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Sabado\",\r\n        \"hour\": 8,\r\n        \"minute\": 0\r\n        },\r\n        {\"dayOfTheWeek\": \"Domingo\",\r\n        \"hour\": 8,\r\n        \"minute\": 0\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8093/stores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"stores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all stores",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8093/stores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"stores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a store by Id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Body contains store_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"store_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains designation\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"designation\");\r",
+									"});\r",
+									"pm.test(\"Body contains dateOfCreation\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"dateOfCreation\");\r",
+									"});\r",
+									"pm.test(\"Body contains address\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"address\");\r",
+									"});\r",
+									"pm.test(\"Body contains closingHours\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"closingHours\");\r",
+									"});\r",
+									"pm.test(\"Body contains openingHours\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"openingHours\");\r",
+									"});\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8093/stores/searchById?id={{idStore}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"stores",
+								"searchById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{idStore}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a store by Designation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Body contains store_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"store_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains designation\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"designation\");\r",
+									"});\r",
+									"pm.test(\"Body contains dateOfCreation\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"dateOfCreation\");\r",
+									"});\r",
+									"pm.test(\"Body contains address\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"address\");\r",
+									"});\r",
+									"pm.test(\"Body contains closingHours\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"closingHours\");\r",
+									"});\r",
+									"pm.test(\"Body contains openingHours\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"openingHours\");\r",
+									"});\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8093/stores/searchByDesignation?designation={{randomDesignationStore}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"stores",
+								"searchByDesignation"
+							],
+							"query": [
+								{
+									"key": "designation",
+									"value": "{{randomDesignationStore}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a store by Location",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Body contains store_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"store_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains designation\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"designation\");\r",
+									"});\r",
+									"pm.test(\"Body contains dateOfCreation\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"dateOfCreation\");\r",
+									"});\r",
+									"pm.test(\"Body contains address\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"address\");\r",
+									"});\r",
+									"pm.test(\"Body contains closingHours\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"closingHours\");\r",
+									"});\r",
+									"pm.test(\"Body contains openingHours\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"openingHours\");\r",
+									"});\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8093/stores/searchByLocation?location={{randomCityStore}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"stores",
+								"searchByLocation"
+							],
+							"query": [
+								{
+									"key": "location",
+									"value": "{{randomCityStore}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update opening hours",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Body contains store_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"store_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains designation\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"designation\");\r",
+									"});\r",
+									"pm.test(\"Body contains dateOfCreation\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"dateOfCreation\");\r",
+									"});\r",
+									"pm.test(\"Body contains address\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"address\");\r",
+									"});\r",
+									"pm.test(\"Body contains closingHours\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"closingHours\");\r",
+									"});\r",
+									"pm.test(\"Body contains openingHours\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"openingHours\");\r",
+									"});\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dayOfTheWeek\": \"Segunda\",\r\n    \"hour\": 7,\r\n    \"minute\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8093/stores/openingHours?id={{idStore}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"stores",
+								"openingHours"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{idStore}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update closing hours",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Body contains store_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"store_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains designation\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"designation\");\r",
+									"});\r",
+									"pm.test(\"Body contains dateOfCreation\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"dateOfCreation\");\r",
+									"});\r",
+									"pm.test(\"Body contains address\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"address\");\r",
+									"});\r",
+									"pm.test(\"Body contains closingHours\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"closingHours\");\r",
+									"});\r",
+									"pm.test(\"Body contains openingHours\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"openingHours\");\r",
+									"});\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dayOfTheWeek\": \"Segunda\",\r\n    \"hour\": 21,\r\n    \"minute\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8093/stores/closingHours?id={{idStore}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"stores",
+								"closingHours"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{idStore}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove store",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(203);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8093/stores/delete?id={{idStore}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"stores",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{idStore}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ingredient",
+			"item": [
+				{
+					"name": "Get all ingredients without ingredient",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var body = JSON.parse(responseBody);\r",
+									"tests[\"Count: \"  + body.length] = true;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/ingredients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"ingredients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Ingredient",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const r = pm.variables.replaceIn(\"{{$randomWord}}\");\r",
+									"pm.globals.set('randomDesignation', r);"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body contains ingredient_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"ingredient_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains designation\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"designation\");\r",
+									"});\r",
+									"\r",
+									"pm.globals.set(\"idIngredient\", pm.response.json().ingredient_id);\r",
+									"console.log(pm.globals.get(\"idIngredient\"));\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"designation\": \"{{randomDesignation}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/ingredients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"ingredients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Ingredient Duplicated",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"designation\": \"{{randomDesignation}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/ingredients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"ingredients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Ingredient without designation",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/ingredients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"ingredients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ingredient by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Body contains ingredient_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"ingredient_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains designation\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"designation\");\r",
+									"});\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/ingredients/searchById?id={{idIngredient}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"ingredients",
+								"searchById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{idIngredient}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ingredient by designation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Body contains ingredient_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"ingredient_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains designation\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"designation\");\r",
+									"});\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/ingredients/searchByDesignation?designation={{randomDesignation}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"ingredients",
+								"searchByDesignation"
+							],
+							"query": [
+								{
+									"key": "designation",
+									"value": "{{randomDesignation}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all ingredients",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/ingredients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"ingredients"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sandwich",
+			"item": [
+				{
+					"name": "Get all sandwiches without sandwich",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var body = JSON.parse(responseBody);\r",
+									"tests[\"Count: \"  + body.length] = true;\r",
+									"pm.globals.set(\"nSandwiches\", body.length);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8091/sandwiches",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"sandwiches"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create sandwiches",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const r = pm.variables.replaceIn(\"{{$randomWord}}\");\r",
+									"pm.globals.set('randomDesignation', r);"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body contains sandwich_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"sandwich_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains selling_price\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"selling_price\");\r",
+									"});\r",
+									"pm.test(\"Body contains ingredients_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"ingredients_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains descriptions\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"descriptions\");\r",
+									"});\r",
+									"\r",
+									"pm.globals.set(\"idSandwich\", pm.response.json().sandwich_id);\r",
+									"console.log(pm.globals.get(\"idSandwich\"));\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"selling_price\": 1.99,\r\n    \"designation\": \"{{randomDesignation}}\",\r\n    \"ingredients_id\": [1,2,3],\r\n    \"descriptions\":[{\"text\": \"Sandwich 1 em portugues\"}]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/sandwiches",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"sandwiches"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create sandwiches without designation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"selling_price\": 1.99,\r\n    \"ingredients_id\": [1,2,3],\r\n    \"descriptions\":[{\"text\": \"Sandwich 1 em portugues\"}]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/sandwiches",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"sandwiches"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create sandwiches without price",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"designation\": \"Sandwich 2\",\r\n    \"ingredients_id\": [1,2,3],\r\n    \"descriptions\":[{\"text\": \"Sandwich 1 em portugues\"}]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/sandwiches",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"sandwiches"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create sandwiches with less than 3 ingredients",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"selling_price\": 1.99,\r\n    \"designation\": \"Sandwich 2\",\r\n    \"ingredients_id\": [1,2],\r\n    \"descriptions\":[{\"text\": \"Sandwich 1 em portugues\"}]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/sandwiches",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"sandwiches"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create sandwiches without ingredients",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"selling_price\": 1.99,\r\n    \"designation\": \"Sandwich 2\",\r\n    \"descriptions\":[{\"text\": \"Sandwich 1 em portugues\"}]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/sandwiches",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"sandwiches"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create sandwiches without descriptions",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"selling_price\": 1.99,\r\n    \"designation\": \"Sandwich 2\",\r\n    \"ingredients_id\": [1,2,3]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/sandwiches",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"sandwiches"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get sandwich by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8091/sandwiches/searchById?id={{idSandwich}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"sandwiches",
+								"searchById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{idSandwich}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search for sandwiches that doesn´t have a ingredient",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8091/sandwiches/searchWithoutId?id={{idIngredient}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"sandwiches",
+								"searchWithoutId"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{idIngredient}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add ingredients to sandwich",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Check number of ingredients\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.ingredients_id.length).to.eql(4);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"ingredients_id\": [{{idIngredient}}]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/sandwiches/ingredients?id={{idSandwich}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"sandwiches",
+								"ingredients"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{idSandwich}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add ingredients to sandwich duplicated",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"ingredients_id\": [{{idIngredient}}]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/sandwiches/ingredients?id={{idSandwich}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"sandwiches",
+								"ingredients"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{idSandwich}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add ingredients that doesn´t exist to sandwich",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"ingredients_id\": [-1]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/sandwiches/ingredients?id=9797979",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"sandwiches",
+								"ingredients"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "9797979"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add descriptions to sandwich",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Check number of ingredients\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.descriptions.length).to.eql(3);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"descriptions\": [{\r\n\t\t\t\t\t\t\"text\": \"Un buen bocadillo para disfrutar por la tarde\"\r\n\t\t\t\t\t},{\r\n\t\t\t\t\t\t\"text\": \"Example test to verify if the endpoint works\"\r\n\t\t\t\t\t}]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/sandwiches/descriptions?id={{idSandwich}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"sandwiches",
+								"descriptions"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{idSandwich}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add descriptions to sandwich duplicated",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"descriptions\": [{\r\n\t\t\t\t\t\t\"text\": \"Un buen bocadillo para disfrutar por la tarde\"\r\n\t\t\t\t\t},{\r\n\t\t\t\t\t\t\"text\": \"Example test to verify if the endpoint works\"\r\n\t\t\t\t\t}]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/sandwiches/descriptions?id={{idSandwich}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"sandwiches",
+								"descriptions"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{idSandwich}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all sandwiches with sandwich",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check number of sanwiches\", function () {\r",
+									"    var body = JSON.parse(responseBody);\r",
+									"    let n = pm.globals.get(\"nSandwiches\") + 1;\r",
+									"    pm.expect(body.length).to.eql(n);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8091/sandwiches",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"sandwiches"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get all users without user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var body = JSON.parse(responseBody);\r",
+									"tests[\"Count: \"  + body.length] = true;\r",
+									"pm.globals.set(\"nUsers\", body.length);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8092/users/",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"let min = 100000000;\r",
+									"let max = 999999999;\r",
+									"// for generating random number \r",
+									"function randomNumber(min, max) { \r",
+									"    return Math.random() * (max - min) + min;\r",
+									"} \r",
+									"let number = Math.round(randomNumber(min, max));\r",
+									"console.log(number)\r",
+									"\r",
+									"pm.globals.set('randomIdentificationNumber', number);\r",
+									"\r",
+									"const a = pm.variables.replaceIn(\"{{$randomFullName}}\");\r",
+									"pm.globals.set('fullname', a);\r",
+									"\r",
+									"const b = pm.variables.replaceIn(\"{{$randomPassword}}\");\r",
+									"pm.globals.set('password', b);\r",
+									"\r",
+									"const d = pm.variables.replaceIn(\"{{$randomStreetAddress}}\");\r",
+									"pm.globals.set('address', d);\r",
+									"\r",
+									"const e = pm.variables.replaceIn(\"{{$randomExampleEmail}}\");\r",
+									"let ee = e.toLowerCase();\r",
+									"pm.globals.set('email', ee);\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body contains user_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"user_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains name\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"name\");\r",
+									"});\r",
+									"pm.test(\"Body contains taxIdentificationNumber\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"taxIdentificationNumber\");\r",
+									"});\r",
+									"pm.test(\"Body contains address\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"address\");\r",
+									"});\r",
+									"pm.test(\"Body contains email\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"email\");\r",
+									"});\r",
+									"pm.test(\"Body contains permissions\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"permissions\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.globals.set(\"idUser\", pm.response.json().user_id);\r",
+									"console.log(pm.globals.get(\"idUser\"));\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"name\":\"{{fullname}}\",\r\n\t\"password\": \"{{password}}\",\r\n\t\"taxIdentificationNumber\": \"{{randomIdentificationNumber}}\",\r\n\t\"address\": \"{{address}}\",\r\n\t\"email\": \"{{email}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8092/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User without email",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"name\":\"{{fullname}}\",\r\n\t\"password\": \"{{password}}\",\r\n\t\"taxIdentificationNumber\": \"{{randomIdentificationNumber}}\",\r\n\t\"address\": \"{{address}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8092/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User without name",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"password\": \"{{password}}\",\r\n\t\"taxIdentificationNumber\": \"{{randomIdentificationNumber}}\",\r\n\t\"address\": \"{{address}}\",\r\n\t\"email\": \"{{email}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8092/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User without password",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"name\":\"{{fullname}}\",\r\n\t\"taxIdentificationNumber\": \"{{randomIdentificationNumber}}\",\r\n\t\"address\": \"{{address}}\",\r\n\t\"email\": \"{{email}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8092/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User without tax identification number",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"{{fullname}}\",\r\n    \"password\": \"{{password}}\",\r\n    \"address\": \"{{address}}\",\r\n    \"email\": \"{{email}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8092/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User without address",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"name\":\"{{fullname}}\",\r\n\t\"password\": \"{{password}}\",\r\n\t\"taxIdentificationNumber\": \"{{randomIdentificationNumber}}\",\r\n\t\"email\": \"{{email}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8092/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get the user roles",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body contains values\",() => {\r",
+									"  var jsonData = pm.response.json();\r",
+									"  pm.expect(jsonData.perms[0]).to.eql(\"CUSTOMER\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body contains perms\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"perms\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8092/users/autenticationData?id={{idUser}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"users",
+								"autenticationData"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{idUser}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search User By Id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body contains user_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"user_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains name\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"name\");\r",
+									"});\r",
+									"pm.test(\"Body contains taxIdentificationNumber\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"taxIdentificationNumber\");\r",
+									"});\r",
+									"pm.test(\"Body contains address\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"address\");\r",
+									"});\r",
+									"pm.test(\"Body contains email\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"email\");\r",
+									"});\r",
+									"pm.test(\"Body contains permissions\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"permissions\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8092/users/searchById?id={{idUser}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"users",
+								"searchById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{idUser}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search User By Email",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body contains user_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"user_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains name\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"name\");\r",
+									"});\r",
+									"pm.test(\"Body contains taxIdentificationNumber\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"taxIdentificationNumber\");\r",
+									"});\r",
+									"pm.test(\"Body contains address\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"address\");\r",
+									"});\r",
+									"pm.test(\"Body contains email\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"email\");\r",
+									"});\r",
+									"pm.test(\"Body contains permissions\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"permissions\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8092/users/searchByEmail?email={{email}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"users",
+								"searchByEmail"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "{{email}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search User By Tax Identification Number",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body contains user_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"user_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains name\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"name\");\r",
+									"});\r",
+									"pm.test(\"Body contains taxIdentificationNumber\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"taxIdentificationNumber\");\r",
+									"});\r",
+									"pm.test(\"Body contains address\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"address\");\r",
+									"});\r",
+									"pm.test(\"Body contains email\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"email\");\r",
+									"});\r",
+									"pm.test(\"Body contains permissions\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"permissions\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8092/users/searchByTaxIdentificationNumber?tax={{randomIdentificationNumber}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"users",
+								"searchByTaxIdentificationNumber"
+							],
+							"query": [
+								{
+									"key": "tax",
+									"value": "{{randomIdentificationNumber}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all users with user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check number of sanwiches\", function () {\r",
+									"    var body = JSON.parse(responseBody);\r",
+									"    let n = pm.globals.get(\"nUsers\") + 1;\r",
+									"    pm.expect(body.length).to.eql(n);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8092/users/",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add permissions to user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body contains values\",() => {\r",
+									"  var jsonData = pm.response.json();\r",
+									"  pm.expect(pm.response.text()).to.include(\"permissions\");\r",
+									"  pm.expect(jsonData.permissions.length).to.eql(2);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8092/users/permissions?id={{idUser}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"users",
+								"permissions"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{idUser}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a JWT",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type header is text/plain\", () => {\r",
+									"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('text/plain');\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"{{password}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8092/users/jwt",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"users",
+								"jwt"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Review",
+			"item": [
+				{
+					"name": "Create a review",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Body contains review_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"review_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains user_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"user_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains sandwich_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"sandwich_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains dateOfCreation\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"dateOfCreation\");\r",
+									"});\r",
+									"pm.test(\"Body contains comment\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"comment\");\r",
+									"});\r",
+									"pm.test(\"Body contains rating\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"rating\");\r",
+									"});\r",
+									"pm.test(\"Body contains upvotes\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"upvotes\");\r",
+									"});\r",
+									"pm.test(\"Body contains downvotes\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"downvotes\");\r",
+									"});\r",
+									"pm.test(\"Body contains status\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"status\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body contains values\",() => {\r",
+									"  var jsonData = pm.response.json();\r",
+									"  pm.expect(jsonData.status).to.eql(\"Created\");\r",
+									"});\r",
+									"\r",
+									"pm.globals.set(\"idReview\", pm.response.json().review_id);\r",
+									"console.log(pm.globals.get(\"idReview\"));\r",
+									"\r",
+									"pm.globals.set(\"idReviewUser\", pm.response.json().user_id);\r",
+									"console.log(pm.globals.get(\"idReviewUser\"));\r",
+									"\r",
+									"pm.globals.set(\"idReviewSandwich\", pm.response.json().sandwich_id);\r",
+									"console.log(pm.globals.get(\"idReviewSandwich\"));\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 1,\r\n    \"sandwich_id\": 1,\r\n    \"comment\": \"test1\",\r\n    \"rating\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8095/reviews",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a review Without Comment",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 1,\r\n    \"sandwich_id\": 1,\r\n    \"rating\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8095/reviews",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a review Without Rating",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 1,\r\n    \"sandwich_id\": 1,\r\n    \"comment\": \"test1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8095/reviews",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get review by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Body contains review_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"review_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains user_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"user_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains sandwich_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"sandwich_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains dateOfCreation\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"dateOfCreation\");\r",
+									"});\r",
+									"pm.test(\"Body contains comment\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"comment\");\r",
+									"});\r",
+									"pm.test(\"Body contains rating\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"rating\");\r",
+									"});\r",
+									"pm.test(\"Body contains upvotes\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"upvotes\");\r",
+									"});\r",
+									"pm.test(\"Body contains downvotes\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"downvotes\");\r",
+									"});\r",
+									"pm.test(\"Body contains status\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"status\");\r",
+									"});\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/reviews/searchById?id={{idReview}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"reviews",
+								"searchById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{idReview}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get review by User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Body contains review_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"review_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains user_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"user_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains sandwich_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"sandwich_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains dateOfCreation\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"dateOfCreation\");\r",
+									"});\r",
+									"pm.test(\"Body contains comment\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"comment\");\r",
+									"});\r",
+									"pm.test(\"Body contains rating\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"rating\");\r",
+									"});\r",
+									"pm.test(\"Body contains upvotes\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"upvotes\");\r",
+									"});\r",
+									"pm.test(\"Body contains downvotes\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"downvotes\");\r",
+									"});\r",
+									"pm.test(\"Body contains status\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"status\");\r",
+									"});\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/reviews/searchByUserId?id={{idReviewUser}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"reviews",
+								"searchByUserId"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{idReviewUser}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get review by Sandwich",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Body contains review_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"review_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains user_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"user_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains sandwich_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"sandwich_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains dateOfCreation\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"dateOfCreation\");\r",
+									"});\r",
+									"pm.test(\"Body contains comment\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"comment\");\r",
+									"});\r",
+									"pm.test(\"Body contains rating\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"rating\");\r",
+									"});\r",
+									"pm.test(\"Body contains upvotes\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"upvotes\");\r",
+									"});\r",
+									"pm.test(\"Body contains downvotes\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"downvotes\");\r",
+									"});\r",
+									"pm.test(\"Body contains status\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"status\");\r",
+									"});\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/reviews/searchBySandwichId?id={{idReviewSandwich}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"reviews",
+								"searchBySandwichId"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{idReviewSandwich}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Report the review",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body contains review_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"review_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains user_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"user_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains sandwich_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"sandwich_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains dateOfCreation\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"dateOfCreation\");\r",
+									"});\r",
+									"pm.test(\"Body contains comment\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"comment\");\r",
+									"});\r",
+									"pm.test(\"Body contains rating\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"rating\");\r",
+									"});\r",
+									"pm.test(\"Body contains upvotes\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"upvotes\");\r",
+									"});\r",
+									"pm.test(\"Body contains downvotes\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"downvotes\");\r",
+									"});\r",
+									"pm.test(\"Body contains status\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"status\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"REPORTED STATUS\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.status).to.eql(\"REPORTED\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/reviews/report?id={{idReview}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"reviews",
+								"report"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{idReview}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get reviews Reported",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/reviews/reported",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"reviews",
+								"reported"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change status of review to the inicial state",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body contains review_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"review_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains user_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"user_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains sandwich_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"sandwich_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains dateOfCreation\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"dateOfCreation\");\r",
+									"});\r",
+									"pm.test(\"Body contains comment\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"comment\");\r",
+									"});\r",
+									"pm.test(\"Body contains rating\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"rating\");\r",
+									"});\r",
+									"pm.test(\"Body contains upvotes\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"upvotes\");\r",
+									"});\r",
+									"pm.test(\"Body contains downvotes\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"downvotes\");\r",
+									"});\r",
+									"pm.test(\"Body contains status\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"status\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body contains values\",() => {\r",
+									"  var jsonData = pm.response.json();\r",
+									"  pm.expect(jsonData.status).to.eql(\"CREATED\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"review_id\": {{idReview}},\r\n    \"approved\" : true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8095/reviews/admin/reported",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"reviews",
+								"admin",
+								"reported"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Report the review",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body contains review_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"review_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains user_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"user_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains sandwich_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"sandwich_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains dateOfCreation\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"dateOfCreation\");\r",
+									"});\r",
+									"pm.test(\"Body contains comment\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"comment\");\r",
+									"});\r",
+									"pm.test(\"Body contains rating\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"rating\");\r",
+									"});\r",
+									"pm.test(\"Body contains upvotes\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"upvotes\");\r",
+									"});\r",
+									"pm.test(\"Body contains downvotes\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"downvotes\");\r",
+									"});\r",
+									"pm.test(\"Body contains status\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"status\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"REPORTED STATUS\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.status).to.eql(\"REPORTED\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/reviews/report?id={{idReview}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"reviews",
+								"report"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{idReview}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change status of review to not be shown",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body contains review_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"review_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains user_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"user_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains sandwich_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"sandwich_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains dateOfCreation\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"dateOfCreation\");\r",
+									"});\r",
+									"pm.test(\"Body contains comment\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"comment\");\r",
+									"});\r",
+									"pm.test(\"Body contains rating\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"rating\");\r",
+									"});\r",
+									"pm.test(\"Body contains upvotes\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"upvotes\");\r",
+									"});\r",
+									"pm.test(\"Body contains downvotes\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"downvotes\");\r",
+									"});\r",
+									"pm.test(\"Body contains status\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"status\");\r",
+									"});\r",
+									"pm.test(\"Body contains values\",() => {\r",
+									"  var jsonData = pm.response.json();\r",
+									"  pm.expect(jsonData.status).to.eql(\"ELIMINATED\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"review_id\": {{idReview}},\r\n    \"approved\" : false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8095/reviews/admin/reported",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"reviews",
+								"admin",
+								"reported"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Create a order",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.globals.set(\"idOrder\", pm.response.json().order_id);\r",
+									"console.log(pm.globals.get(\"idOrder\"));\r",
+									"\r",
+									"pm.test(\"Body contains order_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"order_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains store_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"store_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains user_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"user_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains status\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"status\");\r",
+									"});\r",
+									"pm.test(\"Body contains dateOfCreation\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"dateOfCreation\");\r",
+									"});\r",
+									"pm.test(\"Body contains items\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"items\");\r",
+									"});\r",
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body contains values\",() => {\r",
+									"  var jsonData = pm.response.json();\r",
+									"  pm.expect(jsonData.status).to.eql(\"PENDING\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"store_id\": 3,\r\n    \"user_id\": 2,\r\n    \"items\":[\r\n        {\r\n            \"sandwichId\": 1,\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8094/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8094",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one order",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Body contains order_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"order_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains store_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"store_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains user_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"user_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains status\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"status\");\r",
+									"});\r",
+									"pm.test(\"Body contains dateOfCreation\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"dateOfCreation\");\r",
+									"});\r",
+									"pm.test(\"Body contains items\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"items\");\r",
+									"});\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8094/orders/searchById?id={{idOrder}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8094",
+							"path": [
+								"orders",
+								"searchById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{idOrder}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a order Step 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Body contains order_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"order_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains store_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"store_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains user_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"user_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains status\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"status\");\r",
+									"});\r",
+									"pm.test(\"Body contains dateOfCreation\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"dateOfCreation\");\r",
+									"});\r",
+									"pm.test(\"Body contains items\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"items\");\r",
+									"});\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body contains values\",() => {\r",
+									"  var jsonData = pm.response.json();\r",
+									"  pm.expect(jsonData.status).to.eql(\"PROCESSING\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8094/orders/admin?id={{idOrder}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8094",
+							"path": [
+								"orders",
+								"admin"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{idOrder}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a order Step 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Body contains order_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"order_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains store_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"store_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains user_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"user_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains status\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"status\");\r",
+									"});\r",
+									"pm.test(\"Body contains dateOfCreation\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"dateOfCreation\");\r",
+									"});\r",
+									"pm.test(\"Body contains items\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"items\");\r",
+									"});\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body contains values\",() => {\r",
+									"  var jsonData = pm.response.json();\r",
+									"  pm.expect(jsonData.status).to.eql(\"DONE\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8094/orders/admin?id={{idOrder}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8094",
+							"path": [
+								"orders",
+								"admin"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{idOrder}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a order Step 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Body contains order_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"order_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains store_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"store_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains user_id\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"user_id\");\r",
+									"});\r",
+									"pm.test(\"Body contains status\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"status\");\r",
+									"});\r",
+									"pm.test(\"Body contains dateOfCreation\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"dateOfCreation\");\r",
+									"});\r",
+									"pm.test(\"Body contains items\",() => {\r",
+									"  pm.expect(pm.response.text()).to.include(\"items\");\r",
+									"});\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body contains values\",() => {\r",
+									"  var jsonData = pm.response.json();\r",
+									"  pm.expect(jsonData.status).to.eql(\"DELIVERED\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8094/orders/admin?id={{idOrder}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8094",
+							"path": [
+								"orders",
+								"admin"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{idOrder}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all orders",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8094/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8094",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get orders made by a user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8094/orders/searchByUserId?id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8094",
+							"path": [
+								"orders",
+								"searchByUserId"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get orders made to a store",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8094/orders/searchByStoreId?id=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8094",
+							"path": [
+								"orders",
+								"searchByStoreId"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Language Dectection",
+			"item": [
+				{
+					"name": "Language Dectection",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verifing the outputs to the first phrase\", function () {\r",
+									"    var language1 = pm.response.json().languages[0];\r",
+									"    var language2 = pm.response.json().languages[1];\r",
+									"    pm.expect(language1).to.eql(\"pt\");\r",
+									"    pm.expect(language2).to.eql(\"en\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verifing the outputs to the second phrase\", function () {\r",
+									"    var language2 = pm.response.json().languages[1];\r",
+									"    pm.expect(language2).to.eql(\"en\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\"text\": \"Uma boa sanduíche para desfrutar à tarde\"},\r\n    {\"text\": \"Good morning, what a good sandwich!\"}\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/language",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"language"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "jwt",
+		"jwt": [
+			{
+				"key": "algorithm",
+				"value": "HS256",
+				"type": "string"
+			},
+			{
+				"key": "isSecretBase64Encoded",
+				"value": false,
+				"type": "boolean"
+			},
+			{
+				"key": "payload",
+				"value": "{}",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "headerPrefix",
+				"value": "Bearer",
+				"type": "string"
+			},
+			{
+				"key": "queryParamKey",
+				"value": "token",
+				"type": "string"
+			},
+			{
+				"key": "header",
+				"value": "{}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

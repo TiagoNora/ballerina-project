@@ -19,22 +19,25 @@ function init() returns error? {
 
     dbClient = check new(host=HOST, user=USER, password=PASSWORD, port=PORT, database="Reviews"); 
     sql:ExecutionResult _ = check dbClient->execute(`CREATE TABLE IF NOT EXISTS Reviews.reviews (
-                                                    review_id INT NOT NULL AUTO_INCREMENT, 
-                                                    user_id INT NOT NULL,
-                                                    sandwich_id INT NOT NULL,
-                                                    rating INT NOT NULL,
-                                                    upVotes INT NOT NULL,
-                                                    downVotes INT NOT NULL,
-                                                    status VARCHAR(255),
-                                                    dateOfCreation VARCHAR(255),
-                                                    comment VARCHAR(255),
-                                                    PRIMARY KEY (review_id))`);
+        review_id INT NOT NULL AUTO_INCREMENT, 
+        user_id INT NOT NULL,
+        sandwich_id INT NOT NULL,
+        rating INT NOT NULL,
+        upVotes INT NOT NULL,
+        downVotes INT NOT NULL,
+        status VARCHAR(255),
+        dateOfCreation VARCHAR(255),
+        comment VARCHAR(255),
+        PRIMARY KEY (review_id)
+        )`);
+
     sql:ExecutionResult _ = check dbClient->execute(`CREATE TABLE IF NOT EXISTS Reviews.reviews_users (
-                                                    review_id INT NOT NULL , 
-                                                    user_id INT NOT NULL,
-                                                    state BOOLEAN,
-                                                    PRIMARY KEY (review_id,user_id)),
-                                                    FOREIGN KEY (review_id) REFERENCES reviews(review_id)`);           
+        review_id INT NOT NULL , 
+        user_id INT NOT NULL,
+        state BOOLEAN,
+        PRIMARY KEY (review_id,user_id),
+        FOREIGN KEY (review_id) REFERENCES reviews(review_id)
+        )`);          
 }
 
 public isolated function addReview(model:ReviewDTO review) returns model:Conflict|model:Review|model:NotFoundError|error{
@@ -226,4 +229,23 @@ public isolated function conflictError(string codeMessage,string messageError) r
             }
                
     };
+}
+
+public isolated function addSandwich(model:Sandwich sand) returns error?{
+    sql:ExecutionResult result = check dbClient->execute(`INSERT INTO sandwiches (selling_price, designation) VALUES (${sand.selling_price}, ${sand.designation})`);
+    int|string? lastInsertId = result.lastInsertId;
+    int n = 0;
+    if lastInsertId is int{
+        n = lastInsertId;
+    }
+    foreach int ingrediend_id in sand.ingredients_id {
+        sql:ExecutionResult _ = check dbClient->execute(`INSERT INTO sandwich_ingredients (sandwich_id, ingredient_id) VALUES (${n}, ${ingrediend_id})`);
+    }
+    foreach model:Description description in sand.descriptions {
+        sql:ExecutionResult _ = check dbClient->execute(`INSERT INTO sandwich_descriptions (sandwich_id , text, language) VALUES (${n}, ${description.text}, ${description.language})`);
+    }
+}
+
+public isolated function addUser(model:UserDTO user) returns error?{
+    sql:ExecutionResult _ = check dbClient->execute(`INSERT INTO users (name, password, taxIdentificationNumber,address,email) VALUES (${user.name}, ${user.password}, ${user.taxIdentificationNumber},${user.address},${user.email})`);
 }

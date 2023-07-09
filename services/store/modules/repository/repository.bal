@@ -4,6 +4,7 @@ import ballerina/sql;
 import store.model;
 import ballerina/time;
 import ballerina/io;
+import ballerinax/rabbitmq;
 
 string USER = "myUser";
 string PASSWORD = "myPassword";
@@ -11,8 +12,13 @@ string HOST = "localhost";
 int PORT = 3309;
 
 final mysql:Client dbClient;
+final rabbitmq:Client rabbitmqClient;
 
 function init() returns error? {
+    rabbitmqClient = check new(rabbitmq:DEFAULT_HOST, rabbitmq:DEFAULT_PORT);
+    _ = check rabbitmqClient->exchangeDeclare("store", rabbitmq:FANOUT_EXCHANGE);
+    _ = check rabbitmqClient->queueDeclare("stores");
+    _ = check rabbitmqClient->queueBind("stores", "store", "routingStore");
     mysql:Client dbClientCreate = check new(host=HOST, user=USER, password=PASSWORD, port=PORT);
     sql:ExecutionResult _ = check dbClientCreate->execute(`CREATE DATABASE IF NOT EXISTS Stores`);
     check dbClientCreate.close();
@@ -75,6 +81,7 @@ public isolated function addStore(model:StoreDTO store) returns model:Store?|err
     foreach model:OpeningHours opening in store.openingHours {
          _ = check addOpeningHoursToDB(n,opening);
     }
+    check rabbitmqClient->publishMessage({content: store, routingKey: "stores"});
 
     model:Store|error|model:NotFoundError s = getStoreById(n);
     return s;

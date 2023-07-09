@@ -32,7 +32,60 @@ function init() returns error? {
                                                     sandwich_id INT NOT NULL,
                                                     quantity INT NOT NULL, 
                                                     PRIMARY KEY (orderItem_id), 
-                                                    FOREIGN KEY (order_id) REFERENCES orders(order_id))`);                  
+                                                    FOREIGN KEY (order_id) REFERENCES orders(order_id))`);
+    sql:ExecutionResult _ = check dbClient->execute(`CREATE TABLE IF NOT EXISTS Orders.sandwiches (
+                                                    sandwich_id INT NOT NULL AUTO_INCREMENT, 
+                                                    selling_price FLOAT(6), 
+                                                    designation VARCHAR(30), 
+                                                    PRIMARY KEY (sandwich_id)
+                                                    )`); 
+    sql:ExecutionResult _ = check dbClient->execute(`CREATE TABLE IF NOT EXISTS Orders.sandwich_ingredients (
+                                                    sandwich_id INT NOT NULL, 
+                                                    ingredient_id INT NOT NULL, 
+                                                    PRIMARY KEY (sandwich_id, ingredient_id), 
+                                                    FOREIGN KEY (sandwich_id) REFERENCES sandwiches(sandwich_id)
+                                                    )`);
+    sql:ExecutionResult _ = check dbClient->execute(`CREATE TABLE IF NOT EXISTS Orders.sandwich_descriptions (
+                                                    sandwich_id INT NOT NULL, 
+                                                    text VARCHAR(500), 
+                                                    language VARCHAR(5), 
+                                                    PRIMARY KEY (sandwich_id, language), 
+                                                    FOREIGN KEY (sandwich_id) REFERENCES sandwiches(sandwich_id)
+                                                    )`);
+    sql:ExecutionResult _ = check dbClient->execute(`CREATE TABLE IF NOT EXISTS Orders.stores (
+                                                    store_id INT NOT NULL AUTO_INCREMENT, 
+                                                    designation VARCHAR(255),
+                                                    dateOfCreation VARCHAR(255),
+                                                    PRIMARY KEY (store_id,designation))`); 
+
+    sql:ExecutionResult _ = check dbClient->execute(`CREATE TABLE IF NOT EXISTS Orders.stores_address (
+                                                    address_id INT NOT NULL AUTO_INCREMENT,
+                                                    store_id INT NOT NULL,
+                                                    zipCode VARCHAR(255),
+                                                    streetName VARCHAR(255), 
+                                                    doorNumber INT, 
+                                                    location VARCHAR(255), 
+                                                    country VARCHAR(255), 
+                                                    PRIMARY KEY (address_id), 
+                                                    FOREIGN KEY (store_id) REFERENCES stores(store_id))`);
+
+    sql:ExecutionResult _ = check dbClient->execute(`CREATE TABLE IF NOT EXISTS Orders.closingHours (
+                                                    closingHours_id INT NOT NULL AUTO_INCREMENT,
+                                                    store_id INT NOT NULL,
+                                                    dayOfTheWeek VARCHAR(255),
+                                                    hour INT, 
+                                                    minute INT, 
+                                                    PRIMARY KEY (closingHours_id), 
+                                                    FOREIGN KEY (store_id) REFERENCES stores(store_id))`); 
+
+    sql:ExecutionResult _ = check dbClient->execute(`CREATE TABLE IF NOT EXISTS Orders.openingHours (
+                                                    openingHours_id INT NOT NULL AUTO_INCREMENT,
+                                                    store_id INT NOT NULL,
+                                                    dayOfTheWeek VARCHAR(255),
+                                                    hour INT, 
+                                                    minute INT, 
+                                                    PRIMARY KEY (openingHours_id), 
+                                                    FOREIGN KEY (store_id) REFERENCES stores(store_id))`);      
 }
 
 public isolated function addOrder(model:OrderDTO orderObject) returns model:OrderObject?|error|model:NotFoundError|model:ValidationError|int{
@@ -284,3 +337,49 @@ public isolated function conflictError(string codeMessage,string messageError) r
                
     };
 }
+
+public isolated function addSandwich(model:Sandwich sand) returns error?{
+    sql:ExecutionResult result = check dbClient->execute(`INSERT INTO sandwiches (selling_price, designation) VALUES (${sand.selling_price}, ${sand.designation})`);
+    int|string? lastInsertId = result.lastInsertId;
+    int n = 0;
+    if lastInsertId is int{
+        n = lastInsertId;
+    }
+    foreach int ingrediend_id in sand.ingredients_id {
+        sql:ExecutionResult _ = check dbClient->execute(`INSERT INTO sandwich_ingredients (sandwich_id, ingredient_id) VALUES (${n}, ${ingrediend_id})`);
+    }
+    foreach model:Description description in sand.descriptions {
+        sql:ExecutionResult _ = check dbClient->execute(`INSERT INTO sandwich_descriptions (sandwich_id , text, language) VALUES (${n}, ${description.text}, ${description.language})`);
+    }
+}
+
+public isolated function addStore(model:StoreDTO store) returns error?{
+    sql:ExecutionResult result = check dbClient->execute(`INSERT INTO stores (designation, dateOfCreation) VALUES (${store.designation}, ${time:utcNow()})`);
+    int|string? lastInsertId = result.lastInsertId;
+    int n= 0;
+    if lastInsertId is int{
+        n = lastInsertId;
+    }
+    model:Address a ={
+        "zipCode":store.address.zipCode,
+        "streetName":store.address.streetName,
+        "doorNumber":store.address.doorNumber,
+        "location":store.address.location,
+        "country":store.address.country
+    };
+    sql:ExecutionResult _ = check dbClient->execute(`INSERT INTO stores_address (store_id, zipCode, streetName, doorNumber, location, country) VALUES 
+    (${n}, ${a.zipCode},${a.streetName},${a.doorNumber},${a.location},${a.country})`);
+
+    foreach model:ClosingHours closing in store.closingHours {
+         sql:ExecutionResult _ = check dbClient->execute(`INSERT INTO closingHours (store_id, dayOfTheWeek, hour, minute) VALUES (${n}, ${closing.dayOfTheWeek},${closing.hour},${closing.minute})`);
+    }
+    foreach model:OpeningHours opening in store.openingHours {
+         sql:ExecutionResult _ = check dbClient->execute(`INSERT INTO openingHours (store_id, dayOfTheWeek, hour, minute) VALUES (${n}, ${opening.dayOfTheWeek},${opening.hour},${opening.minute})`);
+    }
+}
+
+public isolated function addUser(model:UserDTO user) returns error?{
+    sql:ExecutionResult _ = check dbClient->execute(`INSERT INTO users (name, password, taxIdentificationNumber,address,email) VALUES (${user.name}, ${user.password}, ${user.taxIdentificationNumber},${user.address},${user.email})`);
+}
+
+

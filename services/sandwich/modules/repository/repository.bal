@@ -3,6 +3,8 @@ import ballerinax/mysql.driver as _;
 import ballerina/sql;
 import ballerina/http;
 import sandwich.model;
+import ballerinax/rabbitmq;
+
 
 string USER="myUser";
 string PASSWORD="myPassword";
@@ -11,8 +13,13 @@ int PORT=3307;
 
 final mysql:Client dbClient;
 final http:Client language;
+final rabbitmq:Client rabbitmqClient;
 
 function init() returns error? {
+    rabbitmqClient = check new(rabbitmq:DEFAULT_HOST, rabbitmq:DEFAULT_PORT);
+    _ = check rabbitmqClient->exchangeDeclare("sanduiche", rabbitmq:FANOUT_EXCHANGE);
+    _ = check rabbitmqClient->queueDeclare("sanduiches");
+    _ = check rabbitmqClient->queueBind("sanduiches", "sanduiche", "routingSandwich");
     mysql:Client dbClientCreate = check new(host=HOST, user=USER, password=PASSWORD, port=PORT);
     sql:ExecutionResult _ = check dbClientCreate->execute(`CREATE DATABASE IF NOT EXISTS Sandwiches`);
     check dbClientCreate.close();
@@ -36,7 +43,12 @@ function init() returns error? {
                                                     language VARCHAR(5), 
                                                     PRIMARY KEY (sandwich_id, language), 
                                                     FOREIGN KEY (sandwich_id) REFERENCES sandwiches(sandwich_id)
-                                                    )`);                                    
+                                                    )`); 
+    sql:ExecutionResult _ = check dbClient->execute(`CREATE TABLE IF NOT EXISTS Sandwiches.Ingredients (
+                                                    ingredient_id INT AUTO_INCREMENT,
+                                                    designation VARCHAR(255), 
+                                                    PRIMARY KEY (ingredient_id)
+                                                    )`);                                      
 }
 
 public isolated function addSandwich(model:SandwichDTO san) returns model:ServiceError|model:Sandwich|error|model:NotFoundError|model:ValidationError|model:NotFoundError{
@@ -95,6 +107,9 @@ public isolated function addSandwich(model:SandwichDTO san) returns model:Servic
     }
 
     model:Sandwich|error|model:NotFoundError sand = getSandwichById(n);
+    if sand is model:Sandwich{
+        check rabbitmqClient->publishMessage({content: sand, routingKey: "sanduiches"});
+    }
 
     return sand;
 }
@@ -427,4 +442,8 @@ public isolated function serviceError(string codeMessage,string messageError) re
             }
                
     };
+}
+
+public isolated function addIngredient(model:IngredientDTO ing) returns error?{
+    sql:ExecutionResult _ = check dbClient->execute(`INSERT INTO Ingredients (designation)VALUES (${ing.designation})`);
 }
