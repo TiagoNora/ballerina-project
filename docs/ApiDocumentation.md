@@ -459,14 +459,10 @@ Payload: **JSON**
   GET /users/
 ```
 
-| Parameter  | Type       | Description                                   |
-| :---------- | :--------- | :------------------------------------------ |
-| `id`      | `int` | **Required** |
-
 
 | Status  | Description   |
 | :---------- | :--------- |
-| `200`      | `Customer found` |
+| `200`      | `Customer or customers found` |
 | `404`      | `Customer or customers not found` |
 
 **If 200 returns:**
@@ -505,7 +501,7 @@ Payload: **JSON**
 
 | Status  | Description   |
 | :---------- | :--------- |
-| `200`      | `Description or descriptions added` |
+| `201`      | `Permission added` |
 | `404`      | `Sandwiches or sandwich not found` |
 
 **If 201 returns:**
@@ -535,12 +531,534 @@ Payload: **JSON**
 
 | Status  | Description   |
 | :---------- | :--------- |
-| `200`      | `Description or descriptions added` |
-| `404`      | `Sandwiches or sandwich not found` |
+| `201`      | `JWT generated` |
+| `404`      | `Error when generating jwt` |
 
 **If 201 returns:**
 ```json
 STRING
 ```
 
+#### US19: Add review of a ordered sandwich
 
+```http
+  POST /reviews
+```
+Payload: **JSON**
+
+```json
+{
+    "sandwich_id": 1,
+    "comment": "test1",
+    "rating": 5
+}
+```
+
+| Status  | Description   |
+| :---------- | :--------- |
+| `201`      | `Review added` |
+| `404`      | `Customer not found` |
+
+**If 201 returns:**
+```json
+{
+    "review_id": 79,
+    "user_id": 1,
+    "sandwich_id": 1,
+    "dateOfCreation": "2023-07-09 22:23:56.393",
+    "comment": "test1",
+    "rating": 5,
+    "upvotes": 0,
+    "downvotes": 0,
+    "status": "Created"
+}
+```
+
+#### US22: Create shop
+
+```http
+  POST /stores
+```
+Payload: **JSON**
+
+```json
+{
+    "designation": "designation",
+    "address":{
+        "zipCode": "4000-000",
+        "streetName": "Teste",
+        "doorNumber": 1,
+        "location": "location",
+        "country": "TesteTeste"
+    },
+    "openingHours":[{
+        "dayOfTheWeek": "Segunda",
+        "hour": 8,
+        "minute": 0},
+        {"dayOfTheWeek": "Terça",
+        "hour": 8,
+        "minute": 0
+        },
+        {"dayOfTheWeek": "Quarta",
+        "hour": 8,
+        "minute": 0
+        },
+        {"dayOfTheWeek": "Quinta",
+        "hour": 8,
+        "minute": 0
+        },
+        {"dayOfTheWeek": "Sexta",
+        "hour": 8,
+        "minute": 0
+        },
+        {"dayOfTheWeek": "Sabado",
+        "hour": 8,
+        "minute": 0
+        },
+        {"dayOfTheWeek": "Domingo",
+        "hour": 8,
+        "minute": 0
+        }
+    ],
+    "closingHours":[{
+        "dayOfTheWeek": "Segunda",
+        "hour": 20,
+        "minute": 0},
+        {"dayOfTheWeek": "Terça",
+        "hour": 20,
+        "minute": 0
+        },
+        {"dayOfTheWeek": "Quarta",
+        "hour": 20,
+        "minute": 0
+        },
+        {"dayOfTheWeek": "Quinta",
+        "hour": 20,
+        "minute": 0
+        },
+        {"dayOfTheWeek": "Sexta",
+        "hour": 20,
+        "minute": 0
+        },
+        {"dayOfTheWeek": "Sabado",
+        "hour": 20,
+        "minute": 0
+        },
+        {"dayOfTheWeek": "Domingo",
+        "hour": 20,
+        "minute": 0
+        }
+    ]
+}
+```
+
+| Status  | Description   |
+| :---------- | :--------- |
+| `201`      | `Store added` |
+| `404`      | `Customer not found` |
+
+**If 201 returns:**
+```json
+{
+    "store_id": 60,
+    "designation": "hacking",
+    "dateOfCreation": "2023-07-09 22:25:50.971",
+    "address": {
+        "zipCode": "4000-000",
+        "streetName": "Teste",
+        "doorNumber": 1,
+        "location": "New Dawsonstad",
+        "country": "TesteTeste"
+    },
+    "closingHours": [
+        {
+            "dayOfTheWeek": "Segunda",
+            "hour": 20,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Terça",
+            "hour": 20,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Quarta",
+            "hour": 20,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Quinta",
+            "hour": 20,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Sexta",
+            "hour": 20,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Sabado",
+            "hour": 20,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Domingo",
+            "hour": 20,
+            "minute": 0
+        }
+    ],
+    "openingHours": [
+        {
+            "dayOfTheWeek": "Segunda",
+            "hour": 8,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Terça",
+            "hour": 8,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Quarta",
+            "hour": 8,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Quinta",
+            "hour": 8,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Sexta",
+            "hour": 8,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Sabado",
+            "hour": 8,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Domingo",
+            "hour": 8,
+            "minute": 0
+        }
+    ]
+}
+```
+
+#### US24: List shop by id
+
+```http
+  GET /stores/searchById?id=id
+```
+
+| Parameter  | Type       | Description                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `int` | **Required** |
+
+
+| Status  | Description   |
+| :---------- | :--------- |
+| `200`      | `Shop found` |
+| `404`      | `Shop not found` |
+
+**If 200 returns:**
+```json
+{
+    "store_id": 60,
+    "designation": "hacking",
+    "dateOfCreation": "2023-07-09 22:25:50.971",
+    "address": {
+        "zipCode": "4000-000",
+        "streetName": "Teste",
+        "doorNumber": 1,
+        "location": "New Dawsonstad",
+        "country": "TesteTeste"
+    },
+    "closingHours": [
+        {
+            "dayOfTheWeek": "Segunda",
+            "hour": 20,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Terça",
+            "hour": 20,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Quarta",
+            "hour": 20,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Quinta",
+            "hour": 20,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Sexta",
+            "hour": 20,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Sabado",
+            "hour": 20,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Domingo",
+            "hour": 20,
+            "minute": 0
+        }
+    ],
+    "openingHours": [
+        {
+            "dayOfTheWeek": "Segunda",
+            "hour": 8,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Terça",
+            "hour": 8,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Quarta",
+            "hour": 8,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Quinta",
+            "hour": 8,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Sexta",
+            "hour": 8,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Sabado",
+            "hour": 8,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Domingo",
+            "hour": 8,
+            "minute": 0
+        }
+    ]
+}
+```
+### US25: List shop by designation
+
+```http
+  GET /stores/searchByDesignation?designation=designation
+```
+
+| Parameter  | Type       | Description                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `designation`      | `string` | **Required** |
+
+
+| Status  | Description   |
+| :---------- | :--------- |
+| `200`      | `Shop found` |
+| `404`      | `Shop not found` |
+
+**If 200 returns:**
+```json
+{
+    "store_id": 60,
+    "designation": "hacking",
+    "dateOfCreation": "2023-07-09 22:25:50.971",
+    "address": {
+        "zipCode": "4000-000",
+        "streetName": "Teste",
+        "doorNumber": 1,
+        "location": "New Dawsonstad",
+        "country": "TesteTeste"
+    },
+    "closingHours": [
+        {
+            "dayOfTheWeek": "Segunda",
+            "hour": 20,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Terça",
+            "hour": 20,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Quarta",
+            "hour": 20,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Quinta",
+            "hour": 20,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Sexta",
+            "hour": 20,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Sabado",
+            "hour": 20,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Domingo",
+            "hour": 20,
+            "minute": 0
+        }
+    ],
+    "openingHours": [
+        {
+            "dayOfTheWeek": "Segunda",
+            "hour": 8,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Terça",
+            "hour": 8,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Quarta",
+            "hour": 8,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Quinta",
+            "hour": 8,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Sexta",
+            "hour": 8,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Sabado",
+            "hour": 8,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Domingo",
+            "hour": 8,
+            "minute": 0
+        }
+    ]
+}
+```
+#### US26: List shop by address
+
+```http
+  GET /stores/searchByLocation?location=location
+```
+
+| Parameter  | Type       | Description                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `location`      | `int` | **Required** |
+
+
+| Status  | Description   |
+| :---------- | :--------- |
+| `200`      | `Shop found` |
+| `404`      | `Shop not found` |
+
+**If 200 returns:**
+```json
+{
+    "store_id": 60,
+    "designation": "hacking",
+    "dateOfCreation": "2023-07-09 22:25:50.971",
+    "address": {
+        "zipCode": "4000-000",
+        "streetName": "Teste",
+        "doorNumber": 1,
+        "location": "New Dawsonstad",
+        "country": "TesteTeste"
+    },
+    "closingHours": [
+        {
+            "dayOfTheWeek": "Segunda",
+            "hour": 20,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Terça",
+            "hour": 20,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Quarta",
+            "hour": 20,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Quinta",
+            "hour": 20,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Sexta",
+            "hour": 20,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Sabado",
+            "hour": 20,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Domingo",
+            "hour": 20,
+            "minute": 0
+        }
+    ],
+    "openingHours": [
+        {
+            "dayOfTheWeek": "Segunda",
+            "hour": 8,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Terça",
+            "hour": 8,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Quarta",
+            "hour": 8,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Quinta",
+            "hour": 8,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Sexta",
+            "hour": 8,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Sabado",
+            "hour": 8,
+            "minute": 0
+        },
+        {
+            "dayOfTheWeek": "Domingo",
+            "hour": 8,
+            "minute": 0
+        }
+    ]
+}
+```
