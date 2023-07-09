@@ -75,7 +75,7 @@ docker run --name my-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=mypassword -d mys
 You can enter your container with the following code:
 
 ```
-podman exec -it <container-name> bin/bash
+docker exec -it <container-name> bin/bash
 mysql -u root -p
 ```
 Insert your password and to create the user insert this code:
