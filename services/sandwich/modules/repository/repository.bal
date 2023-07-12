@@ -280,6 +280,17 @@ public isolated function checkSandwichId(int id) returns boolean{
     }
 }
 
+public isolated function addSandwichIngredient(int n, int ingrediend_id) returns error?{
+    sql:ExecutionResult _ = check dbClient->execute(`INSERT INTO sandwich_ingredients (sandwich_id, ingredient_id) VALUES (${n}, ${ingrediend_id})`);
+}
+
+public isolated function addSandwichDescription(int n, string text, string language) returns error?{
+    sql:ExecutionResult _ = check dbClient->execute(`INSERT INTO sandwich_descriptions (sandwich_id , text, language) VALUES (${n}, ${text}, ${language})`);
+}
+
+public isolated function addRabbit(model:Sandwich sand) returns error?{
+    check rabbitmqClient->publishMessage({content: sand, routingKey: "sanduiches"});
+}
 public isolated function checkArrayReceivedAndFound (int[] received, int[] found) returns boolean{
     int aux = 0;
     foreach int nFound in found{

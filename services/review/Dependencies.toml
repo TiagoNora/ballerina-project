@@ -392,6 +392,7 @@ modules = [
 	{org = "tiago", packageName = "review", moduleName = "review"},
 	{org = "tiago", packageName = "review", moduleName = "review.model"},
 	{org = "tiago", packageName = "review", moduleName = "review.rabbitmq"},
-	{org = "tiago", packageName = "review", moduleName = "review.repository"}
+	{org = "tiago", packageName = "review", moduleName = "review.repository"},
+	{org = "tiago", packageName = "review", moduleName = "review.serviceReview"}
 ]
 

@@ -384,6 +384,7 @@ modules = [
 	{org = "tiago", packageName = "sandwich", moduleName = "sandwich"},
 	{org = "tiago", packageName = "sandwich", moduleName = "sandwich.model"},
 	{org = "tiago", packageName = "sandwich", moduleName = "sandwich.rabbitmq"},
-	{org = "tiago", packageName = "sandwich", moduleName = "sandwich.repository"}
+	{org = "tiago", packageName = "sandwich", moduleName = "sandwich.repository"},
+	{org = "tiago", packageName = "sandwich", moduleName = "sandwich.serviceSandwich"}
 ]
 

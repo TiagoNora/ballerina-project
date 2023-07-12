@@ -88,6 +88,10 @@ public isolated function addStore(model:StoreDTO store) returns model:Store?|err
 
 }
 
+public isolated function addRabbit(model:StoreDTO store) returns error? {
+ _ = check rabbitmqClient->publishMessage({content: store, routingKey: "stores"});
+}
+
 public isolated function getStoreById(int id) returns model:Store|error|model:NotFoundError{
     model:StoreAux|error aux = findStoreByIdFromDB(id);
     if aux is error{

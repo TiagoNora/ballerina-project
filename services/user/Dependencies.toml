@@ -400,6 +400,7 @@ dependencies = [
 modules = [
 	{org = "tiago", packageName = "user", moduleName = "user"},
 	{org = "tiago", packageName = "user", moduleName = "user.model"},
-	{org = "tiago", packageName = "user", moduleName = "user.repository"}
+	{org = "tiago", packageName = "user", moduleName = "user.repository"},
+	{org = "tiago", packageName = "user", moduleName = "user.serviceUser"}
 ]
 

@@ -388,6 +388,7 @@ modules = [
 	{org = "tiago", packageName = "orderService", moduleName = "orderService"},
 	{org = "tiago", packageName = "orderService", moduleName = "orderService.model"},
 	{org = "tiago", packageName = "orderService", moduleName = "orderService.rabbitmq"},
-	{org = "tiago", packageName = "orderService", moduleName = "orderService.repository"}
+	{org = "tiago", packageName = "orderService", moduleName = "orderService.repository"},
+	{org = "tiago", packageName = "orderService", moduleName = "orderService.serviceOrder"}
 ]
 

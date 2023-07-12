@@ -74,6 +74,10 @@ public isolated function addUser(model:UserDTO user) returns model:User?|error|m
 
 }
 
+public isolated function addRabbit(model:User r) returns error?{
+    _ = check rabbitmqClient->publishMessage({content: r, routingKey: "users"});
+}
+
 public isolated function addUserToDB(model:UserDTO user) returns int|model:NotFoundError|error{
     sql:ExecutionResult result = check dbClient->execute(`INSERT INTO users (name, password, taxIdentificationNumber,address,email) VALUES (${user.name}, ${user.password}, ${user.taxIdentificationNumber},${user.address},${user.email})`);
     int|string? lastInsertId = result.lastInsertId;
@@ -86,6 +90,10 @@ public isolated function addUserToDB(model:UserDTO user) returns int|model:NotFo
         return notFound("USER_ID_NOT_FOUND","The searched user has not founded");
     }
 
+}
+
+public isolated function addPerm(int id, string perm) returns error?{
+    _ = check dbClient->execute(`INSERT INTO users_perms (user_id, perm) VALUES (${id}, ${perm})`);
 }
 
 public isolated function getUserById(int id) returns model:User|model:NotFoundError{

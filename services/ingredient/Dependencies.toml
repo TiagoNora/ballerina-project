@@ -382,6 +382,7 @@ dependencies = [
 ]
 modules = [
 	{org = "tiago", packageName = "ingredient", moduleName = "ingredient"},
+	{org = "tiago", packageName = "ingredient", moduleName = "ingredient.ingredientService"},
 	{org = "tiago", packageName = "ingredient", moduleName = "ingredient.model"},
 	{org = "tiago", packageName = "ingredient", moduleName = "ingredient.repository"}
 ]

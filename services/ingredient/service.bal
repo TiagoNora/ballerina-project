@@ -1,22 +1,22 @@
 import ballerina/http;
 import ingredient.model;
-import ingredient.repository;
+import ingredient.ingredientService;
 service /ingredients on new http:Listener(8090) {
 
     isolated resource function post .(@http:Payload model:IngredientDTO ing) returns error|model:ValidationError|model:Ingredient?|model:NotFoundError{
-        return repository:addIngredient(ing);
+        return ingredientService:addIngredient(ing);
     }
     
     isolated resource function get searchById(int id) returns model:Ingredient?|error|model:NotFoundError {
-        return repository:getIngredientById(id);
+        return ingredientService:getIngredientById(id);
     }
 
     isolated resource function get searchByDesignation(string designation) returns model:Ingredient?|error|model:NotFoundError {
-        return repository:getIngredientByDesignation(designation);
+        return ingredientService:getIngredientByDesignation(designation);
     }
     
     isolated resource function get .() returns model:Ingredient[]|error?|model:NotFoundError {
-        return repository:getAllIngredients();
+        return ingredientService:getAllIngredients();
     }
 
 }

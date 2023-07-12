@@ -387,6 +387,7 @@ dependencies = [
 modules = [
 	{org = "tiago", packageName = "store", moduleName = "store"},
 	{org = "tiago", packageName = "store", moduleName = "store.model"},
-	{org = "tiago", packageName = "store", moduleName = "store.repository"}
+	{org = "tiago", packageName = "store", moduleName = "store.repository"},
+	{org = "tiago", packageName = "store", moduleName = "store.serviceStore"}
 ]
 

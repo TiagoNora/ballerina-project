@@ -88,7 +88,7 @@ function init() returns error? {
                                                     FOREIGN KEY (store_id) REFERENCES stores(store_id))`);      
 }
 
-public isolated function addOrder(model:OrderDTO orderObject) returns model:OrderObject?|error|model:NotFoundError|model:ValidationError|int{
+public isolated function addOrder(model:OrderDTO orderObject) returns error|int{
     int|model:NotFoundError|error lastIdInserted = addOrderToDB(orderObject);
     int n= 0;
     if lastIdInserted is int{
@@ -98,56 +98,17 @@ public isolated function addOrder(model:OrderDTO orderObject) returns model:Orde
     foreach model:OrderItemDTO o in orderObject.items {
         sql:ExecutionResult _ = check dbClient->execute(`INSERT INTO orders_items (order_id, sandwich_id, quantity) VALUES (${n}, ${o.sandwichId}, ${o.quantity})`);
     }
-    model:OrderObject|error|model:NotFoundError or = getOrderById(n);
-    return or;
+    return n;
 
 
 }
 
-public isolated function updateOrderById(int id) returns model:OrderObject?|error|model:NotFoundError|model:ValidationError|int|model:Conflict{
-    model:OrderInfo|error info = findOrderByIdFromDB(id);
-    if info is error{
-           return notFound("ORDER_NOT_FOUND","The searched sandwich has not founded");
-    }
-    else{
-        if info.status == "PENDING"{
-            string newStatus = "PROCESSING";
-            _ = check dbClient->execute(`UPDATE orders SET status=${newStatus} WHERE order_id = ${id}`);
-        }
-        else if info.status == "PROCESSING" {
-            string newStatus = "DONE";
-            _ = check dbClient->execute(`UPDATE orders SET status=${newStatus} WHERE order_id = ${id}`);
-        }
-        else if info.status == "DONE"{
-            string newStatus = "DELIVERED";
-            _ = check dbClient->execute(`UPDATE orders SET status=${newStatus} WHERE order_id = ${id}`);
-        }
-        else {
-            return conflictError("ORDER_ALREADY_DELIVERED","The order was already delivered to the client");
-        }
-    }
-    model:OrderObject|error|model:NotFoundError or = getOrderById(id);
-    return or;
-
+public isolated function updateOrderById(string newStatus,int id) returns error? {
+    _ = check dbClient->execute(`UPDATE orders SET status=${newStatus} WHERE order_id = ${id}`);
 }
 
-public isolated function updateUserOrderById(int id) returns model:OrderObject?|error|model:NotFoundError|model:ValidationError|int|model:Conflict{
-    model:OrderInfo|error info = findOrderByIdFromDB(id);
-    if info is error{
-           return notFound("ORDER_NOT_FOUND","The searched sandwich has not founded");
-    }
-    else{
-        if info.status == "PENDING"{
-            string newStatus = "CANCELED";
-            _ = check dbClient->execute(`UPDATE orders SET status=${newStatus} WHERE order_id = ${id}`);
-        }
-        else {
-            return conflictError("ORDER_ATIVE","The order is been made, has made or has delivered");
-        }
-    }
-    model:OrderObject|error|model:NotFoundError or = getOrderById(id);
-    return or;
-
+public isolated function updateUserOrderById(string newStatus,int id) returns error? {
+    _ = check dbClient->execute(`UPDATE orders SET status=${newStatus} WHERE order_id = ${id}`);
 }
 
 public isolated function getOrderById(int id) returns model:OrderObject|error|model:NotFoundError{
